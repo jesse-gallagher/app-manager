@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xp:view xmlns:xp="http://www.ibm.com/xsp/core" xmlns:xe="http://www.ibm.com/xsp/coreex" xmlns:xc="http://www.ibm.com/xsp/custom"
+	beforePageLoad="#{pageController.beforePageLoad}" afterPageLoad="#{pageController.afterPageLoad}"
+	pageTitle="Config: Updater Agents">
+
+
+	<xc:layout navigationPath="/Config/UpdaterAgents" pageTitle="#{view.pageTitle}">
+		<xp:this.facets>
+			<xc:linksbarConfig xp:key="LeftColumn"/>
+			<xp:div xp:key="ActionBar">
+				<xp:button id="createUpdaterAgentButton" value="Create Agent">
+					<xp:eventHandler event="onclick" submit="false">
+						<xp:this.script><![CDATA[XSP.openDialog("#{id:createUpdaterAgentDialog}")]]></xp:this.script>
+					</xp:eventHandler>
+				</xp:button>
+				
+				<xe:dialog id="createUpdaterAgentDialog" title="Create Updater Agent">
+					<xe:dialogContent>
+						<div class="form-horizontal">
+							<xc:bsControlGroup label="Server">
+								<xp:inputText value="#{viewScope.createUpdaterAgentServer}"/>
+							</xc:bsControlGroup>
+						</div>
+					</xe:dialogContent>
+					<xe:dialogButtonBar>
+						<xp:button id="createUpdaterAgentConfirm" value="Create Agent">
+							<xp:eventHandler event="onclick" submit="true" refreshMode="complete" action="#{pageController.createAgent}"/>
+						</xp:button>
+					</xe:dialogButtonBar>
+				</xe:dialog>
+			</xp:div>
+		</xp:this.facets>
+		
+		<xp:dataTable value="#{pageController.agentInfo}" rows="1000" var="agent"
+			styleClass="table table-bordered table-condensed table-striped table-rounded hideHeader hideFooter">
+			
+			<xp:column>
+				<xp:this.facets><xp:text xp:key="header" value="Server"/></xp:this.facets>
+				<xc:link value="/Config_UpdaterAgent.xsp?agentId=#{agent.noteId}" text="#{agent.server}"/>
+			</xp:column>
+			<xp:column>
+				<xp:this.facets><xp:text xp:key="header" value="Enabled"/></xp:this.facets>
+				<xp:text value="#{agent.enabled}"/>
+			</xp:column>
+			<xp:column>
+				<xp:this.facets><xp:text xp:key="header" value="Schedule"/></xp:this.facets>
+				<xp:text value="#{agent.scheduleType}"/>
+			</xp:column>
+		</xp:dataTable>
+	</xc:layout>
+</xp:view>

@@ -1,0 +1,193 @@
+<theme extends="" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="platform:/plugin/com.ibm.designer.domino.stylekits/schema/stylekit.xsd">
+	<resources>
+		<metaData name="viewport" content="width=device-width, initial-scale=1.0" />
+
+		<!--		<styleSheet type="text/css" href="/css/bootstrap.min.css"/>-->
+		<styleSheet type="text/css" href="/css/bootswatch-amelia.min.css" />
+		<styleSheet type="text/css" href="/css/bootstrap-responsive.min.css" />
+		<!--		<styleSheet type="text/css" href="/css/docs.css"/>-->
+		
+
+		<script type="text/javascript" clientSide="true" src="/js/jquery-1.8.2.min.js" />
+		<script type="text/javascript" clientSide="true" src="/js/bootstrap.min.js" />
+		<styleSheet href="/.ibmxspres/dojoroot/dijit/themes/tundra/tundra.css"/>
+	</resources>
+
+	<control>
+		<name>Button.Command</name>
+		<property>
+			<name>styleClass</name>
+			<value>btn</value>
+		</property>
+	</control>
+	<control>
+		<name>Button.Submit</name>
+		<property>
+			<name>styleClass</name>
+			<value>btn btn-primary</value>
+		</property>
+	</control>
+	<control>
+		<name>Button.Cancel</name>
+		<property>
+			<name>styleClass</name>
+			<value>btn</value>
+		</property>
+	</control>
+
+	<control>
+		<name>InputField.EditBox</name>
+		<property>
+			<name>styleClass</name>
+			<value></value>
+		</property>
+	</control>
+
+	<!-- Data tables -->
+	<control>
+		<name>DataTable</name>
+		<property>
+			<name>styleClass</name>
+			<value>table table-condensed table-striped</value>
+		</property>
+		<property>
+			<name>rows</name>
+			<value>30</value>
+		</property>
+	</control>
+	<control>
+		<name>DataTable.ViewPanel</name>
+		<property>
+			<name>viewStyleClass</name>
+			<value>xspDataTableViewPanel</value>
+		</property>
+		<property>
+			<name>headerStyleClass</name>
+			<value>xspDataTableViewPanelHeaderMiddle</value>
+		</property>
+		<property>
+			<name>footerStyleClass</name>
+			<value>xspDataTableViewPanelFooterMiddle</value>
+		</property>
+		<property>
+			<name>footerStartStyleClass</name>
+			<value>xspDataTableViewPanelFooterStart</value>
+		</property>
+		<property>
+			<name>footerEndStyleClass</name>
+			<value>xspDataTableViewPanelFooterEnd</value>
+		</property>
+		<property>
+			<name>dataTableStyleClass</name>
+			<value>xspDataTable</value>
+		</property>
+		<property>
+			<name>headerEndStyleClass</name>
+			<value>xspDataTableViewPanelHeaderEnd</value>
+		</property>
+		<property>
+			<name>headerStartStyleClass</name>
+			<value>xspDataTableViewPanelHeaderStart</value>
+		</property>
+	</control>
+	
+	<!-- ================== Pager / PagerControl ================================ -->
+
+	<!-- Pager -->
+	<control>
+		<name>Pager</name>
+		<property>
+			<name>outerStyleClass</name>
+			<value>xspPagerContainer</value>
+		</property>
+		<property>
+			<name>styleClass</name>
+			<value>xspPager</value>
+		</property>
+	</control>
+
+	<!-- PagerControl -->
+	<control>
+		<name>PagerControl.Pager</name>
+		<property>
+			<name>styleClass</name>
+			<value>xspPagerNav</value>
+		</property>
+	</control>
+
+	<control>
+		<name>PagerControl.Pager.First</name>
+		<property>
+			<name>styleClass</name>
+			<value>xspPagerNav xspFirst</value>
+		</property>
+	</control>
+
+	<control>
+		<name>PagerControl.Pager.Previous</name>
+		<property>
+			<name>styleClass</name>
+			<value>xspPagerNav xspPrevious</value>
+		</property>
+	</control>
+
+	<control>
+		<name>PagerControl.Pager.Next</name>
+		<property>
+			<name>styleClass</name>
+			<value>xspPagerNav xspNext</value>
+		</property>
+	</control>
+
+	<control>
+		<name>PagerControl.Pager.Last</name>
+		<property>
+			<name>styleClass</name>
+			<value>xspPagerNav xspLast</value>
+		</property>
+	</control>
+
+	<control>
+		<name>PagerControl.Pager.Group</name>
+		<property>
+			<name>styleClass</name>
+			<value>xspPagerNav xspGroup</value>
+		</property>
+		<property>
+			<name>currentStyleClass</name>
+			<value>xspCurrentItem</value>
+		</property>
+		<property>
+			<name>firstStyleClass</name>
+			<value>xspFirstItem</value>
+		</property>
+		<property>
+			<name>lastStyleClass</name>
+			<value>xspLastItem</value>
+		</property>
+	</control>
+
+	<control>
+		<name>PagerControl.Pager.Status</name>
+		<property>
+			<name>styleClass</name>
+			<value>xspPagerNav xspStatus</value>
+		</property>
+	</control>
+
+	<control>
+		<name>PagerControl.Pager.Goto</name>
+		<property>
+			<name>styleClass</name>
+			<value>xspPagerNav xspGoto</value>
+		</property>
+	</control>
+
+	<control>
+		<name>PagerControl.Pager.Separator</name>
+		<property>
+			<name>styleClass</name>
+			<value>xspPagerNav xspSeparator</value>
+		</property>
+	</control>
+</theme>

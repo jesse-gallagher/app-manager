@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xp:view xmlns:xp="http://www.ibm.com/xsp/core" xmlns:xc="http://www.ibm.com/xsp/custom" xmlns:xe="http://www.ibm.com/xsp/coreex">
+	<div class="navbar navbar-fixed-top">
+		<div class="navbar-inner">
+			<div class="container">
+				<a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</a>
+				<xc:link styleClass="brand" value="/" text="${database.title}"/>
+				
+				<div class="nav-collapse">
+					<xp:repeat value="${siteOutline}" rows="10000" var="outlineEntry">
+						<xp:this.facets>
+							<xp:text xp:key="header" disableTheme="true" escape="false" value="&lt;ul class='nav'&gt;"/>
+							<xp:text xp:key="footer" disableTheme="true" escape="false" value="&lt;/ul&gt;"/>
+						</xp:this.facets>
+						
+						<xp:panel rendered="#{outlineEntry.type == 'container'}">
+							<li class="dropdown #{javascript: compositeData.navigationPath &amp;&amp; compositeData.navigationPath.startsWith('/' + outlineEntry.label) ? 'active' : ''}">
+								<a href="#" class="dropdown-toggle" data-toggle="dropdown">
+									<xp:text value="#{outlineEntry.label}"/>
+									<b class="caret"></b>
+								</a>
+								
+								<xp:repeat value="#{outlineEntry.children}" rows="10000" var="childEntry">
+									<xp:this.facets>
+										<xp:text xp:key="header" disableTheme="true" escape="false" value="&lt;ul class='dropdown-menu'&gt;"/>
+										<xp:text xp:key="footer" disableTheme="true" escape="false" value="&lt;/ul&gt;"/>
+									</xp:this.facets>
+									
+									<li><xc:link value="#{childEntry.href}" text="#{childEntry.label}"/></li>
+								</xp:repeat>
+							</li>
+						</xp:panel>
+						<xp:panel rendered="#{outlineEntry.type != 'container'}">
+							<li class="#{javascript: compositeData.navigationPath &amp;&amp; compositeData.navigationPath.startsWith('/' + outlineEntry.label) ? 'active' : ''}">
+								<xc:link value="#{outlineEntry.href}" text="#{outlineEntry.label}"/>
+							</li>
+						</xp:panel>
+					</xp:repeat>
+				</div>
+			</div>
+		</div>
+	</div> 
+
+	<div class="container">
+		<header class="jumbotron subhead">
+			<div class="row">
+				<div class="span12">
+					<xp:text value="#{javascript:compositeData.pageTitle ? compositeData.pageTitle : view.pageTitle}" styleClass="" tagName="h2"/>
+				</div>
+			</div>
+		</header>
+	
+		<div class="row">
+			<xp:div styleClass="span2" id="LeftColumnContainer">
+				<xp:this.rendered><![CDATA[#{javascript: this.children.length > 0 }]]></xp:this.rendered>
+				<xp:callback facetName="LeftColumn"/>
+			</xp:div>
+			<xp:div>
+				<xp:this.styleClass><![CDATA[#{javascript: getComponent('LeftColumnContainer').children.length > 0 ? 'span10' : 'span10 offset1' }]]></xp:this.styleClass>
+				<xc:messages/>
+				
+				<xp:panel rendered="#{compositeData.pageTitle != null}"><h2><xp:text value="#{compositeData.pageTitle}"/></h2></xp:panel>
+				
+				<xp:div styleClass="actionBar" rendered="#{javascript: this.children.length &gt; 0}"><xp:callback facetName="ActionBar"/></xp:div>
+			
+				<xp:callback/>
+			</xp:div>
+		</div>
+		
+		<div class="row">
+			<div class="span12">
+				<footer class="footer">
+<!--					<p class="pull-right"><xc:link value="https://github.com/jesse-gallagher/portfolio/blob/master/frostillic.us-portfolio/XPages#{view.pageName}" text="View page on GitHub"/></p>-->
+					<p>© 2013 Jesse Gallagher</p>
+				</footer>
+			</div>
+		</div>
+	</div>
+	
+	<xp:this.navigationRules>
+		<xp:navigationRule outcome="go-home" viewId="/Home.xsp"/>
+	</xp:this.navigationRules>
+</xp:view>

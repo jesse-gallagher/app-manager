@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xp:view xmlns:xp="http://www.ibm.com/xsp/core" xmlns:xe="http://www.ibm.com/xsp/coreex" xmlns:xc="http://www.ibm.com/xsp/custom"
+	beforePageLoad="#{pageController.beforePageLoad}" afterPageLoad="#{pageController.afterPageLoad}"
+	pageTitle="Overview">
+
+
+	<xc:layout navigationPath="/Overview">
+		<h2>Overview</h2>
+		
+		<div class="form-horizontal read-only">
+			<xc:bsControlGroup label="Server Name">
+				<xp:text value="#{pageController.serverName}"/>
+			</xc:bsControlGroup>
+			<xc:bsControlGroup label="XPage Apps">
+				<xp:text value="#{pageController.XPageAppCount}"/>
+			</xc:bsControlGroup>
+			<xc:bsControlGroup label="Memory">
+				Plentiful
+			</xc:bsControlGroup>
+		</div>
+	</xc:layout>
+</xp:view>

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xp:view xmlns:xp="http://www.ibm.com/xsp/core" xmlns:xe="http://www.ibm.com/xsp/coreex" xmlns:xc="http://www.ibm.com/xsp/custom"
+	beforePageLoad="#{pageController.beforePageLoad}" afterPageLoad="#{pageController.afterPageLoad}"
+	pageTitle="Config: Updater Agent">
+
+
+	<xc:layout navigationPath="/Config/UpdaterAgent" pageTitle="#{view.pageTitle}">
+		<xp:this.facets>
+			<xc:linksbarConfig xp:key="LeftColumn"/>
+		</xp:this.facets>
+		
+		<xp:div styleClass="form-horizontal" id="agentFormPanel">
+			<xc:bsControlGroup label="Server">
+				<xp:inputText value="#{pageController.server}"/>
+			</xc:bsControlGroup>
+			<xc:bsControlGroup label="Enabled">
+				<xp:radioGroup value="#{pageController.enabled}">
+					<xp:selectItem itemLabel="Yes" itemValue="true"/>
+					<xp:selectItem itemLabel="No" itemValue="false"/>
+				</xp:radioGroup>
+			</xc:bsControlGroup>
+			<xc:bsControlGroup label="Schedule Type">
+				<xp:comboBox value="#{pageController.scheduleType}">
+					<xp:eventHandler event="onchange" submit="true" refreshMode="partial" refreshId="agentFormPanel" disableValidators="true"/>
+				
+					<xp:selectItem itemLabel="monthly"/>
+				</xp:comboBox>
+			</xc:bsControlGroup>
+			<xc:bsControlGroup label="Day in Month" rendered="#{pageController.scheduleType == 'monthly'}">
+				<xp:comboBox value="#{pageController.dayInMonth}">
+					<xp:selectItems><xp:this.value><![CDATA[${javascript:
+						var result = []
+						for(var i = 1; i <= 31; i++) { result.push(i.toFixed(0)) }
+						result
+					}]]></xp:this.value></xp:selectItems>
+				</xp:comboBox>
+			</xc:bsControlGroup>
+		</xp:div>
+		
+		<xp:button id="saveAgent" value="Save" styleClass="btn btn-primary">
+			<xp:eventHandler event="onclick" submit="true" refreshMode="complete" immediate="false"
+				action="#{pageController.save}"/>
+		</xp:button>
+	</xc:layout>
+	
+	<xp:this.navigationRules>
+		<xp:navigationRule outcome="xsp-success" viewId="/Config_UpdaterAgent.xsp?agentId=${param.agentId}"/>
+		<xp:navigationRule outcome="xsp-failure" viewId="/Config_UpdaterAgent.xsp?agentId=${param.agentId}"/>
+	</xp:this.navigationRules>
+</xp:view>

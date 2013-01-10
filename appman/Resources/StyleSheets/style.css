@@ -1,0 +1,13 @@
+.xspDataTableViewPanelHeaderStart, .xspDataTableViewPanelHeaderMiddle, .xspDataTableViewPanelHeaderEnd,
+.xspDataTableViewPanelFooterStart, .xspDataTableViewPanelFooterMiddle, .xspDataTableViewPanelFooterEnd {
+	/*background-color: rgb(221, 221, 221);*/
+	background-color: transparent;
+	padding: 0.2em;
+}
+.xspDataTableViewPanel { margin-bottom: 20px; width: 100% }
+.xspDataTableViewPanel table.table { margin-bottom: 0 }
+
+.form-horizontal.read-only label { font-weight: bold }
+.form-horizontal.read-only .controls {
+	padding-top: 5px;
+}

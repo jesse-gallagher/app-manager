@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xp:view xmlns:xp="http://www.ibm.com/xsp/core" xmlns:xe="http://www.ibm.com/xsp/coreex" xmlns:xc="http://www.ibm.com/xsp/custom"
+	beforePageLoad="#{pageController.beforePageLoad}" afterPageLoad="#{pageController.afterPageLoad}"
+	pageTitle="Problems: Multiple Signers">
+
+
+	<xc:layout navigationPath="/Problems/MultipleSigners" pageTitle="#{view.pageTitle}">
+		<xp:this.facets>
+			<xc:linksbarProblems xp:key="LeftColumn"/>
+		</xp:this.facets>
+		
+		<xp:viewPanel rows="10000" id="viewPanel1" dataTableStyleClass="table table-bordered table-condensed table-striped table-rounded hideHeader hideFooter">
+			<xp:this.data>
+				<xp:dominoView var="view1" ignoreRequestParams="true" viewName="#{'Problems\\Multiple Signers'}"/>
+			</xp:this.data>
+			<xp:viewColumn columnName="Title" id="viewColumn1">
+				<xp:viewColumnHeader value="Title" id="viewColumnHeader1" sortable="true"/>
+			</xp:viewColumn>
+			<xp:viewColumn columnName="FilePath" id="viewColumn4">
+				<xp:viewColumnHeader value="File Path" id="viewColumnHeader4" sortable="true"/>
+			</xp:viewColumn>
+			<xp:viewColumn columnName="Server" id="viewColumn2">
+				<xp:viewColumnHeader value="Servers" id="viewColumnHeader2" sortable="true"/>
+			</xp:viewColumn>
+			<xp:viewColumn columnName="XSPSigners" id="viewColumn5">
+				<xp:viewColumnHeader value="Signers" id="viewColumnHeader5" sortable="true"/>
+			</xp:viewColumn>
+		</xp:viewPanel>
+	</xc:layout>
+</xp:view>
