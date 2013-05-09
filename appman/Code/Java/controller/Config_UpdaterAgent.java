@@ -6,11 +6,13 @@ import lotus.domino.*;
 import com.ibm.xsp.extlib.util.ExtLibUtil;
 import com.raidomatic.xml.*;
 import java.util.*;
+import java.text.SimpleDateFormat;
 
 public class Config_UpdaterAgent extends BasicXPageController {
 	private static final long serialVersionUID = 1L;
 
 	private XMLDocument xmlDoc;
+	private static SimpleDateFormat TIME_FORMAT = new SimpleDateFormat("'T'HHmmss',00'");
 
 	@Override
 	public void beforePageLoad() throws Exception {
@@ -28,6 +30,7 @@ public class Config_UpdaterAgent extends BasicXPageController {
 		this.xmlDoc = new XMLDocument();
 		String xml = exporter.exportDxl(agentDoc).replaceAll("<\\!DOCTYPE.*>", "");
 		xmlDoc.loadString(xml);
+		xmlDoc.selectSingleNode("//agent").setAttribute("runonbehalfof", "");
 	}
 
 
@@ -41,7 +44,7 @@ public class Config_UpdaterAgent extends BasicXPageController {
 
 		xmlDoc.selectSingleNode("//agent").setAttribute("name", "$$UpdaterAgent-" + canonName);
 		xmlDoc.selectSingleNode("//schedule").setAttribute("runserver", canonName);
-		xmlDoc.selectSingleNode("//agent").setAttribute("runonbehalfof", canonName);
+		//xmlDoc.selectSingleNode("//agent").setAttribute("runonbehalfof", canonName);
 	}
 
 	public String getScheduleType() throws Exception {
@@ -59,6 +62,34 @@ public class Config_UpdaterAgent extends BasicXPageController {
 		xmlDoc.selectSingleNode("//schedule").setAttribute("dateinmonth", dateInMonth);
 	}
 
+	// Weekly schedule
+	public String getDayOfWeek() throws Exception {
+		return xmlDoc.selectSingleNode("//schedule").getAttribute("dayofweek");
+	}
+	public void setDayOfWeek(String dayOfWeek) throws Exception {
+		xmlDoc.selectSingleNode("//schedule").setAttribute("dayofweek", dayOfWeek);
+	}
+
+	// Daily schedule
+	public Date getStartTime() throws Exception {
+		XMLNode timeNode = xmlDoc.selectSingleNode("//schedule/starttime/datetime");
+		if(timeNode != null) {
+			return TIME_FORMAT.parse(timeNode.getText());
+		}
+		return null;
+	}
+	public void setStartTime(Date startTime) throws Exception {
+		XMLNode schedule = xmlDoc.selectSingleNode("//schedule");
+		XMLNode starttime = schedule.selectSingleNode("starttime");
+		if(starttime == null) { starttime = schedule.addChildElement("starttime"); }
+		XMLNode datetime = starttime.selectSingleNode("datetime");
+		if(datetime == null) {
+			datetime = starttime.addChildElement("datetime");
+			datetime.setAttribute("dst", "false");
+		}
+		datetime.setText(TIME_FORMAT.format(startTime));
+	}
+
 	public String getEnabled() throws Exception {
 		return xmlDoc.selectSingleNode("//agent").getAttribute("enabled").equals("false") ? "false" : "true";
 	}
@@ -66,12 +97,12 @@ public class Config_UpdaterAgent extends BasicXPageController {
 		xmlDoc.selectSingleNode("//agent").setAttribute("enabled", enabled);
 	}
 
-
 	public String save() {
 		DxlImporter importer = null;
 		try {
 			Database database = ExtLibUtil.getCurrentDatabase();
 			Database signerDB = ExtLibUtil.getCurrentSessionAsSignerWithFullAccess().getDatabase(database.getServer(), database.getFilePath());
+			//Database normalSignerDB = ExtLibUtil.getCurrentSessionAsSigner().getDatabase(database.getServer(), database.getFilePath());
 
 			importer = ExtLibUtil.getCurrentSessionAsSignerWithFullAccess().createDxlImporter();
 			importer.setDesignImportOption(DxlImporter.DXLIMPORTOPTION_REPLACE_ELSE_CREATE);
@@ -83,6 +114,9 @@ public class Config_UpdaterAgent extends BasicXPageController {
 			agentDoc.sign();
 			agentDoc.save();
 			agentDoc.recycle();
+			//			Agent agent = database.getAgent(xmlDoc.selectSingleNode("//agent").getAttribute("name"));
+			//			agent.save();
+			//			agent.recycle();
 
 			fetchAgentInfo();
 			JSFUtil.addMessage("confirmation", "Agent updated");
@@ -99,5 +133,19 @@ public class Config_UpdaterAgent extends BasicXPageController {
 		}
 
 		return "xsp-success";
+	}
+
+	public String delete() {
+		try {
+			Database database = ExtLibUtil.getCurrentDatabase();
+			Database signerDB = ExtLibUtil.getCurrentSessionAsSignerWithFullAccess().getDatabase(database.getServer(), database.getFilePath());
+			Document agentDoc = signerDB.getDocumentByID(JSFUtil.getParam().get("agentId"));
+			agentDoc.remove(true);
+		} catch(Exception e) {
+			JSFUtil.addMessage("error", "Exception: " + e.toString());
+
+			return "xsp-failure";
+		}
+		return "deleted-agent";
 	}
 }

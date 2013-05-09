@@ -89,6 +89,7 @@ public class Config_UpdaterAgents extends BasicXPageController {
 
 			// Now fill in the correct information
 			xmlDoc.selectSingleNode("//agent").setAttribute("name", "$$UpdaterAgent-" + canonName);
+			xmlDoc.selectSingleNode("//schedule").setAttribute("runlocation", "specific");
 			xmlDoc.selectSingleNode("//schedule").setAttribute("runserver", canonName);
 			xmlDoc.selectSingleNode("//agent").setAttribute("runonbehalfof", canonName);
 

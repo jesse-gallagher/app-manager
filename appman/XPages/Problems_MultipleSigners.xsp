@@ -13,17 +13,23 @@
 			<xp:this.data>
 				<xp:dominoView var="view1" ignoreRequestParams="true" viewName="#{'Problems\\Multiple Signers'}"/>
 			</xp:this.data>
-			<xp:viewColumn columnName="Title" id="viewColumn1">
+			<xp:viewColumn columnName="Title" id="viewColumn1" displayAs="link">
 				<xp:viewColumnHeader value="Title" id="viewColumnHeader1" sortable="true"/>
 			</xp:viewColumn>
-			<xp:viewColumn columnName="FilePath" id="viewColumn4">
+			<xp:viewColumn columnName="FilePath" id="viewColumn4" displayAs="link">
 				<xp:viewColumnHeader value="File Path" id="viewColumnHeader4" sortable="true"/>
 			</xp:viewColumn>
 			<xp:viewColumn columnName="Server" id="viewColumn2">
-				<xp:viewColumnHeader value="Servers" id="viewColumnHeader2" sortable="true"/>
+				<xp:viewColumnHeader value="Servers" id="viewColumnHeader2" sortable="true" />
+				<xp:this.converter>
+					<xp:converter converterId="abbreviatedName"/>
+				</xp:this.converter>
 			</xp:viewColumn>
 			<xp:viewColumn columnName="XSPSigners" id="viewColumn5">
 				<xp:viewColumnHeader value="Signers" id="viewColumnHeader5" sortable="true"/>
+				<xp:this.converter>
+					<xp:converter converterId="abbreviatedName"/>
+				</xp:this.converter>
 			</xp:viewColumn>
 		</xp:viewPanel>
 	</xc:layout>

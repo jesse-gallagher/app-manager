@@ -1,12 +1,12 @@
 <?xml version='1.0' encoding='utf-8'?>
 <note class='view' xmlns='http://www.lotus.com/dxl' version='9.0' replicaid='85257AED0043B6B0'>
-<noteinfo noteid='2e2' unid='88601598FBE5C8E485257AED00453A4E' sequence='1'>
+<noteinfo noteid='322' unid='88601598FBE5C8E485257AED00453A4E' sequence='3'>
 <created><datetime>20130108T073609,10-05</datetime></created>
-<modified><datetime>20130108T073609,19-05</datetime></modified>
-<revised><datetime>20130108T073609,18-05</datetime></revised>
-<lastaccessed><datetime>20130108T141608,74-05</datetime></lastaccessed>
-<addedtofile><datetime>20130108T073609,18-05</datetime></addedtofile></noteinfo>
-<updatedby><name>CN=Jesse Gallagher/O=MTC</name><name>CN=Jesse Gallagher/O=Frost</name></updatedby>
+<modified><datetime>20130123T090155,82-05</datetime></modified>
+<revised><datetime>20130122T210526,71-05</datetime></revised>
+<lastaccessed><datetime dst='true'>20130316T020046,42-04</datetime></lastaccessed>
+<addedtofile><datetime>20130110T144248,78-05</datetime></addedtofile></noteinfo>
+<updatedby><name>CN=Jesse Gallagher/O=Frost</name></updatedby>
 <wassignedby><name>CN=Jesse Gallagher/O=Frost</name></wassignedby>
 <item name='$FormatNote' summary='true'>
 <rawitemdata type='4'>

@@ -1,11 +1,11 @@
 <?xml version='1.0' encoding='utf-8'?>
 <note class='view' xmlns='http://www.lotus.com/dxl' version='9.0' replicaid='85257AED0043B6B0'>
-<noteinfo noteid='4c9a' unid='FA819BBF4E6B12EF85257AED00668460' sequence='3'>
+<noteinfo noteid='3b2' unid='FA819BBF4E6B12EF85257AED00668460' sequence='5'>
 <created><datetime>20130108T133945,60-05</datetime></created>
-<modified><datetime>20130108T134026,79-05</datetime></modified>
-<revised><datetime>20130108T134026,78-05</datetime></revised>
-<lastaccessed><datetime>20130108T134036,34-05</datetime></lastaccessed>
-<addedtofile><datetime>20130108T133946,23-05</datetime></addedtofile></noteinfo>
+<modified><datetime>20130123T090155,77-05</datetime></modified>
+<revised><datetime>20130122T210523,89-05</datetime></revised>
+<lastaccessed><datetime>20130123T090155,76-05</datetime></lastaccessed>
+<addedtofile><datetime>20130110T144249,49-05</datetime></addedtofile></noteinfo>
 <updatedby><name>CN=Jesse Gallagher/O=Frost</name></updatedby>
 <wassignedby><name>CN=Jesse Gallagher/O=Frost</name></wassignedby>
 <item name='$FormatNote' summary='true'>

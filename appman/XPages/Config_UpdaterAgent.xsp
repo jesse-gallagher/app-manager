@@ -23,16 +23,32 @@
 				<xp:comboBox value="#{pageController.scheduleType}">
 					<xp:eventHandler event="onchange" submit="true" refreshMode="partial" refreshId="agentFormPanel" disableValidators="true"/>
 				
-					<xp:selectItem itemLabel="monthly"/>
+					<xp:selectItem itemLabel="Daily" itemValue="daily"/>
+					<xp:selectItem itemLabel="Weekly" itemValue="weekly"/>
+					<xp:selectItem itemLabel="Monthly" itemValue="monthly"/>
 				</xp:comboBox>
 			</xc:bsControlGroup>
 			<xc:bsControlGroup label="Day in Month" rendered="#{pageController.scheduleType == 'monthly'}">
-				<xp:comboBox value="#{pageController.dayInMonth}">
+				<xp:comboBox value="#{pageController.dateInMonth}">
 					<xp:selectItems><xp:this.value><![CDATA[${javascript:
 						var result = []
 						for(var i = 1; i <= 31; i++) { result.push(i.toFixed(0)) }
 						result
 					}]]></xp:this.value></xp:selectItems>
+				</xp:comboBox>
+			</xc:bsControlGroup>
+			<xc:bsControlGroup label="Time" rendered="#{pageController.scheduleType == 'daily'}">
+				<xe:djTimeTextBox id="djTimeTextBox1" value="#{pageController.startTime}"/>
+			</xc:bsControlGroup>
+			<xc:bsControlGroup label="On Day" rendered="#{pageController.scheduleType == 'weekly'}">
+				<xp:comboBox value="#{pageController.dayOfWeek}">
+					<xp:selectItem itemLabel="Sunday" itemValue="sunday"/>
+					<xp:selectItem itemLabel="Monday" itemValue="monday"/>
+					<xp:selectItem itemLabel="Tuesday" itemValue="tuesday"/>
+					<xp:selectItem itemLabel="Wednesday" itemValue="wednesday"/>
+					<xp:selectItem itemLabel="Thursday" itemValue="thursday"/>
+					<xp:selectItem itemLabel="Friday" itemValue="friday"/>
+					<xp:selectItem itemLabel="Saturday" itemValue="saturday"/>
 				</xp:comboBox>
 			</xc:bsControlGroup>
 		</xp:div>
@@ -41,10 +57,18 @@
 			<xp:eventHandler event="onclick" submit="true" refreshMode="complete" immediate="false"
 				action="#{pageController.save}"/>
 		</xp:button>
+		&#160;
+		<xp:button id="deleteAgent" value="Delete" styleClass="btn btn-danger">
+			<xp:eventHandler event="onclick" submit="true" refreshMode="complete" immediate="true" disableValidators="true"
+				action="#{pageController.delete}">
+				<xp:this.script><![CDATA[ return XSP.confirm("Delete this agent?") ]]></xp:this.script>
+			</xp:eventHandler>
+		</xp:button>
 	</xc:layout>
 	
 	<xp:this.navigationRules>
 		<xp:navigationRule outcome="xsp-success" viewId="/Config_UpdaterAgent.xsp?agentId=${param.agentId}"/>
 		<xp:navigationRule outcome="xsp-failure" viewId="/Config_UpdaterAgent.xsp?agentId=${param.agentId}"/>
+		<xp:navigationRule outcome="deleted-agent" viewId="/Config_UpdaterAgents.xsp"/>
 	</xp:this.navigationRules>
 </xp:view>

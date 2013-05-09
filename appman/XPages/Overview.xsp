@@ -9,7 +9,9 @@
 		
 		<div class="form-horizontal read-only">
 			<xc:bsControlGroup label="Server Name">
-				<xp:text value="#{pageController.serverName}"/>
+				<xp:text value="#{pageController.serverName}">
+					<xp:this.converter><xp:converter converterId="abbreviatedName"/></xp:this.converter>
+				</xp:text>
 			</xc:bsControlGroup>
 			<xc:bsControlGroup label="XPage Apps">
 				<xp:text value="#{pageController.XPageAppCount}"/>

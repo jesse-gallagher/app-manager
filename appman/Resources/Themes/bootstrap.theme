@@ -2,8 +2,11 @@
 	<resources>
 		<metaData name="viewport" content="width=device-width, initial-scale=1.0" />
 
-		<!--		<styleSheet type="text/css" href="/css/bootstrap.min.css"/>-->
-		<styleSheet type="text/css" href="/css/bootswatch-amelia.min.css" />
+<!--		<styleSheet type="text/css" href="/css/bootstrap.min.css"/>-->
+<!--		<styleSheet type="text/css" href="/css/bootswatch-amelia.min.css" />-->
+		<styleSheet type="text/css" href="/css/bootswatch-cosmo.min.css" />
+<!--		<styleSheet type="text/css" href="/css/bootswatch-spruce.min.css" />-->
+		
 		<styleSheet type="text/css" href="/css/bootstrap-responsive.min.css" />
 		<!--		<styleSheet type="text/css" href="/css/docs.css"/>-->
 		

@@ -23,7 +23,7 @@
 						</div>
 					</xe:dialogContent>
 					<xe:dialogButtonBar>
-						<xp:button id="createUpdaterAgentConfirm" value="Create Agent">
+						<xp:button id="createUpdaterAgentConfirm" value="Create" styleClass="btn btn-primary">
 							<xp:eventHandler event="onclick" submit="true" refreshMode="complete" action="#{pageController.createAgent}"/>
 						</xp:button>
 					</xe:dialogButtonBar>
@@ -36,7 +36,11 @@
 			
 			<xp:column>
 				<xp:this.facets><xp:text xp:key="header" value="Server"/></xp:this.facets>
-				<xc:link value="/Config_UpdaterAgent.xsp?agentId=#{agent.noteId}" text="#{agent.server}"/>
+				<xc:link value="/Config_UpdaterAgent.xsp?agentId=#{agent.noteId}">
+					<xp:text value="#{agent.server}">
+						<xp:this.converter><xp:converter converterId="abbreviatedName"/></xp:this.converter>
+					</xp:text>
+				</xc:link>
 			</xp:column>
 			<xp:column>
 				<xp:this.facets><xp:text xp:key="header" value="Enabled"/></xp:this.facets>

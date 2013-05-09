@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xp:view xmlns:xp="http://www.ibm.com/xsp/core" xmlns:xe="http://www.ibm.com/xsp/coreex" xmlns:xc="http://www.ibm.com/xsp/custom"
+	beforePageLoad="#{pageController.beforePageLoad}" afterPageLoad="#{pageController.afterPageLoad}"
+	pageTitle="Application">
+	
+	<xp:this.data>
+		<xp:dominoDocument var="doc" formName="#{'Database'}" action="openDocument"/>
+	</xp:this.data>
+	
+	<xc:layout navigationPath="/Application" pageTitle="#{view.pageTitle}">
+		<xp:this.facets>
+<!--			<xc:linksbarApplications xp:key="LeftColumn"/>-->
+		</xp:this.facets>
+		
+		<xp:button id="createCopy" value="Create Design Backup">
+			<xp:eventHandler event="onclick" submit="true" refreshMode="norefresh"
+				action="#{pageController.createDesignBackup}"/>
+		</xp:button>
+	</xc:layout>
+</xp:view>

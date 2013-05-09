@@ -1,17 +1,16 @@
 <?xml version='1.0' encoding='utf-8'?>
 <note class='filter' xmlns='http://www.lotus.com/dxl' version='9.0' replicaid='85257AED0043B6B0'>
-<noteinfo noteid='505e' unid='C3683160A696C1BD85257AEE0073EAC4' sequence='18'>
+<noteinfo noteid='586' unid='C3683160A696C1BD85257AEE0073EAC4' sequence='38'>
 <created><datetime>20130109T160607,40-05</datetime></created>
-<modified><datetime>20130110T081632,22-05</datetime></modified>
-<revised><datetime>20130110T081602,24-05</datetime></revised>
-<lastaccessed><datetime>20130110T081632,21-05</datetime></lastaccessed>
-<addedtofile><datetime>20130109T160607,97-05</datetime></addedtofile></noteinfo>
+<modified><datetime>20130129T141916,79-05</datetime></modified>
+<revised><datetime>20130129T141916,78-05</datetime></revised>
+<lastaccessed><datetime>20130129T141916,78-05</datetime></lastaccessed>
+<addedtofile><datetime>20130110T144258,10-05</datetime></addedtofile></noteinfo>
 <updatedby><name>CN=Jesse Gallagher/O=Frost</name></updatedby>
-<wassignedby><name>CN=Ceres/O=Frost</name></wassignedby>
+<wassignedby><name>CN=Arcturus/O=Frost</name></wassignedby>
 <item name='$TITLE' sign='true'><text>$$UpdaterAgent-CN=Boreas/O=Frost</text></item>
 <item name='$DesignerVersion'><text>8.5.3</text></item>
-<item name='$OnBehalfOf' sign='true'><text>CN=Telamon/O=Frost</text></item>
-<item name='$Restricted' sign='true'><number>2</number></item>
+<item name='$Restricted' sign='true'><number>0</number></item>
 <item name='$AssistTrigger'><text>1</text></item>
 <item name='$MachineName' sign='true'><text>CN=Boreas/O=Frost</text></item>
 <item name='$AssistAction' sign='true'>
@@ -67,10 +66,10 @@ AAAAAAgBCQKoBAAAAAAAAAAAAAAAAAAAAAAAAAAAeAESABQAAAAAAFgBCYIAAAAA6QUAAAAAeAGc
 AP//AAAAAAUAAgAAAAkCTAIJAngBBggEADUAAAAAAB0AABoSAF5oASuoACSmGhMAXjwCS2gBLewC
 I6YaFgBe3AJLPAIsEAN9cAEjphoYAB0CAAAAEQAUAAAAAAD//wEAAwALAAAADgBEABAACgAAAAA=
 </rawitemdata></item>
-<item name='$AssistVersion'><datetime>20130110T081602,19-05</datetime></item>
+<item name='$AssistVersion'><datetime>20130129T141916,75-05</datetime></item>
 <item name='$AssistInfo' sign='true'>
 <rawitemdata type='11'>
-AgABAAAABAABAID8CgABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AQABAAAAAgABAID8CgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
 AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
 </rawitemdata></item>
 <item name='$AssistQuery' sign='true'>
@@ -84,7 +83,7 @@ AAAAAAAAAAA=
 <item name='$AssistDocCount' sign='true'><number>0</number></item>
 <item name='$AssistRunInfo' summary='true'>
 <rawitemdata type='3'>
-CAABAAAACACmaAAAcmgAAAAAAQAAAAAAAAAAAAAA
+CAABAAAACACuBgAAAAMAAAAAAQAAAAAAAAAAAAAA
 </rawitemdata></item>
 <item name='$Flags'><text>3fSL</text></item>
 <item name='$FlagsExt' sign='true'><text/></item></note>
