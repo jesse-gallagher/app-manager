@@ -1,32 +1,34 @@
-<?xml version='1.0' encoding='utf-8'?>
-<note class='view' xmlns='http://www.lotus.com/dxl' version='9.0' replicaid='85257AED0043B6B0'>
-<noteinfo noteid='3b2' unid='FA819BBF4E6B12EF85257AED00668460' sequence='5'>
-<created><datetime>20130108T133945,60-05</datetime></created>
-<modified><datetime>20130123T090155,77-05</datetime></modified>
-<revised><datetime>20130122T210523,89-05</datetime></revised>
-<lastaccessed><datetime>20130123T090155,76-05</datetime></lastaccessed>
-<addedtofile><datetime>20130110T144249,49-05</datetime></addedtofile></noteinfo>
-<updatedby><name>CN=Jesse Gallagher/O=Frost</name></updatedby>
-<wassignedby><name>CN=Jesse Gallagher/O=Frost</name></wassignedby>
-<item name='$FormatNote' summary='true'>
-<rawitemdata type='4'>
+<?xml version="1.0" encoding="UTF-8"?>
+<note xmlns="http://www.lotus.com/dxl" class="view">
+  <item name="$FormatNote" summary="true">
+    <rawitemdata type="4">
 AQAmYw89issr8GZ0RgDteiWF
-</rawitemdata></item>
-<item name='$FormulaClass' sign='true'><text>1</text></item>
-<item name='$TITLE' sign='true'><text>Databases\By XPage</text></item>
-<item name='$Index' sign='true'><text/></item>
-<item name='$Formula' summary='true' sign='true'><formula compiled='true'>
+</rawitemdata>
+  </item>
+  <item name="$FormulaClass" sign="true">
+    <text>1</text>
+  </item>
+  <item name="$TITLE" sign="true">
+    <text>Databases\By XPage</text>
+  </item>
+  <item name="$Index" sign="true">
+    <text/>
+  </item>
+  <item name="$Formula" summary="true" sign="true">
+    <formula compiled="true">
 tgACAC4ABAAkS2V5BQAGAFNlcnZlcgEAAgAhISICBQAJAFJlcGxpY2FJRAAiAgMABQBcAFcACAAG
 AAQABgAJAAgAFQAJAAQAWFBhZ2VzJEtleVNlcnZlclJlcGxpY2FJRFBhdGhuYW1lRGJJbmhlcml0
 VGVtcGxhdGVOYW1lJENvbmZsaWN0JFJFRgAEAAQAAAAcAAUABABGb3JtAQAIAERhdGFiYXNlCgID
 AAcACgAEAAlMMVM=
-</formula></item>
-<item name='$Collation' summary='true'>
-<rawitemdata type='2'>
+</formula>
+  </item>
+  <item name="$Collation" summary="true">
+    <rawitemdata type="2">
 IAACAABEiGYHAAAGAJhmAAYABgBYUGFnZXNTZXJ2ZXI=
-</rawitemdata></item>
-<item name='$ViewFormat' summary='true' sign='true'>
-<rawitemdata type='5'>
+</rawitemdata>
+  </item>
+  <item name="$ViewFormat" summary="true" sign="true">
+    <rawitemdata type="5">
 AQAGAAsAiEAAAFZDgwQGAAAAAAAAAAgAAQEACgABAAAAAAAAAAICAAAAVkMAAAQABABAAAAAoQAB
 AAAKAAAAAAAAAAAAAgIAAABWQ4AABgAGAAAAAABFAAEAAAoAAQAAAAAAAAACAgAAAFZDAAAJAAkA
 AAAAAFAAAQAACgAAAAAAAAAAAAICAAAAVkMAAAgACAAAAAAAUAABAAAKAAAAAAAAAAAAAgIAAABW
@@ -41,15 +43,20 @@ AAAAAP//AAAAAAAAAAAAAAAAAABXQwEBAAkAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAD//wAAAAAA
 AAAAAAAAAAAAV0MBAQAJAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAA//8AAAAAAAAAAAAAAAAAAEIA
 EQAAAAEA////AAEA7+/vAAEA////AAAAAAAAAAAAAQD///8AAQD///8AAAABAAAAAAABAAAAAAAB
 AAAAAAAAAAgAAAAAAAEA
-</rawitemdata></item>
-<item name='$Comment' sign='true'><text/></item>
-<item name='$Flags'><text>PY</text></item>
-<item name='$DesignerVersion'><text>8.5.3</text></item>
-<item name='$V5ACTIONS' sign='true'>
-<rawitemdata type='1'>
+</rawitemdata>
+  </item>
+  <item name="$Comment" sign="true">
+    <text/>
+  </item>
+  <item name="$Flags">
+    <text>PY</text>
+  </item>
+  <item name="$V5ACTIONS" sign="true">
+    <rawitemdata type="1">
 vRwjAAAAAQABAAAAAQAAAAAAAAAAAAAACAACAHn/bAABANTQyAABAAAAAAAJAAAAAAABANTQyAAA
 AB8AAAAAAAAAAAADAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
 AAAAAAAAAAAAAAAAAAAAAAAAAAAAAPz/OgAAAAAAAQAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAA
 AAAAAAAAAAEAAAAAAAAAAAAAAAAAAAA=
-</rawitemdata></item></note>
-
+</rawitemdata>
+  </item>
+</note>
