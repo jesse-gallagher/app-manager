@@ -16,9 +16,6 @@
 			<xc:bsControlGroup label="XPage Apps">
 				<xp:text value="#{pageController.XPageAppCount}"/>
 			</xc:bsControlGroup>
-			<xc:bsControlGroup label="Memory">
-				Plentiful
-			</xc:bsControlGroup>
 		</div>
 	</xc:layout>
 </xp:view>
