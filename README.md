@@ -11,4 +11,4 @@ The starting itches that needed scratching were:
 * Checks for potential problems, such as XPage elements signed with multiple signers
 * Automated app deployment/update, backing up the current design of an app before applying a new NTF
 
-Grown furhter, this sort of thing could be very useful, for example by adding a way to POST an NTF to the server to have it inspected for problems and potentially signed and deployed at the end of an automated build process.
+Grown further, this sort of thing could be very useful, for example by adding a way to POST an NTF to the server to have it inspected for problems and potentially signed and deployed at the end of an automated build process.
