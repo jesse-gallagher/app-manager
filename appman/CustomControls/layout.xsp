@@ -75,7 +75,7 @@
 			<div class="span12">
 				<footer class="footer">
 <!--					<p class="pull-right"><xc:link value="https://github.com/jesse-gallagher/portfolio/blob/master/frostillic.us-portfolio/XPages#{view.pageName}" text="View page on GitHub"/></p>-->
-					<p>© 2013 Jesse Gallagher</p>
+					<p>© 2013-2017 Jesse Gallagher</p>
 				</footer>
 			</div>
 		</div>
