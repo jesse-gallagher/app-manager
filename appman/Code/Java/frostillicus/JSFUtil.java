@@ -7,10 +7,7 @@ import javax.faces.el.ValueBinding;
 import sun.misc.BASE64Decoder;
 import com.ibm.xsp.component.UIViewRootEx2;
 import com.ibm.xsp.extlib.util.ExtLibUtil;
-import com.ibm.xsp.extlib.util.JdbcUtil;
 
-import java.sql.Connection;
-import java.sql.SQLException;
 import lotus.domino.*;
 import lotus.notes.addins.DominoServer;
 
@@ -56,10 +53,6 @@ public class JSFUtil {
 	}
 	public static UIViewRootEx2 getViewRoot() {
 		return (UIViewRootEx2)getVariableValue("view");
-	}
-
-	public static Connection getConnection(String connectionName) throws SQLException {
-		return JdbcUtil.getConnection(FacesContext.getCurrentInstance(), connectionName);
 	}
 
 	public static Database findProjectDatabase(String projectDocumentUNID) throws NotesException {

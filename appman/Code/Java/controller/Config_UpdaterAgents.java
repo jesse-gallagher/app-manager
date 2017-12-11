@@ -8,14 +8,12 @@ import java.util.*;
 
 import com.ibm.commons.util.StringUtil;
 import com.ibm.xsp.extlib.util.ExtLibUtil;
-import lombok.*;
 import com.raidomatic.xml.*;
 
 public class Config_UpdaterAgents extends BasicXPageController {
 	private static final long serialVersionUID = 1L;
 
-	@Getter private List<Map<String, Object>> agentInfo;
-
+	private List<Map<String, Object>> agentInfo;
 
 	@Override
 	public void beforePageLoad() throws Exception {
@@ -110,8 +108,12 @@ public class Config_UpdaterAgents extends BasicXPageController {
 
 		}
 	}
+	
+	public List<Map<String, Object>> getAgentInfo() {
+		return agentInfo;
+	}
 
-	public class AgentListComparator implements Comparator<Map<String, Object>> {
+	public static class AgentListComparator implements Comparator<Map<String, Object>> {
 
 		public int compare(Map<String, Object> arg0, Map<String, Object> arg1) {
 			return ((String)arg0.get("server")).compareToIgnoreCase((String)arg1.get("server"));
