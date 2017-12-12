@@ -18,7 +18,8 @@
 			<xp:viewColumn columnName="$$Created" id="viewColumn1" displayAs="link">
 				<xp:viewColumnHeader value="Created" id="viewColumnHeader1" sortable="true" />
 			</xp:viewColumn>
-			<xp:viewColumn columnName="$ServerAbbrev" id="viewColumn2" displayAs="link">
+			<xp:viewColumn columnName="Server" id="viewColumn2" displayAs="link">
+				<xp:this.converter><xp:converter converterId="abbreviatedName"/></xp:this.converter>
 				<xp:viewColumnHeader value="Server" id="viewColumnHeader2" sortable="true"/>
 			</xp:viewColumn>
 		</xp:viewPanel>
