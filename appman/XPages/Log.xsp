@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xp:view xmlns:xp="http://www.ibm.com/xsp/core" xmlns:xe="http://www.ibm.com/xsp/coreex" xmlns:xc="http://www.ibm.com/xsp/custom"
+	beforePageLoad="#{pageController.beforePageLoad}" afterPageLoad="#{pageController.afterPageLoad}"
+	pageTitle="Log">
+	
+	<xp:this.data>
+		<xp:dominoDocument var="doc" formName="${'Update Agent Report'}" action="openDocument"/>
+	</xp:this.data>
+	
+	<xc:layout navigationPath="/Logs/Log" pageTitle="#{view.pageTitle}">
+		<xc:bsControlGroup label="Server">
+			<xp:text value="#{doc.Server}"/>
+		</xc:bsControlGroup>
+		
+		<p style="white-space: pre-wrap">
+			<xp:text disableTheme="true" value="#{pageController.logBody}"/>
+		</p>
+	</xc:layout>
+</xp:view>

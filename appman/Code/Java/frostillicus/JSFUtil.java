@@ -34,9 +34,10 @@ public class JSFUtil {
 		binding.setValue(context, newObject);
 	}
 
-	public static Object getVariableValue(String varName) {
+	@SuppressWarnings("unchecked")
+	public static <T> T getVariableValue(String varName) {
 		FacesContext context = FacesContext.getCurrentInstance();
-		return context.getApplication().getVariableResolver().resolveVariable(context, varName);
+		return (T)context.getApplication().getVariableResolver().resolveVariable(context, varName);
 	}
 
 	public static String getUserName() {
