@@ -1,14 +1,18 @@
 package controller;
 
-import frostillicus.JSFUtil;
-import frostillicus.controller.BasicXPageController;
+import frostillicus.xsp.controller.BasicXPageController;
 import lotus.domino.*;
 
+import java.io.IOException;
 import java.util.*;
+
+import javax.faces.context.FacesContext;
 
 import com.ibm.commons.util.StringUtil;
 import com.ibm.xsp.extlib.util.ExtLibUtil;
 import com.raidomatic.xml.*;
+
+import net.cmssite.endeavour60.util.EndeavourStrings;
 
 public class Config_UpdaterAgents extends BasicXPageController {
 	private static final long serialVersionUID = 1L;
@@ -39,7 +43,7 @@ public class Config_UpdaterAgents extends BasicXPageController {
 			xmlDoc.loadString(dxl);
 
 			XMLNode agentNode = xmlDoc.selectSingleNode("//agent");
-			thisAgent.put("server", JSFUtil.strRight(agentNode.getAttribute("name"), "$$UpdaterAgent-"));
+			thisAgent.put("server", EndeavourStrings.strRight(agentNode.getAttribute("name"), "$$UpdaterAgent-"));
 			thisAgent.put("enabled", !agentNode.getAttribute("enabled").equals("false"));
 
 			XMLNode schedule = xmlDoc.selectSingleNode("//schedule");
@@ -104,7 +108,7 @@ public class Config_UpdaterAgents extends BasicXPageController {
 			agentDoc.save();
 			agentDoc.recycle();
 
-			JSFUtil.appRedirect("/Config_UpdaterAgent.xsp?agentId=" + importer.getFirstImportedNoteID());
+			appRedirect("/Config_UpdaterAgent.xsp?agentId=" + importer.getFirstImportedNoteID());
 
 		}
 	}
@@ -120,4 +124,14 @@ public class Config_UpdaterAgents extends BasicXPageController {
 		}
 
 	}
+	
+	public static String getContextPath() {
+		return FacesContext.getCurrentInstance().getExternalContext().getRequestContextPath();
+	}
+
+	public static void appRedirect(String appPath) throws IOException {
+		String cleanPath = appPath.startsWith("/") ? appPath : "/" + appPath;
+		FacesContext.getCurrentInstance().getExternalContext().redirect(getContextPath() + cleanPath);
+	}
+
 }

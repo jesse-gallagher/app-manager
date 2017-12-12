@@ -9,16 +9,75 @@
 	
 	<xe:applicationLayout id="applicationLayout1">
 		<xe:this.configuration>
-			<xe:bootstrapResponsiveConfiguration legal="false" footer="false" titleBar="#{not empty compositeData.pageTitle}" titleBarName="#{compositeData.pageTitle}" productLogo="/$Icon"
-				productLogoAlt="${appHelper.appName}" productLogoHeight="24" productLogoWidth="24" placeBar="false" invertedNavbar="true">
-				<xe:this.bannerUtilityLinks>
-					<xe:userTreeNode />
-					<xe:loginTreeNode />
-				</xe:this.bannerUtilityLinks>
-			</xe:bootstrapResponsiveConfiguration>
+			<xe:oneuiApplication legal="false" footer="false" titleBar="#{not empty compositeData.pageTitle}" titleBarName="#{compositeData.pageTitle}" productLogo="/$Icon"
+				productLogoAlt="${eLocaleApp.appName}" productLogoHeight="24" productLogoWidth="24" placeBar="false" mastHeader="true" banner="false">
+			</xe:oneuiApplication>
 		</xe:this.configuration>
 
 		<xe:this.facets>
+			<xp:div xp:key="MastHeader" styleClass="endeavor-header">
+				<div class="companyLogo">
+					<xp:link value="http://endeavorsite.com/" target="_blank">
+						<xp:image url="/.ibmxspres/.extlib/endeavour-6.0-plans/images/logo_company.gif" />
+					</xp:link>
+				</div>
+				<xp:text value="#{UserInfo.companyName}"
+					style="font-family: 'Times New Roman', Times, serif; font-style: oblique; float: right; position: relative; color: #FFF; font-size: 18px; top: 35px; right: 30px;" tagName="div"
+					disableTheme="true">
+				</xp:text>
+				<!-- Info Bar -->
+				<div style="clear: both" class="infoBar">
+					<table cellpadding="0" cellspacing="0">
+						<tr>
+							<td>
+								<ul>
+<!--									<li>-->
+<!--										<div class="icon" />-->
+<!--										<xp:link escape="true" text="My Company Profile" id="link1">-->
+<!--											<xp:eventHandler event="onclick" submit="true" refreshMode="complete">-->
+<!--												<xp:this.action><![CDATA[#{javascript:net.cmssite.xpages.Pages.openPage(net.cmssite.xpages.Pages.myCompanyProfile);}]]></xp:this.action>-->
+<!--											</xp:eventHandler>-->
+<!--										</xp:link>-->
+<!--									</li>-->
+<!--									<li>-->
+<!--										<div class="icon two"></div>-->
+<!--										<xp:link escape="true" text="My Company Projects" id="link2">-->
+<!--											<xp:eventHandler event="onclick" submit="true" refreshMode="complete">-->
+<!--												<xp:this.action><![CDATA[#{javascript:net.cmssite.xpages.Pages.openPage(net.cmssite.xpages.Pages.myCompanyProjects);}]]></xp:this.action>-->
+<!--											</xp:eventHandler>-->
+<!--										</xp:link>-->
+<!--									</li>-->
+<!--									<li>-->
+<!--										<div class="icon three"></div>-->
+<!--										<xp:link escape="true" id="link3" text="My Account Settings">-->
+<!--											<xp:eventHandler event="onclick" submit="true" refreshMode="complete">-->
+<!--												<xp:this.action><![CDATA[#{javascript:net.cmssite.xpages.Pages.openPage(net.cmssite.xpages.Pages.acctSettings);}]]></xp:this.action>-->
+<!--											</xp:eventHandler>-->
+<!--										</xp:link>-->
+<!--									</li>-->
+<!--									<li>-->
+<!--										<div class="pipe"></div>-->
+<!--									</li>-->
+									<li>
+										<div class="icon four"></div>
+										<xp:link escape="true" text="Support" id="link4" value="#{javascript:'mailto:support@projectsite.info?subject=Technical%20Support'}"></xp:link>
+									</li>
+								</ul>
+							</td>
+							<td style="text-align: right;">
+								<span class="infoBarItem">
+									<span><xp:text value="${eLocalePlans.welcome}"/>,&#160;</span>
+									<xp:text escape="true" contentType="text" value="#{UserInfo.fullName}" id="userNameText"></xp:text>
+									<div class="pipe" style="margin-left: 10px;display: inline;"></div>
+								</span>
+								<span class="infoBarItem">
+									<xp:link text="Logout" value="#{javascript:References.getLogoutUrl()}"></xp:link>
+								</span>
+							</td>
+						</tr>
+					</table>
+				</div>
+			</xp:div>
 			<xe:navigator xp:key="LeftColumn">
 				<xe:this.treeNodes>
 					<xe:pageTreeNode label="Overview" page="Overview" />

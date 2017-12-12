@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xp:view xmlns:xp="http://www.ibm.com/xsp/core" xmlns:xe="http://www.ibm.com/xsp/coreex" xmlns:xc="http://www.ibm.com/xsp/custom"
-	beforePageLoad="#{pageController.beforePageLoad}" afterPageLoad="#{pageController.afterPageLoad}"
+	beforePageLoad="#{controller.beforePageLoad}" afterPageLoad="#{controller.afterPageLoad}"
 	pageTitle="Overview">
 
 
 	<xc:layout navigationPath="/Overview" pageTitle="#{view.pageTitle}">
 		<xe:formTable>
 			<xe:formRow label="Server Name">
-				<xp:text value="#{pageController.serverName}">
+				<xp:text value="#{controller.serverName}">
 					<xp:this.converter><xp:converter converterId="abbreviatedName"/></xp:this.converter>
 				</xp:text>
 			</xe:formRow>
 			<xe:formRow label="XPage Apps">
-				<xp:text value="#{pageController.XPageAppCount}"/>
+				<xp:text value="#{controller.XPageAppCount}"/>
 			</xe:formRow>
 		</xe:formTable>
 	</xc:layout>
