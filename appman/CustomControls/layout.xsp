@@ -21,49 +21,10 @@
 						<xp:image url="/.ibmxspres/.extlib/endeavour-6.0-plans/images/logo_company.gif" />
 					</xp:link>
 				</div>
-				<xp:text value="#{UserInfo.companyName}"
-					style="font-family: 'Times New Roman', Times, serif; font-style: oblique; float: right; position: relative; color: #FFF; font-size: 18px; top: 35px; right: 30px;" tagName="div"
-					disableTheme="true">
-				</xp:text>
 				<!-- Info Bar -->
 				<div style="clear: both" class="infoBar">
 					<table cellpadding="0" cellspacing="0">
 						<tr>
-							<td>
-								<ul>
-<!--									<li>-->
-<!--										<div class="icon" />-->
-<!--										<xp:link escape="true" text="My Company Profile" id="link1">-->
-<!--											<xp:eventHandler event="onclick" submit="true" refreshMode="complete">-->
-<!--												<xp:this.action><![CDATA[#{javascript:net.cmssite.xpages.Pages.openPage(net.cmssite.xpages.Pages.myCompanyProfile);}]]></xp:this.action>-->
-<!--											</xp:eventHandler>-->
-<!--										</xp:link>-->
-<!--									</li>-->
-<!--									<li>-->
-<!--										<div class="icon two"></div>-->
-<!--										<xp:link escape="true" text="My Company Projects" id="link2">-->
-<!--											<xp:eventHandler event="onclick" submit="true" refreshMode="complete">-->
-<!--												<xp:this.action><![CDATA[#{javascript:net.cmssite.xpages.Pages.openPage(net.cmssite.xpages.Pages.myCompanyProjects);}]]></xp:this.action>-->
-<!--											</xp:eventHandler>-->
-<!--										</xp:link>-->
-<!--									</li>-->
-<!--									<li>-->
-<!--										<div class="icon three"></div>-->
-<!--										<xp:link escape="true" id="link3" text="My Account Settings">-->
-<!--											<xp:eventHandler event="onclick" submit="true" refreshMode="complete">-->
-<!--												<xp:this.action><![CDATA[#{javascript:net.cmssite.xpages.Pages.openPage(net.cmssite.xpages.Pages.acctSettings);}]]></xp:this.action>-->
-<!--											</xp:eventHandler>-->
-<!--										</xp:link>-->
-<!--									</li>-->
-<!--									<li>-->
-<!--										<div class="pipe"></div>-->
-<!--									</li>-->
-									<li>
-										<div class="icon four"></div>
-										<xp:link escape="true" text="Support" id="link4" value="#{javascript:'mailto:support@projectsite.info?subject=Technical%20Support'}"></xp:link>
-									</li>
-								</ul>
-							</td>
 							<td style="text-align: right;">
 								<span class="infoBarItem">
 									<span><xp:text value="${eLocaleApp.welcome}"/>,&#160;</span>
