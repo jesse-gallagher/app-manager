@@ -6,8 +6,40 @@
 	<xp:this.data>
 		<xp:dominoDocument var="doc" formName="#{'Database'}" action="openDocument"/>
 	</xp:this.data>
+	<xp:this.navigationRules>
+		<xp:navigationRule outcome="xsp-success" viewId="/Applications_All.xsp"/>
+	</xp:this.navigationRules>
 	
 	<xc:layout navigationPath="/Application" pageTitle="#{view.pageTitle}">
+		<xe:formTable>
+			<xe:this.facets>
+				<xp:div xp:key="footer">
+					<xp:button id="save" value="Save">
+						<xp:eventHandler event="onclick" submit="true" refreshMode="complete" immediate="false" save="true"/>
+					</xp:button>
+				</xp:div>
+			</xe:this.facets>
+		
+			<xe:formRow label="Title">
+				<xp:text value="#{doc.Title}"/>
+			</xe:formRow>
+			<xe:formRow label="Server">
+				<xp:text value="#{doc.Server}"/>
+			</xe:formRow>
+			<xe:formRow label="File Path">
+				<xp:text value="#{doc.FilePath}"/>
+			</xe:formRow>
+			<xe:formRow label="Replica ID">
+				<xp:text value="#{doc.ReplicaID}"/>
+			</xe:formRow>
+			<xe:formRow label="Hidden?">
+				<xp:radioGroup id="hidden" value="#{doc.Hidden}" defaultValue="No">
+					<xp:selectItem itemLabel="Yes"/>
+					<xp:selectItem itemLabel="No"/>
+				</xp:radioGroup>
+			</xe:formRow>
+		</xe:formTable>
+	
 		<xp:button id="createCopy" value="Create Design Backup">
 			<xp:eventHandler event="onclick" submit="true" refreshMode="norefresh"
 				action="#{pageController.createDesignBackup}"/>
