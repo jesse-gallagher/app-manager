@@ -1,20 +1,27 @@
-<?xml version="1.0" encoding="UTF-8"?><note class="form" replicaid="85257AED0043B6B0" version="9.0" xmlns="http://www.lotus.com/dxl">
-<noteinfo noteid="302" sequence="5" unid="C84924B53E1BE78F85257AED00443157">
-<created><datetime>20130108T072450,79-05</datetime></created>
-<modified><datetime>20130123T090154,54-05</datetime></modified>
-<revised><datetime>20130122T210553,41-05</datetime></revised>
-<lastaccessed><datetime>20130123T090154,53-05</datetime></lastaccessed>
-<addedtofile><datetime>20130110T144248,61-05</datetime></addedtofile></noteinfo>
-<updatedby><name>CN=Jesse Gallagher/O=Frost</name></updatedby>
-<wassignedby><name>CN=Jesse Gallagher/O=Frost</name></wassignedby>
-<item name="$Flags"><text>D34CiQ</text></item>
-<item name="$FlagsExt"><text>D</text></item>
-<item name="$ImagesWide" sign="true"><number>1</number></item>
-<item name="$ImagesHigh" sign="true"><number>1</number></item>
-<item name="$ImagesColorize" sign="true"><number>0</number></item>
-<item name="$FileModDT" sign="true"><datetime>20121217T100324,00-05</datetime></item>
-<item name="$ImageNames" sign="true"><text>glyphicons-halflings-white.png</text></item>
-<item name="$TITLE" sign="true"><text>img/glyphicons-halflings-white.png</text></item>
-<item name="$DesignerVersion"><text>8.5.3</text></item>
-
+<?xml version="1.0" encoding="UTF-8"?>
+<note xmlns="http://www.lotus.com/dxl" class="form">
+  <item name="$Flags">
+    <text>D34CiQ</text>
+  </item>
+  <item name="$FlagsExt">
+    <text>D</text>
+  </item>
+  <item name="$ImagesWide" sign="true">
+    <number>1</number>
+  </item>
+  <item name="$ImagesHigh" sign="true">
+    <number>1</number>
+  </item>
+  <item name="$ImagesColorize" sign="true">
+    <number>0</number>
+  </item>
+  <item name="$FileModDT" sign="true">
+    <datetime>20121217T100324,00-05</datetime>
+  </item>
+  <item name="$ImageNames" sign="true">
+    <text>glyphicons-halflings-white.png</text>
+  </item>
+  <item name="$TITLE" sign="true">
+    <text>img/glyphicons-halflings-white.png</text>
+  </item>
 </note>

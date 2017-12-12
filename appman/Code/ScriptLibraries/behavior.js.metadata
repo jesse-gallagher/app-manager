@@ -1,14 +1,12 @@
-<?xml version="1.0" encoding="UTF-8"?><note class="filter" replicaid="85257AED0043B6B0" version="9.0" xmlns="http://www.lotus.com/dxl">
-<noteinfo noteid="166" sequence="5" unid="A2D5D1B7329A4548852579BA007B70DE">
-<created><datetime>20120307T172818,22-05</datetime></created>
-<modified><datetime>20130108T071942,38-05</datetime></modified>
-<revised><datetime>20130104T111527,04-05</datetime></revised>
-<lastaccessed><datetime>20130108T071942,37-05</datetime></lastaccessed>
-<addedtofile><datetime>20130108T071942,37-05</datetime></addedtofile></noteinfo>
-<updatedby><name>CN=Jesse Gallagher/O=MTC</name><name>CN=Jesse Gallagher/O=Frost</name></updatedby>
-<wassignedby><name>CN=Jesse Gallagher/O=Frost</name></wassignedby>
-<item name="$TITLE" sign="true"><text>behavior.js</text></item>
-<item name="$Flags"><text>h534Q</text></item>
-<item name="$PublicAccess" sign="true"><text>1</text></item>
-<item name="$DesignerVersion"><text>8.5.3</text></item>
+<?xml version="1.0" encoding="UTF-8"?>
+<note xmlns="http://www.lotus.com/dxl" class="filter">
+  <item name="$TITLE" sign="true">
+    <text>behavior.js</text>
+  </item>
+  <item name="$Flags">
+    <text>h534Q</text>
+  </item>
+  <item name="$PublicAccess" sign="true">
+    <text>1</text>
+  </item>
 </note>

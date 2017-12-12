@@ -1,27 +1,23 @@
-<?xml version='1.0' encoding='utf-8'?>
-<note class='form' xmlns='http://www.lotus.com/dxl' version='9.0' replicaid='85257AED0043B6B0'>
-<noteinfo noteid='27e' unid='618C5BB5308349A3852577EF0068CAB1' sequence='5'>
-<created><datetime>20101204T140436,33-05</datetime></created>
-<modified><datetime>20130123T090153,83-05</datetime></modified>
-<revised><datetime>20130122T210557,11-05</datetime></revised>
-<lastaccessed><datetime>20130123T090153,82-05</datetime></lastaccessed>
-<addedtofile><datetime>20130110T144247,91-05</datetime></addedtofile></noteinfo>
-<updatedby><name>CN=Jesse Gallagher/O=Frost</name></updatedby>
-<wassignedby><name>CN=Jesse Gallagher/O=Frost</name></wassignedby>
-<item name='OriginalModTime'><datetime dst='true'>20061024T120302,07-04</datetime></item>
-<item name='$HTMLCode' sign='true'>
-<rawitemdata type='1'>
+<?xml version="1.0" encoding="UTF-8"?>
+<note xmlns="http://www.lotus.com/dxl" class="form">
+  <item name="OriginalModTime">
+    <datetime dst="true">20061024T120302,07-04</datetime>
+  </item>
+  <item name="$HTMLCode" sign="true">
+    <rawitemdata type="1">
 X/8QAAIADwAHAAAAAAAAAA==
-</rawitemdata></item>
-<item name='$TITLE'><text>NavPage</text></item>
-<item name='$Info' sign='true'>
-<rawitemdata type='1'>
+</rawitemdata>
+  </item>
+  <item name="$TITLE">
+    <text>NavPage</text>
+  </item>
+  <item name="$Info" sign="true">
+    <rawitemdata type="1">
 hhgBAIAAAAAAgAAATwABANbd5QAQAAAA
-</rawitemdata></item>
-<item name='$DesignerVersion'><text>8.5.2</text></item>
-<item name='$$ScriptName' summary='false' sign='true'><text>NavPage</text></item>
-<item name='$Body' sign='true'>
-<rawitemdata type='1'>
+</rawitemdata>
+  </item>
+  <item name="$Body" sign="true">
+    <rawitemdata type="1">
 gQKC/1oAAQAAAAAAAAAAADgEAAA4BAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
 AAAAAAAAAAABAAAAAJSAOAQAADgEAABZTGQAAQAAAAQAAACDBAEAhf8JAAEAAAogAIECgwQBAIX/
 CAABAAAK3QYAAK3/cf8qAAAAAAADABYACAAAAAAAAAAAAAAAAAAAAAAAAAAAAE1haW5PdXQArf8U
@@ -33,6 +29,9 @@ gIAAAQAAAAAAAQD///8AAQD///8AAAAAAAIAAgAAAAAAAwADAAAAAAAAAAAAAAAAAAAAAAAAAAAA
 AAAAAAEAAAAAAAEAAAAAAAEAAAAAAAEAAAAAAAEAAAAAAAEAAAAAAAAAEwAAAAAAAAAAAAAAAAAA
 AAAAAAAAAFRlbXBPdXRsaW5lTm90ZXNWaWV3/P86AAAAAAAAAAAAAAAAAAAAAAAAAAAABgAAAAAA
 AAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAK4C3gYAAK4Ahf8IAAEAAAo=
-</rawitemdata></item>
-<item name='$Flags'><text>C34WQ1</text></item></note>
-
+</rawitemdata>
+  </item>
+  <item name="$Flags">
+    <text>C34WQ1</text>
+  </item>
+</note>

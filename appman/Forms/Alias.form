@@ -1,65 +1,80 @@
-<?xml version='1.0' encoding='utf-8'?>
-<note class='form' xmlns='http://www.lotus.com/dxl' version='9.0' replicaid='85257AED0043B6B0'>
-<noteinfo noteid='31e' unid='2EA6F56405DD2D0F85257AED00453C16' sequence='3'>
-<created><datetime>20130108T073613,66-05</datetime></created>
-<modified><datetime>20130123T090154,38-05</datetime></modified>
-<revised><datetime>20130122T210602,17-05</datetime></revised>
-<lastaccessed><datetime>20130123T090154,37-05</datetime></lastaccessed>
-<addedtofile><datetime>20130110T144248,75-05</datetime></addedtofile></noteinfo>
-<updatedby><name>CN=Jesse Gallagher/O=Frost</name></updatedby>
-<wassignedby><name>CN=Jesse Gallagher/O=Frost</name></wassignedby>
-<item name='$Comment' sign='true'><text/></item>
-<item name='$SubForm_RepIDs' sign='true'><text>0000000000000000</text></item>
-<item name='Date' summary='false' sign='true'>
-<rawitemdata type='400'>
+<?xml version="1.0" encoding="UTF-8"?>
+<note xmlns="http://www.lotus.com/dxl" class="form">
+  <item name="$Comment" sign="true">
+    <text/>
+  </item>
+  <item name="$SubForm_RepIDs" sign="true">
+    <text>0000000000000000</text>
+  </item>
+  <item name="Date" summary="false" sign="true">
+    <rawitemdata type="400">
 AAAAAAAAAAA=
-</rawitemdata></item>
-<item name='Time' summary='false' sign='true'>
-<rawitemdata type='400'>
+</rawitemdata>
+  </item>
+  <item name="Time" summary="false" sign="true">
+    <rawitemdata type="400">
 AAAAAAAAAAA=
-</rawitemdata></item>
-<item name='DateTime' summary='false' sign='true'>
-<rawitemdata type='400'>
+</rawitemdata>
+  </item>
+  <item name="DateTime" summary="false" sign="true">
+    <rawitemdata type="400">
 AAAAAAAAAAA=
-</rawitemdata></item>
-<item name='DateComposed' summary='false' sign='true'>
-<rawitemdata type='400'>
+</rawitemdata>
+  </item>
+  <item name="DateComposed" summary="false" sign="true">
+    <rawitemdata type="400">
 AAAAAAAAAAA=
-</rawitemdata></item>
-<item name='DateModified' summary='false' sign='true'>
-<rawitemdata type='400'>
+</rawitemdata>
+  </item>
+  <item name="DateModified" summary="false" sign="true">
+    <rawitemdata type="400">
 AAAAAAAAAAA=
-</rawitemdata></item>
-<item name='$HTMLCode' sign='true'>
-<rawitemdata type='1'>
+</rawitemdata>
+  </item>
+  <item name="$HTMLCode" sign="true">
+    <rawitemdata type="1">
 X/8QAAIADwAHAAAAAAAAAA==
-</rawitemdata></item>
-<item name='$TITLE'><text>Alias</text></item>
-<item name='$Info' sign='true'>
-<rawitemdata type='1'>
+</rawitemdata>
+  </item>
+  <item name="$TITLE">
+    <text>Alias</text>
+  </item>
+  <item name="$Info" sign="true">
+    <rawitemdata type="1">
 hhgBAIAAAAAAgAAAAQABAP///wAQAAAA
-</rawitemdata></item>
-<item name='$WindowTitle' sign='true'><formula>"Alias"</formula></item>
-<item name='$Flags'><text/></item>
-<item name='$XPageAlt'><text>Project.xsp</text></item>
-<item name='$DesignerVersion'><text>8.5.3</text></item>
-<item name='$$ScriptName' summary='false' sign='true'><text>Project</text></item>
-<item name='From' placeholder='true'>
-<rawitemdata type='0'>
-</rawitemdata></item>
-<item name='To' placeholder='true'>
-<rawitemdata type='0'>
-</rawitemdata></item>
-<item name='$$Title' placeholder='true'>
-<rawitemdata type='0'>
-</rawitemdata></item>
-<item name='$$Creator' placeholder='true'>
-<rawitemdata type='0'>
-</rawitemdata></item>
-<item name='$Fields'><textlist><text>$$Creator</text><text>$$Title</text><text
->To</text><text>From</text></textlist></item>
-<item name='$Body' sign='true'>
-<rawitemdata type='1'>
+</rawitemdata>
+  </item>
+  <item name="$WindowTitle" sign="true">
+    <formula>"Alias"</formula>
+  </item>
+  <item name="$Flags">
+    <text/>
+  </item>
+  <item name="$XPageAlt">
+    <text>Project.xsp</text>
+  </item>
+  <item name="From" placeholder="true">
+    <rawitemdata type="0"/>
+  </item>
+  <item name="To" placeholder="true">
+    <rawitemdata type="0"/>
+  </item>
+  <item name="$$Title" placeholder="true">
+    <rawitemdata type="0"/>
+  </item>
+  <item name="$$Creator" placeholder="true">
+    <rawitemdata type="0"/>
+  </item>
+  <item name="$Fields">
+    <textlist>
+      <text>$$Creator</text>
+      <text>$$Title</text>
+      <text>To</text>
+      <text>From</text>
+    </textlist>
+  </item>
+  <item name="$Body" sign="true">
+    <rawitemdata type="1">
 gQKC/1oAAQAAAAAAAAAAAKAFAACgBQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
 AAAAAAAAAAABAAAAAJSHAAAAAAAAAAAAAAAAAQAAAAQAAACDBAEAhf8IAAEAAAqBAoMEAQCF/wgA
 AQAACoECgv9aAAIAAAAAAAAAAACgBQAAoAUAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
@@ -91,9 +106,10 @@ PiAiAgUAAgBUbyICAwAHABAACQAJMVMyUzNTNFMAJCRUaXRsZQBiDgEAhAAAAAAAAAAAAN4GAACK
 AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACK/0QAjAEABQAwAgAAAAAAAAIB
 AAAKFgAAAAAAAAAJAAAAAAAWAAAAFAAFAAkAQ3JlYXRlZEJ5AAMAJCRDcmVhdG9yAN4GAACK/4X/
 CAABAAAK
-</rawitemdata></item>
-<item name='$V5ACTIONS' sign='true'>
-<rawitemdata type='1'>
+</rawitemdata>
+  </item>
+  <item name="$V5ACTIONS" sign="true">
+    <rawitemdata type="1">
 vRwjAAAAAQABAAAAAQAAAAAAAAAAAAAACAACAHn/bAABANTQyAABAAAAAAAJAAAAAAABANTQyAAA
 AB8AAAAAAAAAAAADAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
 AAAAAAAAAAAAAAAAAAAAAAAAAAAAAPz/OgAAAAAAAQAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAA
@@ -109,5 +125,6 @@ ZSBhbmQgQ2xvc2VyAAoABAAAAEYA+wAFAQEAAwBXZWIACgLkAB0CrwAsACAAAgDGCwAAAAAAAO0B
 AgD8EQAAAAAAAO0BswKuAAwAAQAAAK4ABAC1AwMABwAmAB8ACTJSVDVTNlM4UzEwUlRUMTVSVFQx
 OVJUMjFSVDIyUgD2/zoAAAAAAAMAEwAYAAAAAAAAAAAAAAAAAAAAAAAAAAAAdGFuZ29cc3lzdGVt
 LWxvZy1vdXQuZ2lm
-</rawitemdata></item></note>
-
+</rawitemdata>
+  </item>
+</note>

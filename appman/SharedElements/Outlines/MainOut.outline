@@ -1,16 +1,10 @@
-<?xml version='1.0' encoding='utf-8'?>
-<note class='filter' xmlns='http://www.lotus.com/dxl' version='9.0' replicaid='85257AED0043B6B0'>
-<noteinfo noteid='28e' unid='4FE3846DB5F78871852577EF0068CFA5' sequence='8'>
-<created><datetime>20101204T140449,01-05</datetime></created>
-<modified><datetime>20130123T090153,93-05</datetime></modified>
-<revised><datetime>20130122T210531,17-05</datetime></revised>
-<lastaccessed><datetime>20130123T090153,92-05</datetime></lastaccessed>
-<addedtofile><datetime>20130110T144247,99-05</datetime></addedtofile></noteinfo>
-<updatedby><name>CN=Jesse Gallagher/O=Frost</name></updatedby>
-<wassignedby><name>CN=Jesse Gallagher/O=Frost</name></wassignedby>
-<item name='$POID'><datetime dst='true'>20080313T103820,40-04</datetime></item>
-<item name='$SiteMapList' sign='true'>
-<rawitemdata type='1a'>
+<?xml version="1.0" encoding="UTF-8"?>
+<note xmlns="http://www.lotus.com/dxl" class="filter">
+  <item name="$POID">
+    <datetime dst="true">20080313T103820,40-04</datetime>
+  </item>
+  <item name="$SiteMapList" sign="true">
+    <rawitemdata type="1a">
 AQYBAAEABABIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
 AAAAAAAAAAAAAAAAAAAAAAAEAEgAxAARCAIApgAAAAAAAAASAAAAMgAAAEAAAAAAAAAAQAAAAAAA
 AwADAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAFRm9ybXVsYSBDb25zb2xlAAEA9v8w
@@ -29,8 +23,12 @@ BAAIABIAAQAEAFZpZXf7ARgBAwAHAAwABQAJMFMwRQAAABIAAgCSEwAAAAAAAO0BAwAHAAoAAwAJ
 MFIAAAaKAAoABAAAAGQAiwACACkBAAAAAAAA+wIqAQEAAQA1AAEAAQA2AB8CCgIEAB4BAQALAFBy
 ZWZlcmVuY2VzAAEACwBIaWRkZW5WaWV3cwD0APcDAQANAE90aGVyIFZpZXcuLi4ACgIdAgMABwAg
 ABkACTZTOFM5UzEzUzE0UzE4UzIwUzIyUzIzUwA=
-</rawitemdata></item>
-<item name='$TITLE'><text>MainOut</text></item>
-<item name='$Flags'><text>m</text></item>
-<item name='$DesignerVersion'><text>8.5.3</text></item></note>
-
+</rawitemdata>
+  </item>
+  <item name="$TITLE">
+    <text>MainOut</text>
+  </item>
+  <item name="$Flags">
+    <text>m</text>
+  </item>
+</note>

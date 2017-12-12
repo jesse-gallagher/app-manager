@@ -1,24 +1,22 @@
-<?xml version='1.0' encoding='utf-8'?>
-<note class='form' xmlns='http://www.lotus.com/dxl' version='9.0' replicaid='85257AED0043B6B0'>
-<noteinfo noteid='286' unid='279957D4856A2B7B852577EF0068CC49' sequence='9'>
-<created><datetime>20101204T140440,41-05</datetime></created>
-<modified><datetime>20130123T090153,77-05</datetime></modified>
-<revised><datetime>20130122T210557,71-05</datetime></revised>
-<lastaccessed><datetime>20130123T090153,76-05</datetime></lastaccessed>
-<addedtofile><datetime>20130110T144247,95-05</datetime></addedtofile></noteinfo>
-<updatedby><name>CN=Jesse Gallagher/O=Frost</name></updatedby>
-<wassignedby><name>CN=Jesse Gallagher/O=Frost</name></wassignedby>
-<item name='$TITLE' sign='true'><text>Outer Frame</text></item>
-<item name='$Comment' sign='true'><text/></item>
-<item name='$FrameSet' sign='true'>
-<rawitemdata type='1'>
+<?xml version="1.0" encoding="UTF-8"?>
+<note xmlns="http://www.lotus.com/dxl" class="form">
+  <item name="$TITLE" sign="true">
+    <text>Outer Frame</text>
+  </item>
+  <item name="$Comment" sign="true">
+    <text/>
+  </item>
+  <item name="$FrameSet" sign="true">
+    <rawitemdata type="1">
 7/8YAAIAAwAAAAAAAAAAAAAAAAAAAAAA8P8+AEUAAAABAAAAAAACAAIAAAAAAAUAAAAAAAUAAAAA
 AAEAAgAAAAAAAQAvLy8AAAADAAEAAQC+AAIAUADx/0AAAQAAAABAAQADAAEAAQAAAAAAAwAAAAkA
 AQAvLy8AAABOYXZOb3Rlc1ZpZXcBAP///ywBAAAKAQAAAAAs9v8yAAAAAAADAAYAEAAAAAAAAAAA
 AAAAAAAAAAAAAAAAAE5hdmlnYXRpb24gRnJhbWXx/z0AAQEAAABAAAADAAEAAQAAAAAACQAAAAAA
 AQAvLy8AAABOb3Rlc1ZpZXcBAP///ywBAAAKAQAAAAAsP/b/OwAAAAAAAwACAAMACAAOAAAAAAAA
 AAAASGVyYy9NVENpdFxkYXRhYXBwLm50ZgAAAAAAAAAAQWxsPw==
-</rawitemdata></item>
-<item name='$Flags'><text>#34CQ</text></item>
-<item name='$DesignerVersion'><text>8.5.2</text></item></note>
-
+</rawitemdata>
+  </item>
+  <item name="$Flags">
+    <text>#34CQ</text>
+  </item>
+</note>

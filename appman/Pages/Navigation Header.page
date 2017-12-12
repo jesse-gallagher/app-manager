@@ -1,27 +1,23 @@
-<?xml version='1.0' encoding='utf-8'?>
-<note class='form' xmlns='http://www.lotus.com/dxl' version='9.0' replicaid='85257AED0043B6B0'>
-<noteinfo noteid='2a2' unid='9B3129F383864AA9852577EF0068CAB0' sequence='5'>
-<created><datetime>20101204T140436,32-05</datetime></created>
-<modified><datetime>20130123T090156,00-05</datetime></modified>
-<revised><datetime>20130122T210556,39-05</datetime></revised>
-<lastaccessed><datetime>20130123T090155,99-05</datetime></lastaccessed>
-<addedtofile><datetime>20130110T144248,09-05</datetime></addedtofile></noteinfo>
-<updatedby><name>CN=Jesse Gallagher/O=Frost</name></updatedby>
-<wassignedby><name>CN=Jesse Gallagher/O=Frost</name></wassignedby>
-<item name='OriginalModTime'><datetime>20061107T120130,82-05</datetime></item>
-<item name='$HTMLCode' sign='true'>
-<rawitemdata type='1'>
+<?xml version="1.0" encoding="UTF-8"?>
+<note xmlns="http://www.lotus.com/dxl" class="form">
+  <item name="OriginalModTime">
+    <datetime>20061107T120130,82-05</datetime>
+  </item>
+  <item name="$HTMLCode" sign="true">
+    <rawitemdata type="1">
 X/8QAAIADwAHAAAAAAAAAA==
-</rawitemdata></item>
-<item name='$TITLE'><text>Navigation Header</text></item>
-<item name='$Info' sign='true'>
-<rawitemdata type='1'>
+</rawitemdata>
+  </item>
+  <item name="$TITLE">
+    <text>Navigation Header</text>
+  </item>
+  <item name="$Info" sign="true">
+    <rawitemdata type="1">
 hhgBAIAAAAAAgAAADwABALnF0gAQAAAA
-</rawitemdata></item>
-<item name='$DesignerVersion'><text>8.5.2</text></item>
-<item name='$$ScriptName' summary='false' sign='true'><text>Navigation Header</text></item>
-<item name='$Body' sign='true'>
-<rawitemdata type='1'>
+</rawitemdata>
+  </item>
+  <item name="$Body" sign="true">
+    <rawitemdata type="1">
 gQKC/1oAAQAAAAAAAAAAABAFAAAQBQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
 AAAAAAAAAAABAAAAAJSEEAUHABAFBwAAAAAAAQAAAAQAAACDBAEAhf8IAAEAAASBAoMEAQDdBgEA
 +//7/ywAAAAAAAEBAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAFz/PgAAAAAAAAAA
@@ -30,6 +26,9 @@ ow4QBSgAPAAAAAAAAgCkEgAAEAXuPAAAAAIAAAEBAACBAoL/WgACAAAAAAAAAAAAEAXuPBAFAAAA
 AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAhgEAAAAAVIcAAAAAAAAAAAAA
 AAABAAAABAAAAIMEAgCF/wgAAQEADN0GAACt/6n/FgABABgABAAKAAoAAAAIAJwAAwCF/wgAAQEA
 DKoC3gYAAK4Ahf8IAAEBAAylBgAAAACBAoMEAQCF/wgAAQAACoECgwQBAIX/CAABAAAK
-</rawitemdata></item>
-<item name='$Flags'><text>C34WQ1</text></item></note>
-
+</rawitemdata>
+  </item>
+  <item name="$Flags">
+    <text>C34WQ1</text>
+  </item>
+</note>
