@@ -8,12 +8,16 @@
 	</xp:this.data>
 	
 	<xc:layout navigationPath="/Logs/Log" pageTitle="#{view.pageTitle}">
-		<xc:bsControlGroup label="Server">
-			<xp:text value="#{doc.Server}"/>
-		</xc:bsControlGroup>
+		<xe:formTable>
+			<xe:formRow label="Server">
+				<xp:text value="#{doc.Server}"/>
+			</xe:formRow>
+			<xe:formRow labelPosition="above" label="Body">
+				<pre style="white-space: pre-wrap">
+					<xp:text disableTheme="true" value="#{pageController.logBody}"/>
+				</pre>
+			</xe:formRow>
+		</xe:formTable>
 		
-		<p style="white-space: pre-wrap">
-			<xp:text disableTheme="true" value="#{pageController.logBody}"/>
-		</p>
 	</xc:layout>
 </xp:view>

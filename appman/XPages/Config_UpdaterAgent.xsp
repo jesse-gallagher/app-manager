@@ -5,21 +5,34 @@
 
 
 	<xc:layout navigationPath="/Config/UpdaterAgent" pageTitle="#{view.pageTitle}">
-		<xp:this.facets>
-			<xc:linksbarConfig xp:key="LeftColumn"/>
-		</xp:this.facets>
+	
+		<xe:formTable id="agentFormPanel">
+			<xe:this.facets>
+				<xp:div xp:key="footer">
+					<xp:button id="saveAgent" value="Save" styleClass="btn btn-primary">
+						<xp:eventHandler event="onclick" submit="true" refreshMode="complete" immediate="false"
+							action="#{pageController.save}"/>
+					</xp:button>
+					&#160;
+					<xp:button id="deleteAgent" value="Delete" styleClass="btn btn-danger">
+						<xp:eventHandler event="onclick" submit="true" refreshMode="complete" immediate="true" disableValidators="true"
+							action="#{pageController.delete}">
+							<xp:this.script><![CDATA[ return XSP.confirm("Delete this agent?") ]]></xp:this.script>
+						</xp:eventHandler>
+					</xp:button>
+				</xp:div>
+			</xe:this.facets>
 		
-		<xp:div styleClass="form-horizontal" id="agentFormPanel">
-			<xc:bsControlGroup label="Server">
+			<xe:formRow label="Server">
 				<xp:inputText value="#{pageController.server}"/>
-			</xc:bsControlGroup>
-			<xc:bsControlGroup label="Enabled">
+			</xe:formRow>
+			<xe:formRow label="Enabled">
 				<xp:radioGroup value="#{pageController.enabled}">
 					<xp:selectItem itemLabel="Yes" itemValue="true"/>
 					<xp:selectItem itemLabel="No" itemValue="false"/>
 				</xp:radioGroup>
-			</xc:bsControlGroup>
-			<xc:bsControlGroup label="Schedule Type">
+			</xe:formRow>
+			<xe:formRow label="Schedule Type">
 				<xp:comboBox value="#{pageController.scheduleType}">
 					<xp:eventHandler event="onchange" submit="true" refreshMode="partial" refreshId="agentFormPanel" disableValidators="true"/>
 				
@@ -27,8 +40,8 @@
 					<xp:selectItem itemLabel="Weekly" itemValue="weekly"/>
 					<xp:selectItem itemLabel="Monthly" itemValue="monthly"/>
 				</xp:comboBox>
-			</xc:bsControlGroup>
-			<xc:bsControlGroup label="Day in Month" rendered="#{pageController.scheduleType == 'monthly'}">
+			</xe:formRow>
+			<xe:formRow label="Day in Month" rendered="#{pageController.scheduleType == 'monthly'}">
 				<xp:comboBox value="#{pageController.dateInMonth}">
 					<xp:selectItems><xp:this.value><![CDATA[${javascript:
 						var result = []
@@ -36,11 +49,11 @@
 						result
 					}]]></xp:this.value></xp:selectItems>
 				</xp:comboBox>
-			</xc:bsControlGroup>
-			<xc:bsControlGroup label="Time" rendered="#{pageController.scheduleType == 'daily'}">
+			</xe:formRow>
+			<xe:formRow label="Time" rendered="#{pageController.scheduleType == 'daily'}">
 				<xe:djTimeTextBox id="djTimeTextBox1" value="#{pageController.startTime}"/>
-			</xc:bsControlGroup>
-			<xc:bsControlGroup label="On Day" rendered="#{pageController.scheduleType == 'weekly'}">
+			</xe:formRow>
+			<xe:formRow label="On Day" rendered="#{pageController.scheduleType == 'weekly'}">
 				<xp:comboBox value="#{pageController.dayOfWeek}">
 					<xp:selectItem itemLabel="Sunday" itemValue="sunday"/>
 					<xp:selectItem itemLabel="Monday" itemValue="monday"/>
@@ -50,20 +63,8 @@
 					<xp:selectItem itemLabel="Friday" itemValue="friday"/>
 					<xp:selectItem itemLabel="Saturday" itemValue="saturday"/>
 				</xp:comboBox>
-			</xc:bsControlGroup>
-		</xp:div>
-		
-		<xp:button id="saveAgent" value="Save" styleClass="btn btn-primary">
-			<xp:eventHandler event="onclick" submit="true" refreshMode="complete" immediate="false"
-				action="#{pageController.save}"/>
-		</xp:button>
-		&#160;
-		<xp:button id="deleteAgent" value="Delete" styleClass="btn btn-danger">
-			<xp:eventHandler event="onclick" submit="true" refreshMode="complete" immediate="true" disableValidators="true"
-				action="#{pageController.delete}">
-				<xp:this.script><![CDATA[ return XSP.confirm("Delete this agent?") ]]></xp:this.script>
-			</xp:eventHandler>
-		</xp:button>
+			</xe:formRow>
+		</xe:formTable>
 	</xc:layout>
 	
 	<xp:this.navigationRules>

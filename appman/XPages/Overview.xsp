@@ -4,18 +4,16 @@
 	pageTitle="Overview">
 
 
-	<xc:layout navigationPath="/Overview">
-		<h2>Overview</h2>
-		
-		<div class="form-horizontal read-only">
-			<xc:bsControlGroup label="Server Name">
+	<xc:layout navigationPath="/Overview" pageTitle="#{view.pageTitle}">
+		<xe:formTable>
+			<xe:formRow label="Server Name">
 				<xp:text value="#{pageController.serverName}">
 					<xp:this.converter><xp:converter converterId="abbreviatedName"/></xp:this.converter>
 				</xp:text>
-			</xc:bsControlGroup>
-			<xc:bsControlGroup label="XPage Apps">
+			</xe:formRow>
+			<xe:formRow label="XPage Apps">
 				<xp:text value="#{pageController.XPageAppCount}"/>
-			</xc:bsControlGroup>
-		</div>
+			</xe:formRow>
+		</xe:formTable>
 	</xc:layout>
 </xp:view>

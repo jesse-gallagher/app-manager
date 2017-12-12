@@ -9,10 +9,6 @@
 	</xp:this.data>
 
 	<xc:layout navigationPath="/Config/General" pageTitle="#{view.pageTitle}">
-		<xp:this.facets>
-			<xc:linksbarConfig xp:key="LeftColumn"/>
-		</xp:this.facets>
-		
 		<xp:button id="saveDocument" value="Save" styleClass="btn btn-primary">
 			<xp:eventHandler event="onclick" submit="true" refreshMode="complete" immediate="false"
 				action="#{pageController.save}"/>

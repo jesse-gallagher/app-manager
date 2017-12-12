@@ -4,7 +4,7 @@
 	pageTitle="Logs">
 
 
-	<xc:layout navigationPath="/Logs">
+	<xc:layout navigationPath="/Logs" pageTitle="#{view.pageTitle}">
 		<h2>Logs</h2>
 		
 		<xp:viewPanel rows="30" id="viewPanel1" dataTableStyleClass="table table-bordered table-condensed table-striped table-rounded">

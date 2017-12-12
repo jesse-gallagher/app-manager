@@ -9,11 +9,8 @@
 	
 	<xe:applicationLayout id="applicationLayout1">
 		<xe:this.configuration>
-			<xe:bootstrapResponsiveConfiguration legal="false"
-				footer="false" titleBar="#{not empty compositeData.pageTitle}"
-				titleBarName="#{compositeData.pageTitle}" productLogo="/$Icon"
-				productLogoAlt="${appConfig.appName}" productLogoHeight="24"
-				productLogoWidth="24" placeBar="true" invertedNavbar="true">
+			<xe:bootstrapResponsiveConfiguration legal="false" footer="false" titleBar="#{not empty compositeData.pageTitle}" titleBarName="#{compositeData.pageTitle}" productLogo="/$Icon"
+				productLogoAlt="${appHelper.appName}" productLogoHeight="24" productLogoWidth="24" placeBar="false" invertedNavbar="true">
 				<xe:this.bannerUtilityLinks>
 					<xe:userTreeNode />
 					<xe:loginTreeNode />
@@ -38,7 +35,7 @@
 					</xe:basicContainerNode>
 					<xe:basicContainerNode label="Admin">
 						<xe:this.children>
-							<xe:pageTreeNode label="General Configuration" page="Config_General" />
+							<!-- <xe:pageTreeNode label="General Configuration" page="Config_General" /> -->
 							<xe:pageTreeNode label="Updater Agents" page="Config_UpdaterAgents" />
 							<xe:separatorTreeNode />
 							<xe:pageTreeNode label="Logs" page="Logs" />

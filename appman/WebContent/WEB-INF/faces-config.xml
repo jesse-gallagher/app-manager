@@ -6,11 +6,6 @@
     <managed-bean-scope>session</managed-bean-scope>
   </managed-bean>
   <managed-bean>
-    <managed-bean-name>url</managed-bean-name>
-    <managed-bean-class>frostillicus.AliasManager</managed-bean-class>
-    <managed-bean-scope>application</managed-bean-scope>
-  </managed-bean>
-  <managed-bean>
     <managed-bean-name>appHelper</managed-bean-name>
     <managed-bean-class>helper.AppHelper</managed-bean-class>
     <managed-bean-scope>application</managed-bean-scope>

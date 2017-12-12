@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<xp:view xmlns:xp="http://www.ibm.com/xsp/core" xmlns:xe="http://www.ibm.com/xsp/coreex" xmlns:xc="http://www.ibm.com/xsp/custom">
-	<xe:navigator styleClass="nav nav-tabs nav-stacked">
-		<xe:this.treeNodes>
-			<xe:pageTreeNode title="Multiple Signers" page="Problems_MultipleSigners" styleClass="${view.pageName == '/Problems_MultipleSigners.xsp' ? 'active' : ''}"/>
-		</xe:this.treeNodes>
-	</xe:navigator>
-</xp:view>

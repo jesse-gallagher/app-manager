@@ -4,10 +4,6 @@
 	pageTitle="All Applications">
 	
 	<xc:layout navigationPath="/Applications/All" pageTitle="#{view.pageTitle}">
-		<xp:this.facets>
-			<xc:linksbarApplications xp:key="LeftColumn"/>
-		</xp:this.facets>
-		
 		<xp:viewPanel rows="30" id="viewPanel1" dataTableStyleClass="table table-bordered table-condensed table-striped table-rounded">
 			<xp:this.data>
 				<xp:dominoView var="view1" ignoreRequestParams="true" viewName="${'Databases\\All'}"/>

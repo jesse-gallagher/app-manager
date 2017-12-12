@@ -8,10 +8,6 @@
 	</xp:this.data>
 	
 	<xc:layout navigationPath="/Application" pageTitle="#{view.pageTitle}">
-		<xp:this.facets>
-<!--			<xc:linksbarApplications xp:key="LeftColumn"/>-->
-		</xp:this.facets>
-		
 		<xp:button id="createCopy" value="Create Design Backup">
 			<xp:eventHandler event="onclick" submit="true" refreshMode="norefresh"
 				action="#{pageController.createDesignBackup}"/>

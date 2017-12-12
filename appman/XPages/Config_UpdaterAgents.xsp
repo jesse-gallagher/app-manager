@@ -6,7 +6,6 @@
 
 	<xc:layout navigationPath="/Config/UpdaterAgents" pageTitle="#{view.pageTitle}">
 		<xp:this.facets>
-			<xc:linksbarConfig xp:key="LeftColumn"/>
 			<xp:div xp:key="ActionBar">
 				<xp:button id="createUpdaterAgentButton" value="Create Agent">
 					<xp:eventHandler event="onclick" submit="false">
@@ -16,11 +15,11 @@
 				
 				<xe:dialog id="createUpdaterAgentDialog" title="Create Updater Agent">
 					<xe:dialogContent>
-						<div class="form-horizontal">
-							<xc:bsControlGroup label="Server">
+						<xe:formTable>
+							<xe:formRow label="Server">
 								<xp:inputText value="#{viewScope.createUpdaterAgentServer}"/>
-							</xc:bsControlGroup>
-						</div>
+							</xe:formRow>
+						</xe:formTable>
 					</xe:dialogContent>
 					<xe:dialogButtonBar>
 						<xp:button id="createUpdaterAgentConfirm" value="Create" styleClass="btn btn-primary">
@@ -36,11 +35,11 @@
 			
 			<xp:column>
 				<xp:this.facets><xp:text xp:key="header" value="Server"/></xp:this.facets>
-				<xc:link value="/Config_UpdaterAgent.xsp?agentId=#{agent.noteId}">
+				<xp:link value="/Config_UpdaterAgent.xsp?agentId=#{agent.noteId}">
 					<xp:text value="#{agent.server}">
 						<xp:this.converter><xp:converter converterId="abbreviatedName"/></xp:this.converter>
 					</xp:text>
-				</xc:link>
+				</xp:link>
 			</xp:column>
 			<xp:column>
 				<xp:this.facets><xp:text xp:key="header" value="Enabled"/></xp:this.facets>
