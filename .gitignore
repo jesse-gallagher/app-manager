@@ -3,3 +3,6 @@ ehthumbs.db
 Icon?
 Thumbs.db
 ._*
+
+# Ignore per-server agents
+appman/Code/Agents/$$UpdaterAgent-*.lsa
