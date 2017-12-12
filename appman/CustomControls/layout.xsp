@@ -14,7 +14,16 @@
 				titleBarName="#{compositeData.pageTitle}" productLogo="/$Icon"
 				productLogoAlt="${appConfig.appName}" productLogoHeight="24"
 				productLogoWidth="24" placeBar="true" invertedNavbar="true">
-				<xe:this.bannerApplicationLinks>
+				<xe:this.bannerUtilityLinks>
+					<xe:userTreeNode />
+					<xe:loginTreeNode />
+				</xe:this.bannerUtilityLinks>
+			</xe:bootstrapResponsiveConfiguration>
+		</xe:this.configuration>
+
+		<xe:this.facets>
+			<xe:navigator xp:key="LeftColumn">
+				<xe:this.treeNodes>
 					<xe:pageTreeNode label="Overview" page="Overview" />
 					<xe:basicContainerNode label="Applications">
 						<xe:this.children>
@@ -35,24 +44,14 @@
 							<xe:pageTreeNode label="Logs" page="Logs" />
 						</xe:this.children>
 					</xe:basicContainerNode>
-				</xe:this.bannerApplicationLinks>
-				<xe:this.bannerUtilityLinks>
-					<xe:userTreeNode />
-					<xe:loginTreeNode />
-				</xe:this.bannerUtilityLinks>
-			</xe:bootstrapResponsiveConfiguration>
-		</xe:this.configuration>
-
-		<xe:this.facets>
-			<xp:callback xp:key="LeftColumn" facetName="LeftColumn" />
+				</xe:this.treeNodes>
+			</xe:navigator>
 			<xp:callback xp:key="RightColumn" facetName="RightColumn" />
 			<xp:callback xp:key="BreadCrumbs" facetName="BreadCrumbs" />
 		</xe:this.facets>
 		<xc:messages />
 
-		<p>
-			<xp:callback facetName="ActionBar" />
-		</p>
+		<xp:callback facetName="ActionBar" />
 
 		<xp:callback />
 

@@ -4,5 +4,7 @@ Icon?
 Thumbs.db
 ._*
 
+/appman/AppProperties/database.properties
+
 # Ignore per-server agents
-appman/Code/Agents/$$UpdaterAgent-*.lsa
+/appman/Code/Agents/$$UpdaterAgent-*.lsa

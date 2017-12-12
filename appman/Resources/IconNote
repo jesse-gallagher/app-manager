@@ -1,16 +1,7 @@
-<?xml version='1.0' encoding='utf-8'?>
-<note default='true' class='icon' xmlns='http://www.lotus.com/dxl' version='9.0'
- replicaid='85257AED0043B6B0'>
-<noteinfo noteid='12e' unid='B83B02AEE0186948852577EF006863FB' sequence='1'>
-<created><datetime>20101204T140013,39-05</datetime></created>
-<modified><datetime dst='true'>20130328T162602,03-04</datetime></modified>
-<revised><datetime dst='true'>20130328T162602,02-04</datetime></revised>
-<lastaccessed><datetime dst='true'>20130328T162602,02-04</datetime></lastaccessed>
-<addedtofile><datetime>20130110T144110,43-05</datetime></addedtofile></noteinfo>
-<updatedby><name>CN=Jesse Gallagher/O=Frost</name><name>CN=Arcturus/O=Frost</name></updatedby>
-<wassignedby><name>CN=Jesse Gallagher/O=Frost</name></wassignedby>
-<item name='IconBitmap' summary='true'>
-<rawitemdata type='6'>
+<?xml version="1.0" encoding="UTF-8"?>
+<note xmlns="http://www.lotus.com/dxl" default="true" class="icon">
+  <item name="IconBitmap" summary="true">
+    <rawitemdata type="6">
 AiAgAQAA///////wD///gAH//gAAf/wAAD/4AAAf8AAAD+AAAAfgAAAHwAAAA8AAAAPAAAADgAAA
 AYAAAAGAAAABgAAAAYAAAAGAAAABgAAAAYAAAAHAAAADwAAAA8AAAAPgAAAH4AAAB/AAAA/4AAAf
 /AAAP/4AAH//gAH///AP//////8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAiIiIiAAAAAAAAAAAAAAI
@@ -23,12 +14,30 @@ ZmbyL2byL2byL2ZmbAAAj2ZmIiJmIiJmIiJmZvgAAIxmZiIiZiIiZiIiZmbIAAAI9mbyL2byL2by
 L2ZvgAAACMZmZmZmZmZmZmZmbIAAAACMZmZmZmZmZmZmZsgAAAAACMZmZmZmZmZmZmyAAAAAAACM
 9mZmZmZmZm/IAAAAAAAACIz2ZmZmZm/IgAAAAAAAAAAIiMZmZmyIgAAAAAAAAAAAAACIiIiIAAAA
 AAAAUEECICABAAD/////+A4DgA==
-</rawitemdata></item>
-<item name='$DefaultFrameset'><text>Outer Frame</text></item>
-<item name='$AllowPost8HTML'><text>1</text></item>
-<item name='$TITLE'><text>App Manager</text></item>
-<item name='$DefaultXPage'><text>Overview.xsp</text></item>
-<item name='$Daos'><text>1</text></item>
-<item name='$Flags'><text>J7FKzNZ4q!</text></item>
-<item name='$FlagsNoRefresh'><text/></item></note>
-
+</rawitemdata>
+  </item>
+  <item name="$AllowPost8HTML">
+    <text>1</text>
+  </item>
+  <item name="$Daos">
+    <text>1</text>
+  </item>
+  <item name="$LargeSummary">
+    <text>0</text>
+  </item>
+  <item name="$DefaultFrameset">
+    <text>Outer Frame</text>
+  </item>
+  <item name="$DefaultXPage">
+    <text>Overview.xsp</text>
+  </item>
+  <item name="$TITLE">
+    <text>App Manager</text>
+  </item>
+  <item name="$Flags">
+    <text>Jz47qNZFK!</text>
+  </item>
+  <item name="$FlagsNoRefresh">
+    <text>rv</text>
+  </item>
+</note>
