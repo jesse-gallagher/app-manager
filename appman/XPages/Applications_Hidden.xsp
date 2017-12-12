@@ -12,10 +12,10 @@
 				<xp:pager id="pager1" xp:key="headerPager" partialRefresh="true" layout="Previous Group Next" />
 				<xp:pager id="pager2" xp:key="footerPager" partialRefresh="true" layout="Previous Group Next" />
 			</xp:this.facets>
-			<xp:viewColumn columnName="Title" id="viewColumn1">
+			<xp:viewColumn columnName="Title" id="viewColumn1" displayAs="link">
 				<xp:viewColumnHeader value="Title" id="viewColumnHeader1" sortable="true"/>
 			</xp:viewColumn>
-			<xp:viewColumn columnName="FilePath" id="viewColumn4">
+			<xp:viewColumn columnName="FilePath" id="viewColumn4" displayAs="link">
 				<xp:viewColumnHeader value="File Path" id="viewColumnHeader4" sortable="true"/>
 			</xp:viewColumn>
 			<xp:viewColumn columnName="" id="viewColumn5" value="#{appHelper.templateNames[viewEntry.DbInheritTemplateName]}">

@@ -6,8 +6,26 @@ import lotus.domino.*;
 import java.util.*;
 import java.text.SimpleDateFormat;
 
+import net.cmssite.endeavour60.util.EndeavourUtil;
+
 public class Application extends BasicXPageController {
 	private static final long serialVersionUID = 1L;
+	
+	public model.Application getApplication() {
+		Map<String, Object> viewScope = EndeavourUtil.getViewScope();
+		String cacheKey = getClass().getName() + ".application";
+		if(!viewScope.containsKey(cacheKey)) {
+			Map<String, String> param = EndeavourUtil.getParam();
+			String documentId = param.get("documentId");
+			net.cmssite.endeavour60.Document docRef = new net.cmssite.endeavour60.Document(documentId, EndeavourUtil.getDatabase().getFilePath());
+			viewScope.put(cacheKey, new model.Application(docRef));
+		}
+		return (model.Application)viewScope.get(cacheKey);
+	}
+	
+	public String save() {
+		return "xsp-success";
+	}
 
 	private static SimpleDateFormat TIMESTAMP_FORMAT = new SimpleDateFormat("yyyyMMddHHmmssSSS");
 

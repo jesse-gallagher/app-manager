@@ -3,9 +3,10 @@
 	beforePageLoad="#{controller.beforePageLoad}" afterPageLoad="#{controller.afterPageLoad}"
 	pageTitle="Application">
 	
-	<xp:this.data>
-		<xp:dominoDocument var="doc" formName="#{'Database'}" action="openDocument"/>
-	</xp:this.data>
+	<xp:this.dataContexts>
+		<xp:dataContext var="app" value="#{controller.application}"/>
+	</xp:this.dataContexts>
+	
 	<xp:this.navigationRules>
 		<xp:navigationRule outcome="xsp-success" viewId="/Applications_All.xsp"/>
 	</xp:this.navigationRules>
@@ -15,25 +16,25 @@
 			<xe:this.facets>
 				<xp:div xp:key="footer">
 					<xp:button id="save" value="Save">
-						<xp:eventHandler event="onclick" submit="true" refreshMode="complete" immediate="false" save="true"/>
+						<xp:eventHandler event="onclick" submit="true" refreshMode="complete" immediate="false" action="#{controller.save}"/>
 					</xp:button>
 				</xp:div>
 			</xe:this.facets>
 		
 			<xe:formRow label="Title">
-				<xp:text value="#{doc.Title}"/>
+				<xp:text value="#{app.title}"/>
 			</xe:formRow>
 			<xe:formRow label="Server">
-				<xp:text value="#{doc.Server}"/>
+				<xp:text value="#{app.server}"/>
 			</xe:formRow>
 			<xe:formRow label="File Path">
-				<xp:text value="#{doc.FilePath}"/>
+				<xp:text value="#{app.filePath}"/>
 			</xe:formRow>
 			<xe:formRow label="Replica ID">
-				<xp:text value="#{doc.ReplicaID}"/>
+				<xp:text value="#{app.replicaId}"/>
 			</xe:formRow>
 			<xe:formRow label="Hidden?">
-				<xp:radioGroup id="hidden" value="#{doc.Hidden}" defaultValue="No">
+				<xp:radioGroup value="#{app.hidden}" defaultValue="No">
 					<xp:selectItem itemLabel="Yes"/>
 					<xp:selectItem itemLabel="No"/>
 				</xp:radioGroup>
