@@ -19,6 +19,9 @@
 			<xp:viewColumn columnName="Title" id="viewColumn1" displayAs="link">
 				<xp:viewColumnHeader value="Title" id="viewColumnHeader1" sortable="true" />
 			</xp:viewColumn>
+			<xp:viewColumn columnName="$ServerAbbrev" id="viewColumn2" displayAs="link">
+				<xp:viewColumnHeader value="Server" id="viewColumnHeader2" sortable="true"/>
+			</xp:viewColumn>
 			<xp:viewColumn columnName="FilePath" id="viewColumn4" displayAs="link">
 				<xp:viewColumnHeader value="File Path" id="viewColumnHeader4" sortable="true"/>
 			</xp:viewColumn>
