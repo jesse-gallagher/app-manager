@@ -15,11 +15,6 @@
     <managed-bean-class>helper.AppHelper</managed-bean-class>
     <managed-bean-scope>application</managed-bean-scope>
   </managed-bean>
-  <managed-bean>
-    <managed-bean-name>siteOutline</managed-bean-name>
-    <managed-bean-class>helper.SiteOutline</managed-bean-class>
-    <managed-bean-scope>application</managed-bean-scope>
-  </managed-bean>
   <lifecycle>
     <phase-listener>frostillicus.FlashScopePhaseListener</phase-listener>
   </lifecycle>

@@ -1,5 +1,7 @@
-<theme extends="bootstrap" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="platform:/plugin/com.ibm.designer.domino.stylekits/schema/stylekit.xsd" >
+<theme extends="bootstrap3" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="platform:/plugin/com.ibm.designer.domino.stylekits/schema/stylekit.xsd" >
 	<resources>
+		<styleSheet type="text/css" href="/css/bootswatch-cosmo.min.css" />
+	
 		<styleSheet href="/xsp.css"/>
 		<styleSheet href="/style.css"/>
 		<styleSheet href="/dialog.css"/>
