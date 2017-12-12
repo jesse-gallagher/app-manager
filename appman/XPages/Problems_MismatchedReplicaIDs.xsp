@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xp:view xmlns:xp="http://www.ibm.com/xsp/core" xmlns:xe="http://www.ibm.com/xsp/coreex" xmlns:xc="http://www.ibm.com/xsp/custom"
+	beforePageLoad="#{controller.beforePageLoad}" afterPageLoad="#{controller.afterPageLoad}"
+	pageTitle="${eLocaleApp.mismatchedReplicaIds}">
+
+	<xc:layout navigationPath="/Problems/MismatchedReplicaIDs" pageTitle="#{view.pageTitle}">
+		<xp:viewPanel value="${controller.applications}" var="app" id="applicationList"
+			pageName="/Application.xsp">
+			<xp:this.facets>
+				<xp:pager id="pager1" xp:key="headerPager" partialRefresh="true" layout="Previous Group Next" />
+				<xp:pager id="pager2" xp:key="footerPager" partialRefresh="true" layout="Previous Group Next" />
+			</xp:this.facets>
+			
+			<xp:viewColumn columnName="server" displayAs="link">
+				<xp:viewColumnHeader value="${eLocaleApp.server}"/>
+			</xp:viewColumn>
+			<xp:viewColumn columnName="filePath" displayAs="link">
+				<xp:viewColumnHeader value="${eLocaleApp.filePath}"/>
+			</xp:viewColumn>
+			<xp:viewColumn columnName="replicaId" displayAs="link">
+				<xp:viewColumnHeader value="${eLocaleApp.replicaId}"/>
+			</xp:viewColumn>
+			<xp:viewColumn columnName="title" displayAs="link">
+				<xp:viewColumnHeader value="${eLocaleApp.title}"/>
+			</xp:viewColumn>
+		</xp:viewPanel>
+	</xc:layout>
+</xp:view>

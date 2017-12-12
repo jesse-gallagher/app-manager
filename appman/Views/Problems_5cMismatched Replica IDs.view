@@ -2,35 +2,41 @@
 <note xmlns="http://www.lotus.com/dxl" class="view">
   <item name="$FormatNote" summary="true" sign="true">
     <rawitemdata type="4">
-AQCU7G6FoWlsP/FjaADvdyWF
+AQA3PWeKx0J27lTedQDzgSWG
 </rawitemdata>
   </item>
   <item name="$FormulaClass" sign="true">
     <text>1</text>
   </item>
   <item name="$TITLE" sign="true">
-    <text>(Databases by ReplicaID)</text>
+    <text>Problems\Mismatched Replica IDs</text>
   </item>
   <item name="$Index" sign="true">
     <text/>
   </item>
   <item name="$Formula" summary="true" sign="true">
     <formula compiled="true">
-UAAFACQAIAADAAkACQAEAFJlcGxpY2FJRCRDb25mbGljdCRSRUYEAAQAAAAcAAUABABGb3JtAQAI
-AERhdGFiYXNlCgIDAAcACgAEAAlMMVM=
+iAACACwACQAkRmlsZVBhdGgABQAIAEZpbGVQYXRoAQABAFwAAQABAC8AhAMDAAUAMAArAAQACQAJ
+AAkABAAkRmlsZVBhdGhSZXBsaWNhSUQkQ29uZmxpY3QkUkVGAAQABAAAABwABQAEAEZvcm0BAAgA
+RGF0YWJhc2UKAgMABwAKAAQACUwxUw==
 </formula>
   </item>
   <item name="$Collation" summary="true">
     <rawitemdata type="2">
-FgABAABEgGYAAAAJAFJlcGxpY2FJRA==
+JgACAAFEiGYHAAAJAIBmAAkACQAkRmlsZVBhdGhSZXBsaWNhSUQ=
 </rawitemdata>
   </item>
   <item name="$ViewFormat" summary="true" sign="true">
     <rawitemdata type="5">
-AQABAAQAiEAAAFZDAQAJAAQAAAAAAJ8AAQAACgAAAAAAAAAAAAICAAAAUmVwbGljYUlEJEtleSYA
-AQAAAAEBAAkBAAAKAQEOCgAAPwCtKwEAAQABAAAAAAAAAAAAV0MBBQAJAAAAAAAAAAAAAAAAAAAA
-AAAABAAAAAAA//8AAAAAAAAAAAAAAAAAAEIAEQAAAAEA////AAEA7+/vAAEA////AAAAAAAAAAAA
-AQD///8AAQD///8AAAABAAAAAAABAAAAAAABAAAAAAAAAAgAAAAAAAEA
+AQACAAQAiEAAAFZDAwAJAAkAmgAAAFAAAQAACgABAAAAAAAAAAICAAAAVkMBAAkACQAAAAAAUAAB
+AAAKAAAAAAAAAAAAAgIAAAAkRmlsZVBhdGgkRmlsZVBhdGiaAAcAVABOACBOb3JtYWxpemUgZm9y
+IFVuaXgtc3R5bGUgcGF0aHMgZm9yIGNvbnNpc3RlbmN5IGFuZCB0byBhdm9pZCBleHRyYSBjYXRl
+Z29yaWVzIAcACgADAAkxUwACACwACQAkRmlsZVBhdGgABQAIAEZpbGVQYXRoAQABAFwAAQABAC8A
+hAMDAAcADgAHAAkwUjRTNlMAUmVwbGljYUlEUmVwbGljYUlEJgABAAAAAQEACQEAAAoBAQ4KAAA/
+AK0rAQABAAEAAAAAAAAAAABXQwEFAAkAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAD//wAAAAAAAAAA
+AAAAAAAAV0MBBQAJAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAA//8AAAAAAAAAAAAAAAAAAEIAEQAA
+AAEA////AAEA7+/vAAEA////AAAAAAAAAAAAAQD///8AAQD///8AAAABAAAAAAABAAAAAAABAAAA
+AAAAAAgAAAAAAAEA
 </rawitemdata>
   </item>
   <item name="$Comment" sign="true">

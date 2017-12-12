@@ -51,6 +51,7 @@
 					<xe:basicContainerNode label="Problems">
 						<xe:this.children>
 							<xe:pageTreeNode label="Multiple Signers" page="Problems_MultipleSigners" />
+							<xe:pageTreeNode label="${eLocaleApp.mismatchedReplicaIds}" page="Problems_MismatchedReplicaIDs" />
 						</xe:this.children>
 					</xe:basicContainerNode>
 					<xe:basicContainerNode label="Admin">
