@@ -1,40 +1,54 @@
-<?xml version='1.0' encoding='utf-8'?>
-<note class='filter' xmlns='http://www.lotus.com/dxl' version='9.0' replicaid='85257AED0043B6B0'>
-<noteinfo noteid='55a' unid='A6FE27C470E7042B85257AEF0045A14A' sequence='13'>
-<created><datetime>20130110T074032,74-05</datetime></created>
-<modified><datetime>20130129T135220,28-05</datetime></modified>
-<revised><datetime>20130129T135220,26-05</datetime></revised>
-<lastaccessed><datetime>20130129T135220,26-05</datetime></lastaccessed>
-<addedtofile><datetime>20130110T144257,89-05</datetime></addedtofile></noteinfo>
-<updatedby><name>CN=Jesse Gallagher/O=Frost</name></updatedby>
-<wassignedby><name>CN=Jesse Gallagher/O=Frost</name></wassignedby>
-<item name='$TITLE' sign='true'><text>$$UpdaterAgentTemplate</text></item>
-<item name='$AssistType' sign='true'><number>65413</number></item>
-<item name='$AssistLastRun' sign='true'>
-<rawitemdata type='400'>
+<?xml version="1.0" encoding="UTF-8"?>
+<note xmlns="http://www.lotus.com/dxl" class="filter">
+  <item name="$TITLE" sign="true">
+    <text>$$UpdaterAgentTemplate</text>
+  </item>
+  <item name="$AssistType" sign="true">
+    <number>65413</number>
+  </item>
+  <item name="$AssistLastRun" sign="true">
+    <rawitemdata type="400">
 AAAAAAAAAAA=
-</rawitemdata></item>
-<item name='$AssistDocCount' sign='true'><number>0</number></item>
-<item name='$FlagsExt' sign='true'><text/></item>
-<item name='$AssistFlags' sign='true'><text>s</text></item>
-<item name='$MachineName' sign='true'><text>*</text></item>
-<item name='$AssistTrigger'><text>1</text></item>
-<item name='$AssistInfo' sign='true'>
-<rawitemdata type='11'>
+</rawitemdata>
+  </item>
+  <item name="$AssistDocCount" sign="true">
+    <number>0</number>
+  </item>
+  <item name="$FlagsExt" sign="true">
+    <text/>
+  </item>
+  <item name="$AssistFlags" sign="true">
+    <text>s</text>
+  </item>
+  <item name="$MachineName" sign="true">
+    <text>*</text>
+  </item>
+  <item name="$AssistTrigger">
+    <text>1</text>
+  </item>
+  <item name="$AssistInfo" sign="true">
+    <rawitemdata type="11">
 AgABAAAAAgABAEB+BQDAV34AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
 AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-</rawitemdata></item>
-<item name='$AssistQuery' sign='true'>
-<rawitemdata type='f'>
+</rawitemdata>
+  </item>
+  <item name="$AssistQuery" sign="true">
+    <rawitemdata type="f">
 gQYAAAAA
-</rawitemdata></item>
-<item name='$OnBehalfOf' sign='true'><text>CN=Telamon/O=Frost</text></item>
-<item name='$Restricted' sign='true'><number>0</number></item>
-<item name='$Flags'><text>3fSL</text></item>
-<item name='$DesignerVersion'><text>8.5.3</text></item>
-<item name='$AssistRunInfo' summary='true'>
-<rawitemdata type='3'>
-BgABAAAACACKBgAAAAAAAAUAAAAwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+</rawitemdata>
+  </item>
+  <item name="$OnBehalfOf" sign="true">
+    <text>CN=Telamon/O=Frost</text>
+  </item>
+  <item name="$Restricted" sign="true">
+    <number>0</number>
+  </item>
+  <item name="$Flags">
+    <text>3fSL</text>
+  </item>
+  <item name="$AssistRunInfo" summary="true">
+    <rawitemdata type="3">
+BgABAAAACAD2AgAAAAAAAAUAAAAwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
 AAAAAAAAAAAAAAAAAAAA2apnAAJ7JYVTI2wA73olhQAAAAAAAAAAAAAAAAAAAAAAAAAAqqqqqqqq
 qqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqq
 qqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqq
@@ -53,9 +67,10 @@ qqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqq
 qqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqq
 qqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqq
 qqqqqqqqqqqqqqqqqqqqqqqq
-</rawitemdata></item>
-<item name='$AssistAction' sign='true'>
-<rawitemdata type='10'>
+</rawitemdata>
+  </item>
+  <item name="$AssistAction" sign="true">
+    <rawitemdata type="10">
 gQKF/4ECAAAAAHUCAAAnKytMb3R1c1NjcmlwdCBEZXZlbG9wbWVudCBFbnZpcm9ubWVudDoyOjU6
 KE9wdGlvbnMpOjA6NzQKJVJFTQoJQWdlbnQgJCRVcGRhdGVyQWdlbnQtQ049VGVsYW1vbi9PPUZy
 b3N0CglDcmVhdGVkIEphbiA5LCAyMDEzIGJ5IEplc3NlIEdhbGxhZ2hlci9Gcm9zdAoJRGVzY3Jp
@@ -68,9 +83,10 @@ RGltIHNlc3Npb24gQXMgTmV3IE5vdGVzU2Vzc2lvbiwgZGIgQXMgTm90ZXNEYXRhYmFzZQoJU2V0
 IGRiID0gc2Vzc2lvbi5DdXJyZW50RGF0YWJhc2UKCQoJRGltIGFnZW50IEFzIE5vdGVzQWdlbnQK
 CVNldCBhZ2VudCA9IGRiLkdldEFnZW50KCJVcGRhdGUgRGF0YWJhc2UgTGlzdCIpCglDYWxsIGFn
 ZW50LlJ1bgpFbmQgU3ViACI=
-</rawitemdata></item>
-<item name='$AssistAction_Ex' sign='true'>
-<rawitemdata type='14'>
+</rawitemdata>
+  </item>
+  <item name="$AssistAction_Ex" sign="true">
+    <rawitemdata type="14">
 gQKF/5IHAAAAAIYHAAABAAACTFNPQgMAFAhlbgAABAANAD4AAAAAAHADnAEEAAAAAACcAEwCAAAA
 ACAALAEUADQA+ACYAAAAAAAAAAAAAQAAAAQABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
 BAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
@@ -106,6 +122,9 @@ AP//AAAAAAUAAgAAAAkCTAIJAngBBggSABQAAAAAAJQBAQAAAAAAYAQAAAAATAKcAP//AAAAAAQA
 AgAAAAEACQJMAoYIGQAEAEIAAAAAAB0AABoSAF5oASuoACSmGhMAXjwCS2gBLewCI6YaFgBe3AJL
 PAIsEAN9ZAEjphoXAEvcAixAA4sIIzEaGAAdAgAAABEAFAAAAAAA//8BAAMACwAAAA4AOAAQAAoA
 AAA=
-</rawitemdata></item>
-<item name='$AssistVersion'><datetime>20130129T135220,18-05</datetime></item></note>
-
+</rawitemdata>
+  </item>
+  <item name="$AssistVersion">
+    <datetime>20130129T135220,18-05</datetime>
+  </item>
+</note>

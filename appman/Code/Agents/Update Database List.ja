@@ -1,17 +1,99 @@
-<?xml version='1.0' encoding='utf-8'?>
-<note class='filter' xmlns='http://www.lotus.com/dxl' version='9.0' replicaid='85257AED0043B6B0'>
-<noteinfo noteid='376' unid='7F8CF111C96C7A1C85257AED00468F89' sequence='244'>
-<created><datetime>20130108T075042,65-05</datetime></created>
-<modified><datetime>20130128T140236,99-05</datetime></modified>
-<revised><datetime>20130128T140236,97-05</datetime></revised>
-<lastaccessed><datetime>20130128T140236,97-05</datetime></lastaccessed>
-<addedtofile><datetime>20130110T144249,15-05</datetime></addedtofile></noteinfo>
-<updatedby><name>CN=Jesse Gallagher/O=Frost</name></updatedby>
-<wassignedby><name>CN=Jesse Gallagher/O=Frost</name></wassignedby>
-<item name='$FILE' summary='true' sign='true' seal='true'><object><file hosttype='msdos'
- compression='none' flags='sign' encoding='none' name='%%source%%.jar' size='7500'>
-<created><datetime>20130108T075017,48-05</datetime></created>
-<modified><datetime>20130128T140236,21-05</datetime></modified><filedata>
+<?xml version="1.0" encoding="UTF-8"?>
+<note xmlns="http://www.lotus.com/dxl" class="filter">
+  <item name="$JavaCompilerSource">
+    <text>1.6</text>
+  </item>
+  <item name="$JavaCompilerTarget">
+    <text>1.6</text>
+  </item>
+  <item name="$AssistVersion">
+    <datetime>20130128T140236,57-05</datetime>
+  </item>
+  <item name="$TITLE" sign="true">
+    <text>Update Database List</text>
+  </item>
+  <item name="$AssistType" sign="true">
+    <number>65427</number>
+  </item>
+  <item name="$AssistLastRun" sign="true">
+    <rawitemdata type="400">
+AAAAAAAAAAA=
+</rawitemdata>
+  </item>
+  <item name="$AssistDocCount" sign="true">
+    <number>0</number>
+  </item>
+  <item name="$FlagsExt" sign="true">
+    <text>D</text>
+  </item>
+  <item name="$AssistFlags" sign="true">
+    <text>Es</text>
+  </item>
+  <item name="$AssistTrigger">
+    <text>4</text>
+  </item>
+  <item name="$AssistInfo" sign="true">
+    <rawitemdata type="11">
+AQAEAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+</rawitemdata>
+  </item>
+  <item name="$AssistQuery" sign="true">
+    <rawitemdata type="f">
+gQYAAAAA
+</rawitemdata>
+  </item>
+  <item name="$AssistAction" sign="true">
+    <rawitemdata type="10">
+gQKT/3oADwA5AB8AAQAAAAAAAABKYXZhQWdlbnQuY2xhc3NZOlxMaWJyYXJ5XEFwcGxpY2F0aW9u
+IFN1cHBvcnRcTG90dXMgTm90ZXMgRGF0YSAoV2luZG93cyklJXNvdXJjZSUlLmphcgAlJW9iamVj
+dCUlLmphcgAAAA==
+</rawitemdata>
+  </item>
+  <item name="$AssistAction_Ex" sign="true">
+    <rawitemdata type="14">
+gQI=
+</rawitemdata>
+  </item>
+  <item name="$Restricted" sign="true">
+    <number>2</number>
+  </item>
+  <item name="$Flags">
+    <text>fJj3</text>
+  </item>
+  <item name="$AssistRunInfo" summary="true">
+    <rawitemdata type="3">
+BgABAAAACADuAgAAAAAAAAUAAAAwAAAAAAAAAAAAAAAAAAAApgAAAAAAAAAAAAAAAAAAABAAAAAA
+AAAAOb12APOBJYYAAAAACvF1APOBJYad1nUA84ElhgAAAAAAAAAAAAAAAAAAAAAAAAAAU3RhcnRl
+ZCBydW5uaW5nIGFnZW50ICdVcGRhdGUgRGF0YWJhc2UgTGlzdCcgb24gMTIvMTEvMjAxNyAwMzoz
+Njo1NiBQTQ0KUmFuIEphdmEgQWdlbnQgQ2xhc3MNCkRvbmUgcnVubmluZyBhZ2VudCAnVXBkYXRl
+IERhdGFiYXNlIExpc3QnIG9uIDEyLzExLzIwMTcgMDM6MzY6NTYgUE0NCgANCs4ZVs0mA97PfRdh
+AAJ7JYVEYkluaGVyaXRUZW1wbGF0ZU5hbWUkQ29uZmxpY3QkUkVGJEMxJAQABAAAAHwABQAEAEZv
+cm0BAAgARGF0YWJhc2UKAgUABgBYUGFnZXNqAQAAAAAAAAAAAAAPAgUADgBDdXN0b21Db250cm9s
+c2oBAAAAAAAAAAAAAA8CHQIFAA0ASmF2YVJlc291cmNlcwBqAQAAAAAAAAAAAAAPAh0CBAAcAgMA
+BwAsACYACUwxUzRTNVMxMFMxMVMxMlMxM1MxN1MxOFMxOVMyMFMyNFMyNVMhAAEAAAAAAAAAAAAA
+AAAAIQABAAAAAAIAAAAAAAAAACEAAQAAAAAEAAAAAAAAAAAUAAEAAAAABgAAAAAAAAAAJAABAAAA
+AAgAAAAAAAAAACQAAQAAAAAKAAAAAAAAAAAxAAEAAAAADAAAAAAAAAAAMQABAAAAAA4AAAAAAAAA
+AB8AAgAARIBmAAAAAAUAmGYAAAUABgBUaXRsZVNlcnZlch8AAgAARIBmAAAAAAUAGGYAAAUABgBU
+aXRsZVNlcnZlch8AAgAARIFmAAAAAAUAGGYAAAUABgBUaXRsZVNlcnZlchMAAQAARIhmAAAAAAYA
+U2VydmVyIgACAABEgGYAAAAACAAYZgAACAAGAEZpbGVQYXRoU2VydmVyIgACAABEgWYAAAAACAAY
+ZgAACAAGAEZpbGVQYXRoU2VydmVyLwACAABEgGYAAAAAFQAYZgAAFQAGAERiSW5oZXJpdFRlbXBs
+YXRlTmFtZVNlcnZlci8AAgAARIFmAAAAABUAGGYAABUABgBEYkluaGVyaXRUZW1wbGF0ZU5hbWVT
+ZXJ2ZXIEAAAAAAAAAAEAAAAAAAAAAABDlxjPkhXbFkKVqnUCBm4WABAACENg4YgwYMeNEuHceXkg
+YFemQJDuMJnQ5JeRTH9k0PJWiEmkM6hGAVHWhYESPsGYSPlR6ZkjC1eUzWABxFkHPmYYBLuwiY89
+cXhmlZtny9cwFBZA9MsgRZa7
+</rawitemdata>
+  </item>
+  <item name="$FILE" summary="true" sign="true" seal="true">
+    <object>
+      <file hosttype="msdos" compression="none" flags="sign" encoding="none" name="%%source%%.jar" size="7500">
+        <created>
+          <datetime>20130108T075017,48-05</datetime>
+        </created>
+        <modified>
+          <datetime>20130128T140236,21-05</datetime>
+        </modified>
+        <filedata>
 UEsDBBQACAAIACVwPEIAAAAAAAAAAAAAAAAjAAAAY29tL3JhaWRvbWF0aWMveG1sL1hNTERvY3Vt
 ZW50LmphdmHNVd9v0zAQfs6k/g/Wnhy0WV3RwlA1CcZWqVKhEttgr55zaw2JHdlO1zL1f+ccJ01a
 WgRP8BInvh/fd99drwUX3/kMiNA5M1ymOudOCrbMs2HvqHck80IbR77xBWdSs1fD7SsFjt1/nuy/
@@ -144,11 +226,20 @@ AAAAAAAA0gIAAGNvbS9yYWlkb21hdGljL3htbC9YTUxOb2RlLmphdmFQSwECFAAUAAgACAAlcDxC
 3TaB2bUBAAAbBAAAIwAAAAAAAAAAAAAAAABZCQAAY29tL3JhaWRvbWF0aWMveG1sL1hNTE5vZGVM
 aXN0LmphdmFQSwECFAAUAAgACABRcDxC4gsmsXAQAAA2OQAADgAAAAAAAAAAAAAAAABfCwAASmF2
 YUFnZW50LmphdmFQSwUGAAAAAAQABAArAQAACxwAAAAA
-</filedata></file></object></item>
-<item name='$FILE' summary='true' sign='true' seal='true'><object><file hosttype='msdos'
- compression='none' flags='sign' encoding='none' name='%%object%%.jar' size='14117'>
-<created><datetime>20130108T075017,48-05</datetime></created>
-<modified><datetime>20130128T140236,23-05</datetime></modified><filedata>
+</filedata>
+      </file>
+    </object>
+  </item>
+  <item name="$FILE" summary="true" sign="true" seal="true">
+    <object>
+      <file hosttype="msdos" compression="none" flags="sign" encoding="none" name="%%object%%.jar" size="14117">
+        <created>
+          <datetime>20130108T075017,48-05</datetime>
+        </created>
+        <modified>
+          <datetime>20130128T140236,23-05</datetime>
+        </modified>
+        <filedata>
 UEsDBBQACAAIACdwPEIAAAAAAAAAAAAAAAAkAAAAY29tL3JhaWRvbWF0aWMveG1sL1hNTERvY3Vt
 ZW50LmNsYXNzjVZpVxNXGH4uBAbCiAEFcZeiEkIwbd2NtYpKjQ1LZVGk2ySMMJrMpJOJgl3tbje7
 tz/DntOGtpzT48ee/oB+6of+i37r6XNvFhIJlpNzZu7cd3ve533ve/PHv7/+BuBJfK+hTmBX0klH
@@ -397,62 +488,8 @@ AAAAAAAAAADdBQAAY29tL3JhaWRvbWF0aWMveG1sL1hNTE5vZGUuY2xhc3NQSwECFAAUAAgACAAn
 cDxCq4K4g44DAACEBgAAJAAAAAAAAAAAAAAAAABpFAAAY29tL3JhaWRvbWF0aWMveG1sL1hNTE5v
 ZGVMaXN0LmNsYXNzUEsBAhQAFAAIAAgAJ3A8QuOrcP1aHQAAqTsAAA8AAAAAAAAAAAAAAAAASRgA
 AEphdmFBZ2VudC5jbGFzc1BLBQYAAAAABAAEAC8BAADgNQAAAAA=
-</filedata></file></object></item>
-<item name='$JavaCompilerSource'><text>1.6</text></item>
-<item name='$JavaCompilerTarget'><text>1.6</text></item>
-<item name='$AssistVersion'><datetime>20130128T140236,57-05</datetime></item>
-<item name='$TITLE' sign='true'><text>Update Database List</text></item>
-<item name='$AssistType' sign='true'><number>65427</number></item>
-<item name='$AssistLastRun' sign='true'>
-<rawitemdata type='400'>
-AAAAAAAAAAA=
-</rawitemdata></item>
-<item name='$AssistDocCount' sign='true'><number>0</number></item>
-<item name='$FlagsExt' sign='true'><text>D</text></item>
-<item name='$AssistFlags' sign='true'><text>Es</text></item>
-<item name='$AssistTrigger'><text>4</text></item>
-<item name='$AssistInfo' sign='true'>
-<rawitemdata type='11'>
-AQAEAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-</rawitemdata></item>
-<item name='$AssistQuery' sign='true'>
-<rawitemdata type='f'>
-gQYAAAAA
-</rawitemdata></item>
-<item name='$AssistAction' sign='true'>
-<rawitemdata type='10'>
-gQKT/3oADwA5AB8AAQAAAAAAAABKYXZhQWdlbnQuY2xhc3NZOlxMaWJyYXJ5XEFwcGxpY2F0aW9u
-IFN1cHBvcnRcTG90dXMgTm90ZXMgRGF0YSAoV2luZG93cyklJXNvdXJjZSUlLmphcgAlJW9iamVj
-dCUlLmphcgAAAA==
-</rawitemdata></item>
-<item name='$AssistAction_Ex' sign='true'>
-<rawitemdata type='14'>
-gQI=
-</rawitemdata></item>
-<item name='$Restricted' sign='true'><number>2</number></item>
-<item name='$Flags'><text>fJj3</text></item>
-<item name='$DesignerVersion'><text>8.5.3</text></item>
-<item name='$AssistRunInfo' summary='true'>
-<rawitemdata type='3'>
-BgABAAAACABiBgAAAAAAAAUAAAAwAAAAAAAAAAAAAAAAAAAApgAAAAAAAAAAAAAAAAAAABAAAAAA
-AAAA3LdbAFV7JYUAAAAAE5xoAAF7JYVTI2wA73olhQAAAAAAAAAAAAAAAAAAAAAAAAAAU3RhcnRl
-ZCBydW5uaW5nIGFnZW50ICdVcGRhdGUgRGF0YWJhc2UgTGlzdCcgb24gMDQvMjIvMjAxMyAxMjo0
-MTowMCBQTQ0KUmFuIEphdmEgQWdlbnQgQ2xhc3MNCkRvbmUgcnVubmluZyBhZ2VudCAnVXBkYXRl
-IERhdGFiYXNlIExpc3QnIG9uIDA0LzIyLzIwMTMgMTI6NDE6NDggUE0NCgANCs4ZVs0mA97PfRdh
-AAJ7JYVEYkluaGVyaXRUZW1wbGF0ZU5hbWUkQ29uZmxpY3QkUkVGJEMxJAQABAAAAHwABQAEAEZv
-cm0BAAgARGF0YWJhc2UKAgUABgBYUGFnZXNqAQAAAAAAAAAAAAAPAgUADgBDdXN0b21Db250cm9s
-c2oBAAAAAAAAAAAAAA8CHQIFAA0ASmF2YVJlc291cmNlcwBqAQAAAAAAAAAAAAAPAh0CBAAcAgMA
-BwAsACYACUwxUzRTNVMxMFMxMVMxMlMxM1MxN1MxOFMxOVMyMFMyNFMyNVMhAAEAAAAAAAAAAAAA
-AAAAIQABAAAAAAIAAAAAAAAAACEAAQAAAAAEAAAAAAAAAAAUAAEAAAAABgAAAAAAAAAAJAABAAAA
-AAgAAAAAAAAAACQAAQAAAAAKAAAAAAAAAAAxAAEAAAAADAAAAAAAAAAAMQABAAAAAA4AAAAAAAAA
-AB8AAgAARIBmAAAAAAUAmGYAAAUABgBUaXRsZVNlcnZlch8AAgAARIBmAAAAAAUAGGYAAAUABgBU
-aXRsZVNlcnZlch8AAgAARIFmAAAAAAUAGGYAAAUABgBUaXRsZVNlcnZlchMAAQAARIhmAAAAAAYA
-U2VydmVyIgACAABEgGYAAAAACAAYZgAACAAGAEZpbGVQYXRoU2VydmVyIgACAABEgWYAAAAACAAY
-ZgAACAAGAEZpbGVQYXRoU2VydmVyLwACAABEgGYAAAAAFQAYZgAAFQAGAERiSW5oZXJpdFRlbXBs
-YXRlTmFtZVNlcnZlci8AAgAARIFmAAAAABUAGGYAABUABgBEYkluaGVyaXRUZW1wbGF0ZU5hbWVT
-ZXJ2ZXIEAAAAAAAAAAEAAAAAAAAAAABDlxjPkhXbFkKVqnUCBm4WABAACENg4YgwYMeNEuHceXkg
-YFemQJDuMJnQ5JeRTH9k0PJWiEmkM6hGAVHWhYESPsGYSPlR6ZkjC1eUzWABxFkHPmYYBLuwiY89
-cXhmlZtny9cwFBZA9MsgRZa7
-</rawitemdata></item></note>
-
+</filedata>
+      </file>
+    </object>
+  </item>
+</note>
