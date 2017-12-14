@@ -1,13 +1,12 @@
 package model;
 
-import javax.persistence.Column;
+import lotus.domino.Database;
+import lotus.domino.Document;
+import lotus.domino.NotesException;
 
-import net.cmssite.endeavour60.forms.CMSDocument;
-
-import org.openntf.domino.Document;
-
-public class Application extends CMSDocument {
+public class Application extends AbstractModel {
 	private static final long serialVersionUID = 1L;
+<<<<<<< HEAD
 	
 	// TODO figure out why these annotations aren't visible from the plugin
 	@Column
@@ -26,11 +25,14 @@ public class Application extends CMSDocument {
 	public Application() {
 		super();
 	}
+=======
+>>>>>>> parent of 9f252d2... Switched model.Application to use CMSDocument
 
-	public Application(final net.cmssite.endeavour60.Document document) {
-		super(document);
+	public Application(Document doc) throws NotesException {
+		super(doc);
 	}
 
+<<<<<<< HEAD
 	public Application(final Document document) {
 		super(document);
 	}
@@ -117,4 +119,15 @@ public class Application extends CMSDocument {
 	public void setDocumentCount(int documentCount) {
 		this.documentCount = documentCount;
 	}
+=======
+	public Application(Database database) throws NotesException {
+		super(database);
+	}
+
+	@Override
+	protected boolean doSave() throws Exception {
+		return true;
+	}
+
+>>>>>>> parent of 9f252d2... Switched model.Application to use CMSDocument
 }
