@@ -1,9 +1,11 @@
 package controller;
 
 import frostillicus.xsp.controller.BasicXPageController;
-import lotus.domino.*;
+import org.openntf.domino.*;
 
 import java.io.IOException;
+import java.io.UnsupportedEncodingException;
+import java.net.URLEncoder;
 import java.util.*;
 
 import javax.faces.context.FacesContext;
@@ -13,6 +15,7 @@ import com.ibm.xsp.extlib.util.ExtLibUtil;
 import frostillicus.xsp.xml.*;
 
 import net.cmssite.endeavour60.util.EndeavourStrings;
+import net.cmssite.endeavour60.util.EndeavourUtil;
 
 public class Config_UpdaterAgents extends BasicXPageController {
 	private static final long serialVersionUID = 1L;
@@ -23,8 +26,8 @@ public class Config_UpdaterAgents extends BasicXPageController {
 	public void beforePageLoad() throws Exception {
 		this.agentInfo = new ArrayList<Map<String, Object>>();
 
-		Database database = ExtLibUtil.getCurrentDatabase();
-		DxlExporter exporter = ExtLibUtil.getCurrentSession().createDxlExporter();
+		Database database = EndeavourUtil.getDatabase();
+		DxlExporter exporter = EndeavourUtil.getSession().createDxlExporter();
 
 		NoteCollection agentNotes = database.createNoteCollection(false);
 		agentNotes.setSelectAgents(true);
@@ -55,12 +58,8 @@ public class Config_UpdaterAgents extends BasicXPageController {
 
 			agentInfo.add(thisAgent);
 
-			agentDoc.recycle();
 			noteId = agentNotes.getNextNoteID(noteId);
 		}
-
-		agentNotes.recycle();
-		exporter.recycle();
 
 		Collections.sort(this.agentInfo, new AgentListComparator());
 	}
@@ -68,13 +67,12 @@ public class Config_UpdaterAgents extends BasicXPageController {
 	public void createAgent() throws Exception {
 		String server = (String)ExtLibUtil.getViewScope().get("createUpdaterAgentServer");
 		if(!StringUtil.isEmpty(server)) {
-			Name serverName = ExtLibUtil.getCurrentSession().createName(server);
+			Name serverName = EndeavourUtil.getSession().createName(server);
 			String canonName = serverName.getCanonical();
-			serverName.recycle();
 
 			// Find the template agent to copy
-			Database database = ExtLibUtil.getCurrentDatabase();
-			DxlExporter exporter = ExtLibUtil.getCurrentSession().createDxlExporter();
+			Database database = EndeavourUtil.getDatabase();
+			DxlExporter exporter = EndeavourUtil.getSession().createDxlExporter();
 			NoteCollection agentNotes = database.createNoteCollection(false);
 			agentNotes.setSelectAgents(true);
 			agentNotes.setSelectionFormula(" $Title='$$UpdaterAgentTemplate' ");
@@ -95,18 +93,20 @@ public class Config_UpdaterAgents extends BasicXPageController {
 			xmlDoc.selectSingleNode("//schedule").setAttribute("runserver", canonName);
 			xmlDoc.selectSingleNode("//agent").setAttribute("runonbehalfof", canonName);
 
-			Database signerDB = ExtLibUtil.getCurrentSessionAsSignerWithFullAccess().getDatabase(database.getServer(), database.getFilePath());
+			Database signerDB = EndeavourUtil.getSessionAsSignerWithFullAccess().getDatabase(database.getServer(), database.getFilePath());
 
-			DxlImporter importer = ExtLibUtil.getCurrentSessionAsSignerWithFullAccess().createDxlImporter();
-			importer.setDesignImportOption(DxlImporter.DXLIMPORTOPTION_REPLACE_ELSE_CREATE);
+			DxlImporter importer = EndeavourUtil.getSessionAsSignerWithFullAccess().createDxlImporter();
+			importer.setDesignImportOption(DxlImporter.DesignImportOption.REPLACE_ELSE_CREATE);
 			importer.setReplicaRequiredForReplaceOrUpdate(false);
 			importer.importDxl(xmlDoc.getXml(), signerDB);
+			if(importer.getImportedNoteCount() < 1) {
+				throw new RuntimeException(importer.getLog());
+			}
 
 			// Now fetch and sign the doc
 			Document agentDoc = signerDB.getDocumentByID(importer.getFirstImportedNoteID());
 			agentDoc.sign();
 			agentDoc.save();
-			agentDoc.recycle();
 
 			appRedirect("/Config_UpdaterAgent.xsp?agentId=" + importer.getFirstImportedNoteID());
 
@@ -116,6 +116,24 @@ public class Config_UpdaterAgents extends BasicXPageController {
 	public List<Map<String, Object>> getAgentInfo() {
 		return agentInfo;
 	}
+	
+	public boolean isCurrentServer() {
+		Session session = EndeavourUtil.getSession();
+		String currentServer = session.getServerName();
+		Map<String, Object> currentAgent = EndeavourUtil.resolveVariable("agent");
+		return StringUtil.equalsIgnoreCase(currentServer, StringUtil.toString(currentAgent.get("server")));
+	}
+	
+	public String getAgentUrl() throws UnsupportedEncodingException {
+		Map<String, Object> currentAgent = EndeavourUtil.resolveVariable("agent");
+		String server = (String)currentAgent.get("server");
+		String name = "$$UpdaterAgent-" + server;
+		return getContextPath() + "/" + URLEncoder.encode(name, "UTF-8");
+	}
+	
+	// ******************************************************************************
+	// * Internal utility methods
+	// ******************************************************************************
 
 	public static class AgentListComparator implements Comparator<Map<String, Object>> {
 

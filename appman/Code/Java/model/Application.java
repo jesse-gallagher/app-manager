@@ -20,6 +20,8 @@ public class Application extends CMSDocument {
 	private String replicaId;
 	@Column
 	private String hidden;
+	@Column
+	private int documentCount;
 	
 	public Application() {
 		super();
@@ -48,6 +50,7 @@ public class Application extends CMSDocument {
 		this.server = doc.getItemValueString("server");
 		this.replicaId = doc.getItemValueString("replicaId");
 		this.hidden = doc.getItemValueString("hidden");
+		this.documentCount = doc.getItemValueInteger("documentCount");
 	}
 
 	@Override
@@ -62,6 +65,7 @@ public class Application extends CMSDocument {
 		doc.replaceItemValue("server", this.server);
 		doc.replaceItemValue("replicaId", this.replicaId);
 		doc.replaceItemValue("hidden", this.hidden);
+		doc.replaceItemValue("documentCount", this.documentCount);
 	}
 	
 	// ******************************************************************************
@@ -105,5 +109,12 @@ public class Application extends CMSDocument {
 	}
 	public void setHidden(String hidden) {
 		this.hidden = hidden;
+	}
+	
+	public int getDocumentCount() {
+		return documentCount;
+	}
+	public void setDocumentCount(int documentCount) {
+		this.documentCount = documentCount;
 	}
 }

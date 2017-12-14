@@ -49,6 +49,22 @@
 				<xp:this.facets><xp:text xp:key="header" value="Schedule"/></xp:this.facets>
 				<xp:text value="#{agent.scheduleType}"/>
 			</xp:column>
+			<xp:column>
+				<xp:link id="runNow" rendered="#{controller.currentServer}" text="${eLocaleApp.runNow}">
+					<xp:eventHandler event="onclick" submit="false"><xp:this.script><![CDATA[
+						var agentPath = "#{javascript:controller.getAgentUrl()}";
+						dojo.xhrGet({
+							url: agentPath,
+							handleAs: "text",
+							timeout: 1,
+							error: function() {
+								// This is expected, as the timeout is so low
+								XSP.alert("#{javascript:eLocaleApp.getValue('startedUpdaterAgent')}");
+							}
+						})
+					]]></xp:this.script></xp:eventHandler>
+				</xp:link>
+			</xp:column>
 		</xp:dataTable>
 	</xc:layout>
 </xp:view>
