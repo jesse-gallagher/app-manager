@@ -3,7 +3,7 @@ package controller;
 import frostillicus.xsp.controller.BasicXPageController;
 import lotus.domino.*;
 import com.ibm.xsp.extlib.util.ExtLibUtil;
-import frostillicus.xsp.xml.*;
+import com.raidomatic.xml.*;
 import java.util.*;
 import java.text.SimpleDateFormat;
 

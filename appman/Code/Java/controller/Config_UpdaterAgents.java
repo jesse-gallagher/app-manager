@@ -12,7 +12,7 @@ import javax.faces.context.FacesContext;
 
 import com.ibm.commons.util.StringUtil;
 import com.ibm.xsp.extlib.util.ExtLibUtil;
-import frostillicus.xsp.xml.*;
+import com.raidomatic.xml.*;
 
 import net.cmssite.endeavour60.util.EndeavourStrings;
 import net.cmssite.endeavour60.util.EndeavourUtil;
