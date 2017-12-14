@@ -1,22 +1,30 @@
 package controller;
 
+<<<<<<< HEAD
 import frostillicus.xsp.controller.BasicXPageController;
 import org.openntf.domino.*;
 
 import java.io.IOException;
 import java.io.UnsupportedEncodingException;
 import java.net.URLEncoder;
-import java.util.*;
+=======
+import frostillicus.JSFUtil;
+import frostillicus.controller.BasicXPageController;
+import lotus.domino.*;
 
-import javax.faces.context.FacesContext;
+>>>>>>> parent of 7a53a0a... Converted app to use Endeavour code more often
+import java.util.*;
 
 import com.ibm.commons.util.StringUtil;
 import com.ibm.xsp.extlib.util.ExtLibUtil;
 import com.raidomatic.xml.*;
 
+<<<<<<< HEAD
 import net.cmssite.endeavour60.util.EndeavourStrings;
 import net.cmssite.endeavour60.util.EndeavourUtil;
 
+=======
+>>>>>>> parent of 7a53a0a... Converted app to use Endeavour code more often
 public class Config_UpdaterAgents extends BasicXPageController {
 	private static final long serialVersionUID = 1L;
 
@@ -46,7 +54,7 @@ public class Config_UpdaterAgents extends BasicXPageController {
 			xmlDoc.loadString(dxl);
 
 			XMLNode agentNode = xmlDoc.selectSingleNode("//agent");
-			thisAgent.put("server", EndeavourStrings.strRight(agentNode.getAttribute("name"), "$$UpdaterAgent-"));
+			thisAgent.put("server", JSFUtil.strRight(agentNode.getAttribute("name"), "$$UpdaterAgent-"));
 			thisAgent.put("enabled", !agentNode.getAttribute("enabled").equals("false"));
 
 			XMLNode schedule = xmlDoc.selectSingleNode("//schedule");
@@ -108,7 +116,7 @@ public class Config_UpdaterAgents extends BasicXPageController {
 			agentDoc.sign();
 			agentDoc.save();
 
-			appRedirect("/Config_UpdaterAgent.xsp?agentId=" + importer.getFirstImportedNoteID());
+			JSFUtil.appRedirect("/Config_UpdaterAgent.xsp?agentId=" + importer.getFirstImportedNoteID());
 
 		}
 	}
@@ -142,14 +150,4 @@ public class Config_UpdaterAgents extends BasicXPageController {
 		}
 
 	}
-	
-	public static String getContextPath() {
-		return FacesContext.getCurrentInstance().getExternalContext().getRequestContextPath();
-	}
-
-	public static void appRedirect(String appPath) throws IOException {
-		String cleanPath = appPath.startsWith("/") ? appPath : "/" + appPath;
-		FacesContext.getCurrentInstance().getExternalContext().redirect(getContextPath() + cleanPath);
-	}
-
 }

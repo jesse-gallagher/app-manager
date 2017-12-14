@@ -1,24 +1,25 @@
 package controller;
 
 import com.ibm.xsp.extlib.util.ExtLibUtil;
-import frostillicus.xsp.controller.BasicXPageController;
+import frostillicus.controller.BasicDocumentController;
 import lotus.domino.*;
 import java.util.*;
 import java.text.SimpleDateFormat;
 
-public class Application extends BasicXPageController {
+public class Application extends BasicDocumentController {
 	private static final long serialVersionUID = 1L;
 
 	private static SimpleDateFormat TIMESTAMP_FORMAT = new SimpleDateFormat("yyyyMMddHHmmssSSS");
 
 	public void createDesignBackup() throws NotesException {
-		// TODO make this actually point to the right DB
 		Database database = ExtLibUtil.getCurrentDatabase();
 		Session sessionAsSigner = ExtLibUtil.getCurrentSessionAsSignerWithFullAccess();
 		Database signerDB = sessionAsSigner.getDatabase(database.getServer(), database.getFilePath());
 
 		String newpath = getBackupPath() + database.getReplicaID() + "-" + TIMESTAMP_FORMAT.format(new Date()) + ".ntf";
+		System.out.println("Storing backup in " + newpath);
 		signerDB.createCopy(database.getServer(), newpath);
+		System.out.println("backup complete");
 	}
 
 	public String getBackupPath() throws NotesException {

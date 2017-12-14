@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xp:view xmlns:xp="http://www.ibm.com/xsp/core" xmlns:xe="http://www.ibm.com/xsp/coreex" xmlns:xc="http://www.ibm.com/xsp/custom"
-	beforePageLoad="#{controller.beforePageLoad}" afterPageLoad="#{controller.afterPageLoad}"
+	beforePageLoad="#{pageController.beforePageLoad}" afterPageLoad="#{pageController.afterPageLoad}"
 	pageTitle="Config: Updater Agents">
 
 
@@ -23,14 +23,14 @@
 					</xe:dialogContent>
 					<xe:dialogButtonBar>
 						<xp:button id="createUpdaterAgentConfirm" value="Create" styleClass="btn btn-primary">
-							<xp:eventHandler event="onclick" submit="true" refreshMode="complete" action="#{controller.createAgent}"/>
+							<xp:eventHandler event="onclick" submit="true" refreshMode="complete" action="#{pageController.createAgent}"/>
 						</xp:button>
 					</xe:dialogButtonBar>
 				</xe:dialog>
 			</xp:div>
 		</xp:this.facets>
 		
-		<xp:dataTable value="#{controller.agentInfo}" rows="1000" var="agent"
+		<xp:dataTable value="#{pageController.agentInfo}" rows="1000" var="agent"
 			styleClass="table table-bordered table-condensed table-striped table-rounded hideHeader hideFooter">
 			
 			<xp:column>

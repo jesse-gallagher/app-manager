@@ -1,14 +1,12 @@
 package controller;
 
-import frostillicus.xsp.controller.BasicXPageController;
+import frostillicus.JSFUtil;
+import frostillicus.controller.BasicXPageController;
 import lotus.domino.*;
 import com.ibm.xsp.extlib.util.ExtLibUtil;
 import com.raidomatic.xml.*;
 import java.util.*;
 import java.text.SimpleDateFormat;
-
-import net.cmssite.endeavour60.util.EndeavourUtil;
-import net.cmssite.endeavour60.util.EndeavourStrings;
 
 public class Config_UpdaterAgent extends BasicXPageController {
 	private static final long serialVersionUID = 1L;
@@ -22,7 +20,7 @@ public class Config_UpdaterAgent extends BasicXPageController {
 	}
 
 	private void fetchAgentInfo() throws Exception {
-		Map<String, String> param = EndeavourUtil.getParam();
+		Map<String, String> param = JSFUtil.getParam();
 		String noteId = param.get("agentId");
 
 		Database database = ExtLibUtil.getCurrentDatabase();
@@ -37,7 +35,7 @@ public class Config_UpdaterAgent extends BasicXPageController {
 
 
 	public String getServer() throws Exception {
-		return EndeavourStrings.strRight(xmlDoc.selectSingleNode("//agent").getAttribute("name"), "$$UpdaterAgent-");
+		return JSFUtil.strRight(xmlDoc.selectSingleNode("//agent").getAttribute("name"), "$$UpdaterAgent-");
 	}
 	public void setServer(String server) throws Exception {
 		Name serverName = ExtLibUtil.getCurrentSession().createName(server);
@@ -121,13 +119,13 @@ public class Config_UpdaterAgent extends BasicXPageController {
 			//			agent.recycle();
 
 			fetchAgentInfo();
-			EndeavourUtil.flashMessage("confirmation", "Agent updated");
+			JSFUtil.addMessage("confirmation", "Agent updated");
 		} catch(Exception e) {
-			EndeavourUtil.flashMessage("error", "Exception: " + e.toString());
+			JSFUtil.addMessage("error", "Exception: " + e.toString());
 
 			if("NotesException: DXL importer operation failed".equals(e.toString())) {
 				try {
-					EndeavourUtil.flashMessage("error", importer.getLog());
+					JSFUtil.addMessage("error", importer.getLog());
 				} catch(NotesException ne) { }
 			}
 
@@ -141,10 +139,10 @@ public class Config_UpdaterAgent extends BasicXPageController {
 		try {
 			Database database = ExtLibUtil.getCurrentDatabase();
 			Database signerDB = ExtLibUtil.getCurrentSessionAsSignerWithFullAccess().getDatabase(database.getServer(), database.getFilePath());
-			Document agentDoc = signerDB.getDocumentByID(EndeavourUtil.getParam().get("agentId"));
+			Document agentDoc = signerDB.getDocumentByID(JSFUtil.getParam().get("agentId"));
 			agentDoc.remove(true);
 		} catch(Exception e) {
-			EndeavourUtil.flashMessage("error", "Exception: " + e.toString());
+			JSFUtil.addMessage("error", "Exception: " + e.toString());
 
 			return "xsp-failure";
 		}

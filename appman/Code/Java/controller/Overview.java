@@ -1,7 +1,7 @@
 package controller;
 
 import com.ibm.xsp.extlib.util.ExtLibUtil;
-import frostillicus.xsp.controller.BasicXPageController;
+import frostillicus.controller.BasicXPageController;
 import lotus.domino.*;
 
 public class Overview extends BasicXPageController {

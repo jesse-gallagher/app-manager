@@ -9,12 +9,17 @@
 	
 	<xe:applicationLayout id="applicationLayout1">
 		<xe:this.configuration>
-			<xe:oneuiApplication legal="false" footer="false" titleBar="#{not empty compositeData.pageTitle}" titleBarName="#{compositeData.pageTitle}" productLogo="/$Icon"
-				productLogoAlt="${eLocaleApp.appName}" productLogoHeight="24" productLogoWidth="24" placeBar="false" mastHeader="true" banner="false">
-			</xe:oneuiApplication>
+			<xe:bootstrapResponsiveConfiguration legal="false" footer="false" titleBar="#{not empty compositeData.pageTitle}" titleBarName="#{compositeData.pageTitle}" productLogo="/$Icon"
+				productLogoAlt="${appHelper.appName}" productLogoHeight="24" productLogoWidth="24" placeBar="false" invertedNavbar="true">
+				<xe:this.bannerUtilityLinks>
+					<xe:userTreeNode />
+					<xe:loginTreeNode />
+				</xe:this.bannerUtilityLinks>
+			</xe:bootstrapResponsiveConfiguration>
 		</xe:this.configuration>
 
 		<xe:this.facets>
+<<<<<<< HEAD
 			<xp:div xp:key="MastHeader" styleClass="endeavor-header">
 				<div class="companyLogo">
 					<xp:link value="http://endeavorsite.com/" target="_blank">
@@ -39,6 +44,8 @@
 					</table>
 				</div>
 			</xp:div>
+=======
+>>>>>>> parent of 7a53a0a... Converted app to use Endeavour code more often
 			<xe:navigator xp:key="LeftColumn">
 				<xe:this.treeNodes>
 					<xe:pageTreeNode label="Overview" page="Overview" />
