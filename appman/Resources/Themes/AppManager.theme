@@ -1,5 +1,6 @@
-<theme extends="endeavour-6.0-plans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="platform:/plugin/com.ibm.designer.domino.stylekits/schema/stylekit.xsd" >
+<theme extends="oneuiv2.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="platform:/plugin/com.ibm.designer.domino.stylekits/schema/stylekit.xsd" >
 	<resources>
+		<styleSheet href="/overrides.css"/>
 		<styleSheet href="/style.css"/>
 	</resources>
 </theme>

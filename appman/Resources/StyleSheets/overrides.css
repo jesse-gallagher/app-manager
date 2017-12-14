@@ -1,0 +1,5 @@
+
+/* bootswatch-yeti hides modals for some reason */
+.modal {
+	display: block;
+}
