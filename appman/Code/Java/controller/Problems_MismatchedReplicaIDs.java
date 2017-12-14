@@ -5,15 +5,14 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.TreeSet;
 
-import net.cmssite.endeavour60.util.EndeavourUtil;
-
 import util.BeanTabularListAdapter;
 
-import frostillicus.xsp.controller.BasicXPageController;
+import frostillicus.controller.BasicXPageController;
 
-import org.openntf.domino.*;
+import lotus.domino.*;
 
 import com.ibm.commons.util.StringUtil;
+import com.ibm.xsp.extlib.util.ExtLibUtil;
 
 public class Problems_MismatchedReplicaIDs extends BasicXPageController {
 	private static final long serialVersionUID = 1L;
@@ -35,11 +34,12 @@ public class Problems_MismatchedReplicaIDs extends BasicXPageController {
 		));
 	}
 
-	public BeanTabularListAdapter<model.Application> getApplications() {
+	public BeanTabularListAdapter<model.Application> getApplications() throws NotesException {
 		List<model.Application> result = new ArrayList<model.Application>();
 		
-		Database database = EndeavourUtil.getDatabase();
-		View view = EndeavourUtil.getView(database, "Problems\\Mismatched Replica IDs");
+		Database database = ExtLibUtil.getCurrentDatabase();
+		View view = database.getView("Problems\\Mismatched Replica IDs");
+		view.setAutoUpdate(false);
 		ViewNavigator nav = view.createViewNav();
 		nav.setCacheGuidance(400);
 		ViewEntry categoryEntry = nav.getFirst();
@@ -60,6 +60,6 @@ public class Problems_MismatchedReplicaIDs extends BasicXPageController {
 			categoryEntry = nav.getNextSibling(categoryEntry);
 		}
 		
-		return new BeanTabularListAdapter<model.Application>(result, "unid");
+		return new BeanTabularListAdapter<model.Application>(result, "documentId");
 	}
 }

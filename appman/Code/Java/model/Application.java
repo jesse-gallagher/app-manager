@@ -6,47 +6,24 @@ import lotus.domino.NotesException;
 
 public class Application extends AbstractModel {
 	private static final long serialVersionUID = 1L;
-<<<<<<< HEAD
 	
-	// TODO figure out why these annotations aren't visible from the plugin
-	@Column
 	private String title;
-	@Column
 	private String server;
-	@Column
 	private String filePath;
-	@Column
 	private String replicaId;
-	@Column
 	private String hidden;
-	@Column
 	private int documentCount;
 	
-	public Application() {
-		super();
+	public Application(Database database) throws NotesException {
+		super(database);
 	}
-=======
->>>>>>> parent of 9f252d2... Switched model.Application to use CMSDocument
 
-	public Application(Document doc) throws NotesException {
+	public Application(final Document doc) throws NotesException {
 		super(doc);
-	}
-
-<<<<<<< HEAD
-	public Application(final Document document) {
-		super(document);
+		loadDocument(doc);
 	}
 	
-	// ******************************************************************************
-	// * CMSDocument methods
-	// ******************************************************************************
-	
-	@Override
-	protected void initialize() {
-		
-	}
-	
-	protected void doLoadDocument(Document doc, boolean useRichText, boolean loadAttachments) throws Exception {
+	protected void loadDocument(Document doc) throws NotesException {
 		this.title = doc.getItemValueString("title");
 		this.filePath = doc.getItemValueString("filePath");
 		this.server = doc.getItemValueString("server");
@@ -56,18 +33,14 @@ public class Application extends AbstractModel {
 	}
 
 	@Override
-	protected void doSaveNewDocument(Document doc) throws Exception {
-		
-	}
-	
-	@Override
-	protected void doSaveDocument(Document doc) throws Exception {
+	protected boolean doSave(Document doc) throws Exception {
 		doc.replaceItemValue("title", this.title);
 		doc.replaceItemValue("filePath", this.filePath);
 		doc.replaceItemValue("server", this.server);
 		doc.replaceItemValue("replicaId", this.replicaId);
 		doc.replaceItemValue("hidden", this.hidden);
 		doc.replaceItemValue("documentCount", this.documentCount);
+		return true;
 	}
 	
 	// ******************************************************************************
@@ -119,15 +92,4 @@ public class Application extends AbstractModel {
 	public void setDocumentCount(int documentCount) {
 		this.documentCount = documentCount;
 	}
-=======
-	public Application(Database database) throws NotesException {
-		super(database);
-	}
-
-	@Override
-	protected boolean doSave() throws Exception {
-		return true;
-	}
-
->>>>>>> parent of 9f252d2... Switched model.Application to use CMSDocument
 }

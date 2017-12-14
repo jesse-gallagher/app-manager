@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xp:view xmlns:xp="http://www.ibm.com/xsp/core" xmlns:xe="http://www.ibm.com/xsp/coreex" xmlns:xc="http://www.ibm.com/xsp/custom"
-	beforePageLoad="#{pageController.beforePageLoad}" afterPageLoad="#{pageController.afterPageLoad}"
+	beforePageLoad="#{controller.beforePageLoad}" afterPageLoad="#{controller.afterPageLoad}"
 	pageTitle="Log">
 	
 	<xp:this.data>
@@ -14,7 +14,7 @@
 			</xe:formRow>
 			<xe:formRow labelPosition="above" label="Body">
 				<pre style="white-space: pre-wrap">
-					<xp:text disableTheme="true" value="#{pageController.logBody}"/>
+					<xp:text disableTheme="true" value="#{controller.logBody}"/>
 				</pre>
 			</xe:formRow>
 		</xe:formTable>

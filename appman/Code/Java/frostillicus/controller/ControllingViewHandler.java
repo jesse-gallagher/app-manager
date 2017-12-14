@@ -65,19 +65,19 @@ public class ControllingViewHandler extends com.ibm.xsp.application.ViewHandlerE
 		UIViewRootEx root = null;
 		try {
 			XPageController pageController = controllerClass.newInstance();
-			ExtLibUtil.getRequestScope().put("pageController", pageController);
+			ExtLibUtil.getRequestScope().put("controller", pageController);
 
 			root = (UIViewRootEx)super.createView(context, pageName);
-			ExtLibUtil.getViewScope().put("pageController", pageController);
-			ExtLibUtil.getRequestScope().remove("pageController");
+			ExtLibUtil.getViewScope().put("controller", pageController);
+			ExtLibUtil.getRequestScope().remove("controller");
 
-			MethodBinding beforeRenderResponse = context.getApplication().createMethodBinding("#{pageController.beforeRenderResponse}", new Class[] { PhaseEvent.class });
+			MethodBinding beforeRenderResponse = context.getApplication().createMethodBinding("#{controller.beforeRenderResponse}", new Class[] { PhaseEvent.class });
 			root.setBeforeRenderResponse(beforeRenderResponse);
 
-			MethodBinding afterRenderResponse = context.getApplication().createMethodBinding("#{pageController.afterRenderResponse}", new Class[] { PhaseEvent.class });
+			MethodBinding afterRenderResponse = context.getApplication().createMethodBinding("#{controller.afterRenderResponse}", new Class[] { PhaseEvent.class });
 			root.setAfterRenderResponse(afterRenderResponse);
 
-			MethodBinding afterRestoreView = context.getApplication().createMethodBinding("#{pageController.afterRestoreView}", new Class[] { PhaseEvent.class });
+			MethodBinding afterRestoreView = context.getApplication().createMethodBinding("#{controller.afterRestoreView}", new Class[] { PhaseEvent.class });
 			root.setAfterRestoreView(afterRestoreView);
 		} catch(Exception e) {
 			e.printStackTrace();

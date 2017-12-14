@@ -1,7 +1,10 @@
 package util;
 
+import java.beans.IntrospectionException;
+import java.beans.PropertyDescriptor;
 import java.io.Serializable;
 import java.lang.reflect.InvocationTargetException;
+import java.lang.reflect.Method;
 import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.Iterator;
@@ -9,8 +12,6 @@ import java.util.List;
 import java.util.Set;
 
 import javax.faces.model.DataModel;
-
-import org.apache.commons.beanutils.PropertyUtils;
 
 import com.ibm.commons.util.StringUtil;
 import com.ibm.xsp.model.TabularDataModel;
@@ -178,24 +179,29 @@ public class BeanTabularListAdapter<T> extends TabularDataModel implements Seria
 	@SuppressWarnings("unchecked")
 	private static <T> T getProperty(Object bean, String name) {
 		try {
-			return (T)PropertyUtils.getProperty(bean, name);
+			PropertyDescriptor propDesc = new PropertyDescriptor(name, bean.getClass());
+			Method getter = propDesc.getReadMethod();
+			Object val = getter.invoke(bean);
+			return (T)val;
 		} catch (IllegalAccessException e) {
 			throw new RuntimeException(e);
 		} catch (InvocationTargetException e) {
 			throw new RuntimeException(e);
-		} catch (NoSuchMethodException e) {
+		} catch (IntrospectionException e) {
 			throw new RuntimeException(e);
 		}
 	}
 	
 	private static void setProperty(Object bean, String name, Object value) {
 		try {
-			PropertyUtils.setProperty(bean, name, value);
+			PropertyDescriptor propDesc = new PropertyDescriptor(name, bean.getClass());
+			Method setter = propDesc.getWriteMethod();
+			setter.invoke(bean, value);
 		} catch (IllegalAccessException e) {
 			throw new RuntimeException(e);
 		} catch (InvocationTargetException e) {
 			throw new RuntimeException(e);
-		} catch (NoSuchMethodException e) {
+		} catch (IntrospectionException e) {
 			throw new RuntimeException(e);
 		}
 	}

@@ -1,18 +1,12 @@
-<?xml version="1.0" encoding="UTF-8"?><note class="form" replicaid="85257AED0043B6B0" version="9.0" xmlns="http://www.lotus.com/dxl">
-<noteinfo noteid="2c6" sequence="2" unid="84B0B8B27329D44D85257AED00451618">
-<created><datetime>20130108T073436,40-05</datetime></created>
-<modified><datetime>20130108T073447,92-05</datetime></modified>
-<revised><datetime>20130108T073447,90-05</datetime></revised>
-<lastaccessed><datetime>20130108T073447,90-05</datetime></lastaccessed>
-<addedtofile><datetime>20130108T073438,18-05</datetime></addedtofile></noteinfo>
-<updatedby><name>CN=Jesse Gallagher/O=MTC</name><name>CN=Jesse Gallagher/O=Frost</name><name>CN=Jesse Gallagher/O=MTC</name><name>CN=Jesse Gallagher/O=Frost</name></updatedby>
-<wassignedby><name>CN=Jesse Gallagher/O=Frost</name></wassignedby>
-<item name="$Flags"><text>34567Cg~[</text></item>
-<item name="$TITLE"><text>frostillicus/controller/ControllingViewHandler.java</text></item>
-
-
-
-<item name="$DesignerVersion"><text>8.5.3</text></item>
-
-
-<item name="$FileNames" sign="true"><text>frostillicus/controller/ControllingViewHandler.java</text></item></note>
+<?xml version="1.0" encoding="UTF-8"?>
+<note xmlns="http://www.lotus.com/dxl" class="form">
+  <item name="$Flags">
+    <text>34567Cg~[</text>
+  </item>
+  <item name="$TITLE">
+    <text>frostillicus/controller/ControllingViewHandler.java</text>
+  </item>
+  <item name="$FileNames" sign="true">
+    <text>frostillicus/controller/ControllingViewHandler.java</text>
+  </item>
+</note>

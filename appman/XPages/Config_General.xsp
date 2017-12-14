@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xp:view xmlns:xp="http://www.ibm.com/xsp/core" xmlns:xe="http://www.ibm.com/xsp/coreex" xmlns:xc="http://www.ibm.com/xsp/custom"
-	beforePageLoad="#{pageController.beforePageLoad}" afterPageLoad="#{pageController.afterPageLoad}"
+	beforePageLoad="#{controller.beforePageLoad}" afterPageLoad="#{controller.afterPageLoad}"
 	pageTitle="Config: General">
 
 	<xp:this.data>
@@ -11,7 +11,7 @@
 	<xc:layout navigationPath="/Config/General" pageTitle="#{view.pageTitle}">
 		<xp:button id="saveDocument" value="Save" styleClass="btn btn-primary">
 			<xp:eventHandler event="onclick" submit="true" refreshMode="complete" immediate="false"
-				action="#{pageController.save}"/>
+				action="#{controller.save}"/>
 		</xp:button>
 	</xc:layout>
 	

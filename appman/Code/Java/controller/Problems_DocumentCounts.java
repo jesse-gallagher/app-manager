@@ -3,28 +3,30 @@ package controller;
 import java.util.ArrayList;
 import java.util.List;
 
-import net.cmssite.endeavour60.util.EndeavourUtil;
+import com.ibm.xsp.extlib.util.ExtLibUtil;
 
-import org.openntf.domino.Database;
-import org.openntf.domino.Document;
-import org.openntf.domino.View;
-import org.openntf.domino.ViewEntry;
-import org.openntf.domino.ViewNavigator;
+import lotus.domino.Database;
+import lotus.domino.Document;
+import lotus.domino.NotesException;
+import lotus.domino.View;
+import lotus.domino.ViewEntry;
+import lotus.domino.ViewNavigator;
 
 import util.BeanTabularListAdapter;
 
-import frostillicus.xsp.controller.BasicXPageController;
+import frostillicus.controller.BasicXPageController;
 
 public class Problems_DocumentCounts extends BasicXPageController {
 	private static final long serialVersionUID = 1L;
 	
 	public static final double DIVERGENCE = 0.02;
 
-	public BeanTabularListAdapter<model.Application> getApplications() {
+	public BeanTabularListAdapter<model.Application> getApplications() throws NotesException {
 		List<model.Application> result = new ArrayList<model.Application>();
 		
-		Database database = EndeavourUtil.getDatabase();
-		View view = EndeavourUtil.getView(database, "Problems\\Divergent Document Counts");
+		Database database = ExtLibUtil.getCurrentDatabase();
+		View view = database.getView("Problems\\Divergent Document Counts");
+		view.setAutoUpdate(false);
 		ViewNavigator nav = view.createViewNav();
 		nav.setCacheGuidance(400);
 		ViewEntry categoryEntry = nav.getFirst();
@@ -70,6 +72,6 @@ public class Problems_DocumentCounts extends BasicXPageController {
 			categoryEntry = nav.getNextSibling(categoryEntry);
 		}
 		
-		return new BeanTabularListAdapter<model.Application>(result, "unid");
+		return new BeanTabularListAdapter<model.Application>(result, "documentId");
 	}
 }
