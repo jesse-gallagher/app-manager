@@ -5,9 +5,10 @@
 
 
 	<xc:layout navigationPath="/Config/UpdaterAgents" pageTitle="#{view.pageTitle}">
-		<xp:this.facets>
-			<xp:div xp:key="ActionBar">
-				<xp:button id="createUpdaterAgentButton" value="Create Agent">
+		<fieldset>
+			<legend><h2>Updater Agents</h2></legend>
+			<div class="actionBar">
+				<xp:button id="button1" value="Create Agent">
 					<xp:eventHandler event="onclick" submit="false">
 						<xp:this.script><![CDATA[XSP.openDialog("#{id:createUpdaterAgentDialog}")]]></xp:this.script>
 					</xp:eventHandler>
@@ -17,53 +18,89 @@
 					<xe:dialogContent>
 						<xe:formTable>
 							<xe:formRow label="Server">
-								<xp:inputText value="#{viewScope.createUpdaterAgentServer}"/>
+								<xe:djComboBox id="djComboBox2" value="#{viewScope.createUpdaterAgentServer}">
+									<xp:selectItem itemLabel=""/>
+									<xp:selectItems value="${appHelper.knownServers}"/>
+								</xe:djComboBox>
 							</xe:formRow>
 						</xe:formTable>
 					</xe:dialogContent>
 					<xe:dialogButtonBar>
-						<xp:button id="createUpdaterAgentConfirm" value="Create" styleClass="btn btn-primary">
+						<xp:button id="button2" value="Create" styleClass="btn btn-primary">
 							<xp:eventHandler event="onclick" submit="true" refreshMode="complete" action="#{controller.createAgent}"/>
 						</xp:button>
 					</xe:dialogButtonBar>
 				</xe:dialog>
-			</xp:div>
-		</xp:this.facets>
-		
-		<xp:dataTable value="#{controller.agentInfo}" rows="1000" var="agent">
+			</div>
+			<xp:dataTable value="#{controller.agentInfo}" rows="1000" var="agent">
 			
-			<xp:column>
-				<xp:this.facets><xp:text xp:key="header" value="Server"/></xp:this.facets>
-				<xp:link value="/Config_UpdaterAgent.xsp?agentId=#{agent.noteId}">
-					<xp:text value="#{agent.server}">
-						<xp:this.converter><xp:converter converterId="abbreviatedName"/></xp:this.converter>
-					</xp:text>
-				</xp:link>
-			</xp:column>
-			<xp:column>
-				<xp:this.facets><xp:text xp:key="header" value="Enabled"/></xp:this.facets>
-				<xp:text value="#{agent.enabled}"/>
-			</xp:column>
-			<xp:column>
-				<xp:this.facets><xp:text xp:key="header" value="Schedule"/></xp:this.facets>
-				<xp:text value="#{agent.scheduleType}"/>
-			</xp:column>
-			<xp:column>
-				<xp:link id="runNow" rendered="#{controller.currentServer}" text="Run Now">
-					<xp:eventHandler event="onclick" submit="false"><xp:this.script><![CDATA[
-						var agentPath = "#{javascript:controller.getAgentUrl()}";
-						dojo.xhrGet({
-							url: agentPath,
-							handleAs: "text",
-							timeout: 1,
-							error: function() {
-								// This is expected, as the timeout is so low
-								XSP.alert("Started updater agent");
-							}
-						})
-					]]></xp:this.script></xp:eventHandler>
-				</xp:link>
-			</xp:column>
-		</xp:dataTable>
+				<xp:column>
+					<xp:this.facets><xp:text xp:key="header" value="Server"/></xp:this.facets>
+					<xp:link value="/Config_UpdaterAgent.xsp?agentId=#{agent.noteId}">
+						<xp:text value="#{agent.server}">
+							<xp:this.converter><xp:converter converterId="abbreviatedName"/></xp:this.converter>
+						</xp:text>
+					</xp:link>
+				</xp:column>
+				<xp:column>
+					<xp:this.facets><xp:text xp:key="header" value="Enabled"/></xp:this.facets>
+					<xp:text value="#{agent.enabled}"/>
+				</xp:column>
+				<xp:column>
+					<xp:this.facets><xp:text xp:key="header" value="Schedule"/></xp:this.facets>
+					<xp:text value="#{agent.scheduleType}"/>
+				</xp:column>
+				<xp:column>
+					<xp:link id="runNow" rendered="#{controller.currentServer}" text="Run Now">
+						<xp:eventHandler event="onclick" submit="false"><xp:this.script><![CDATA[
+							var agentPath = "#{javascript:controller.getAgentUrl()}";
+							dojo.xhrGet({
+								url: agentPath,
+								handleAs: "text",
+								timeout: 1,
+								error: function() {
+									// This is expected, as the timeout is so low
+									XSP.alert("Started updater agent");
+								}
+							})
+						]]></xp:this.script></xp:eventHandler>
+					</xp:link>
+				</xp:column>
+			</xp:dataTable>
+		</fieldset>
+		
+		<xe:formTable formTitle="Manual Run">
+			<xe:this.facets>
+				<xp:div styleClass="actionBar" xp:key="footer">
+					<xp:button id="manualRun" value="Manual Run">
+						<xp:eventHandler event="onclick" submit="true" refreshMode="norefresh"
+							action="#{controller.manualRun}">
+							<xp:this.script><![CDATA[
+								if(XSP.confirm("Run the updater agent for this server now?")) {
+									window.__oldSubmitLatency = XSP.submitLatency
+									XSP.submitLatency = 1000 * 60;
+								} else {
+									return false;
+								}
+							]]></xp:this.script>
+							<xp:this.onComplete><![CDATA[
+								XSP.submitLatency = window.__oldSubmitLatency;
+								XSP.alert("Agent completed successfully");
+							]]></xp:this.onComplete>
+							<xp:this.onError><![CDATA[
+								XSP.submitLatency = window.__oldSubmitLatency;
+								XSP.alert("Error while running agent; check the JavaScript console");
+							]]></xp:this.onError>
+						</xp:eventHandler>
+					</xp:button>
+				</xp:div>
+			</xe:this.facets>
+			<xe:formRow label="Server">
+				<xe:djComboBox id="djComboBox1" value="#{viewScope.manualRunServer}">
+					<xp:selectItem itemLabel=""/>
+					<xp:selectItems value="${appHelper.knownServers}"/>
+				</xe:djComboBox>
+			</xe:formRow>
+		</xe:formTable>
 	</xc:layout>
 </xp:view>

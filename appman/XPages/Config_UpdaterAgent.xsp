@@ -24,7 +24,10 @@
 			</xe:this.facets>
 		
 			<xe:formRow label="Server">
-				<xe:djTextBox value="#{controller.server}"/>
+				<xe:djComboBox id="djComboBox1" value="#{controller.server}">
+						<xp:selectItem itemLabel=""/>
+						<xp:selectItems value="${appHelper.knownServers}"/>
+					</xe:djComboBox>
 			</xe:formRow>
 			<xe:formRow label="Enabled">
 				<xp:radioGroup value="#{controller.enabled}">

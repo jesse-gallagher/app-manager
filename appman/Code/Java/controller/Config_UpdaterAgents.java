@@ -131,6 +131,22 @@ public class Config_UpdaterAgents extends BasicXPageController {
 	}
 	
 	// ******************************************************************************
+	// * Manual Run
+	// ******************************************************************************
+	
+	public void manualRun() throws NotesException {
+		Map<String, Object> viewScope = ExtLibUtil.getViewScope();
+		String server = StringUtil.toString(viewScope.get("manualRunServer"));
+		if(StringUtil.isNotEmpty(server)) {
+			Database database = ExtLibUtil.getCurrentDatabase();
+			Document tempDoc = database.createDocument();
+			tempDoc.replaceItemValue("Server", server);
+			Agent agent = database.getAgent("Update Database List Manual");
+			agent.runWithDocumentContext(tempDoc);
+		}
+	}
+	
+	// ******************************************************************************
 	// * Internal utility methods
 	// ******************************************************************************
 
