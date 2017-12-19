@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<note xmlns="http://www.lotus.com/dxl" class="filter">
+  <item name="$FILE" summary="true" sign="true" seal="true">
+    <object>
+      <file hosttype="msdos" compression="none" flags="sign" encoding="none" name="%%source%%.jar" size="907">
+        <created>
+          <datetime>20171219T135124,05-05</datetime>
+        </created>
+        <modified>
+          <datetime>20171219T140511,77-05</datetime>
+        </modified>
+        <filedata>
+UEsDBBQACAgIAKVwk0sAAAAAAAAAAAAAAAAOAAAASmF2YUFnZW50LmphdmG9Vdtu2zAMffaA/QPh
+J6cI3A9o021NMqDbug5L1z4rNpOotSVPotIGbf59lGUn7iXtHtYZQXzh4eGhKFKyrLQhuBJLkUqd
+/jBS0aWRhObg/TvZMTqSRTrURYEZSa2es36Tlvj7xlJocjbNdSmVTvdqS+WmhcwgK4S18IU9P81R
+EeAtocot1G/HwiLceXTUkQPaefKIfx8nrqoMWnspjJJqbpPYqWyB2TXmcY8BTZSlljl814T2VEiV
+9DxpFDEPDGCOVAc7c1Q5Snqe2nNHZFYBF004AmcKtrnXTs3HxiGqOYZaEWcAovsyaP3SNlRjaV1H
+gsTUp5q3D4MHDN5v6IzhLy20da3//GofTohXaH7EsVQ+LoUsPmtz8NSM3nQuDFPaYA4pRhcSbyDT
+aibnzggKabaCvAIPSOJhFxE3KqIHfqnlNB3pXxW7YzIThcUWONKZK32dgwe/cpSH3hyqRR2vvuIq
+iblwciYzQVrZuA9k3IZPzpIO0wCUK4qmunzt7/uiLzhxIA25Zt8FqsZokJxRDc863LqLtxHG1F7U
+CWF5IQqHSTzpwOKOFGnHZUWrpEvT2y2H1UgLN2LVB5SszLygrFu3F5SNO7DnlHVpHisDrdAL8+pB
+Ej/u1rPe7j5m7+absjTiJuNWPJW2FMTtmMNPrLgPBZyMWNYmbmV0xq2xxTUwRiXt1us/2LJNSn8V
+fiSXaOqhstl1Q+0UPaNgA22RAfiqCH9fQ+bFQzK+zbCqGwdbfkwrP7cmJLLrcyMyTHjmBHefwjpM
+MV79vX96NZx+1Xn62jcK4cerkUvucbDEvduM2ZeK+mTS9WHndOpxexh9Y8Pc3i7uXTOf169K2FXV
+N1DxZiU84RPAKFGAP1clraBEWuj8/9V0qnWBQkE7QbYH/+GHI1iKdtxyH/LL4xkcRkc9ssOuB+TT
+AAI4bTl7r8CD8Wx6xYFhJo2lCx8Kag5eHz4ZTNJLVedM5QhbYNAE9/cQxyn+dnwibazbWfA4eJgy
+9V9jqo+yg1D19R9QSwcIvNTWV/0CAAAwCQAAUEsBAhQAFAAICAgApXCTS7zU1lf9AgAAMAkAAA4A
+AAAAAAAAAAAAAAAAAAAAAEphdmFBZ2VudC5qYXZhUEsFBgAAAAABAAEAPAAAADkDAAAAAA==
+</filedata>
+      </file>
+    </object>
+  </item>
+  <item name="$FILE" summary="true" sign="true" seal="true">
+    <object>
+      <file hosttype="msdos" compression="none" flags="sign" encoding="none" name="%%object%%.jar" size="1585">
+        <created>
+          <datetime>20171219T135124,06-05</datetime>
+        </created>
+        <modified>
+          <datetime>20171219T140511,78-05</datetime>
+        </modified>
+        <filedata>
+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
+</filedata>
+      </file>
+    </object>
+  </item>
+  <item name="$JavaCompilerSource">
+    <text>1.5</text>
+  </item>
+  <item name="$JavaCompilerTarget">
+    <text>1.5</text>
+  </item>
+  <item name="$AssistVersion">
+    <datetime>20171219T140511,80-05</datetime>
+  </item>
+  <item name="$TITLE" sign="true">
+    <text>Send Email Notifications</text>
+  </item>
+  <item name="$AssistType" sign="true">
+    <number>65427</number>
+  </item>
+  <item name="$AssistLastRun" sign="true">
+    <rawitemdata type="400">
+AAAAAAAAAAA=
+</rawitemdata>
+  </item>
+  <item name="$AssistDocCount" sign="true">
+    <number>0</number>
+  </item>
+  <item name="$FlagsExt" sign="true">
+    <text>D</text>
+  </item>
+  <item name="$AssistFlags" sign="true">
+    <text>Es</text>
+  </item>
+  <item name="$AssistTrigger">
+    <text>4</text>
+  </item>
+  <item name="$AssistInfo" sign="true">
+    <rawitemdata type="11">
+AQAEAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+</rawitemdata>
+  </item>
+  <item name="$AssistQuery" sign="true">
+    <rawitemdata type="f">
+gQYAAAAA
+</rawitemdata>
+  </item>
+  <item name="$AssistAction" sign="true">
+    <rawitemdata type="10">
+gQKT/2YADwAlAB8AAQAAAAAAAABKYXZhQWdlbnQuY2xhc3NDOlxQcm9ncmFtIEZpbGVzICh4ODYp
+XElCTVxOb3Rlc1xEYXRhJSVzb3VyY2UlJS5qYXIAJSVvYmplY3QlJS5qYXIAAAA=
+</rawitemdata>
+  </item>
+  <item name="$AssistAction_Ex" sign="true">
+    <rawitemdata type="14">
+gQI=
+</rawitemdata>
+  </item>
+  <item name="$Restricted" sign="true">
+    <number>1</number>
+  </item>
+  <item name="$Flags">
+    <text>fJj3</text>
+  </item>
+  <item name="$AssistRunInfo" summary="true">
+    <rawitemdata type="3">
+BgABAAAACAAqBgAAAAAAAAUAAAAwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAjNhoAPuBJYWxHncA9IElhQAAAAAAAAAAAAAAAAAAAAAAAAAAqqqqqqqq
+qqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqq
+qqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqq
+qqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqq
+qqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqq
+qqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqq
+qqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqq
+qqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqq
+qqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqq
+qqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqq
+qqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqq
+qqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqq
+qqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqq
+qqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqq
+qqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqq
+qqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqq
+qqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqq
+qqqqqqqqqqqqqqqqqqqqqqqq
+</rawitemdata>
+  </item>
+</note>
