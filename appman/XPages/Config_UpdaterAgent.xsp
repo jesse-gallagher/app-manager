@@ -24,7 +24,7 @@
 			</xe:this.facets>
 		
 			<xe:formRow label="Server">
-				<xp:inputText value="#{controller.server}"/>
+				<xe:djTextBox value="#{controller.server}"/>
 			</xe:formRow>
 			<xe:formRow label="Enabled">
 				<xp:radioGroup value="#{controller.enabled}">
