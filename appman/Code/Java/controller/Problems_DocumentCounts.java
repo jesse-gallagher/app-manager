@@ -1,6 +1,7 @@
 package controller;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 import com.ibm.xsp.extlib.util.ExtLibUtil;
@@ -11,8 +12,9 @@ import lotus.domino.NotesException;
 import lotus.domino.View;
 import lotus.domino.ViewEntry;
 import lotus.domino.ViewNavigator;
+import model.AbstractViewRowDataModel;
 
-import util.BeanTabularListAdapter;
+import util.DataModelTabularListAdapter;
 
 import frostillicus.controller.BasicXPageController;
 
@@ -21,8 +23,8 @@ public class Problems_DocumentCounts extends BasicXPageController {
 	
 	public static final double DIVERGENCE = 0.02;
 
-	public BeanTabularListAdapter<model.Application> getApplications() throws NotesException {
-		List<model.Application> result = new ArrayList<model.Application>();
+	public DataModelTabularListAdapter getApplications() throws NotesException {
+		List<AbstractViewRowDataModel> result = new ArrayList<AbstractViewRowDataModel>();
 		
 		Database database = ExtLibUtil.getCurrentDatabase();
 		View view = database.getView("Problems\\Divergent Document Counts");
@@ -72,6 +74,6 @@ public class Problems_DocumentCounts extends BasicXPageController {
 			categoryEntry = nav.getNextSibling(categoryEntry);
 		}
 		
-		return new BeanTabularListAdapter<model.Application>(result, "documentId");
+		return new DataModelTabularListAdapter(result, "documentId", Arrays.asList(""));
 	}
 }

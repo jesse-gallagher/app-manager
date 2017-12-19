@@ -1,6 +1,9 @@
 package model;
 
-import java.io.Serializable;
+import java.beans.IntrospectionException;
+import java.beans.PropertyDescriptor;
+import java.lang.reflect.InvocationTargetException;
+import java.lang.reflect.Method;
 import java.util.Map;
 
 import com.ibm.commons.util.StringUtil;
@@ -14,12 +17,13 @@ import lotus.domino.*;
  * @author Jesse Gallagher
  *
  */
-public abstract class AbstractModel implements Serializable {
+public abstract class AbstractModel extends AbstractViewRowDataModel {
 	private static final long serialVersionUID = 1L;
 
 	private String documentId;
 	private String databaseServer;
 	private String databaseFilePath;
+	private int rowIndex;
 	
 	/**
 	 * Constructs a model object from an existing document.
@@ -66,6 +70,73 @@ public abstract class AbstractModel implements Serializable {
 	}
 	
 	// ******************************************************************************
+	// * DataModel and ViewRowData methods
+	// ******************************************************************************
+	
+	@Override
+	public int getRowCount() {
+		return 1;
+	}
+
+	@Override
+	public Object getRowData() {
+		return this;
+	}
+
+	@Override
+	public int getRowIndex() {
+		return rowIndex;
+	}
+
+	@Override
+	public AbstractModel getWrappedData() {
+		return this;
+	}
+
+	@Override
+	public boolean isRowAvailable() {
+		return true;
+	}
+
+	@Override
+	public void setRowIndex(final int rowIndex) {
+		this.rowIndex = rowIndex;
+	}
+
+	@Override
+	public void setWrappedData(final Object obj) {
+		// NOP
+	}
+
+	public ColumnInfo getColumnInfo(final String columnName) {
+		return null;
+	}
+
+	public Object getColumnValue(final String columnName) {
+		return getProperty(this, columnName);
+	}
+
+	public String getOpenPageURL(final String pageName, final boolean readOnly) {
+		if(StringUtil.isEmpty(pageName)) {
+			return "";
+		} else {
+			return pageName + (pageName.contains("?") ? "&" : "?") + "documentId=" + getDocumentId();
+		}
+	}
+
+	public Object getValue(final String columnName) {
+		return getProperty(this, columnName);
+	}
+
+	public boolean isReadOnly(final String columnName) {
+		return false;
+	}
+
+	public void setColumnValue(final String columnName, final Object value) {
+		setProperty(this, columnName, value);
+	}
+	
+	// ******************************************************************************
 	// * Implementation utility methods
 	// ******************************************************************************
 	
@@ -100,5 +171,35 @@ public abstract class AbstractModel implements Serializable {
 	private void setDatabase(Database database) throws NotesException {
 		this.databaseServer = database.getServer();
 		this.databaseFilePath = database.getFilePath();
+	}
+	
+	@SuppressWarnings("unchecked")
+	private static <T> T getProperty(Object bean, String name) {
+		try {
+			PropertyDescriptor propDesc = new PropertyDescriptor(name, bean.getClass());
+			Method getter = propDesc.getReadMethod();
+			Object val = getter.invoke(bean);
+			return (T)val;
+		} catch (IllegalAccessException e) {
+			throw new RuntimeException(e);
+		} catch (InvocationTargetException e) {
+			throw new RuntimeException(e);
+		} catch (IntrospectionException e) {
+			throw new RuntimeException(e);
+		}
+	}
+	
+	private static void setProperty(Object bean, String name, Object value) {
+		try {
+			PropertyDescriptor propDesc = new PropertyDescriptor(name, bean.getClass());
+			Method setter = propDesc.getWriteMethod();
+			setter.invoke(bean, value);
+		} catch (IllegalAccessException e) {
+			throw new RuntimeException(e);
+		} catch (InvocationTargetException e) {
+			throw new RuntimeException(e);
+		} catch (IntrospectionException e) {
+			throw new RuntimeException(e);
+		}
 	}
 }

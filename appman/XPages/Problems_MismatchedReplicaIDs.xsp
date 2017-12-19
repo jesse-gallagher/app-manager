@@ -11,11 +11,11 @@
 				<xp:pager id="pager2" xp:key="footerPager" partialRefresh="true" layout="Previous Group Next" />
 			</xp:this.facets>
 			
+			<xp:viewColumn columnName="filePath">
+				<xp:viewColumnHeader value="File Path"/>
+			</xp:viewColumn>
 			<xp:viewColumn columnName="server" displayAs="link">
 				<xp:viewColumnHeader value="Server"/>
-			</xp:viewColumn>
-			<xp:viewColumn columnName="filePath" displayAs="link">
-				<xp:viewColumnHeader value="File Path"/>
 			</xp:viewColumn>
 			<xp:viewColumn columnName="replicaId" displayAs="link">
 				<xp:viewColumnHeader value="Replica ID"/>
