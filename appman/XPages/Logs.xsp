@@ -7,7 +7,7 @@
 	<xc:layout navigationPath="/Logs" pageTitle="#{view.pageTitle}">
 		<h2>Logs</h2>
 		
-		<xp:viewPanel rows="30" id="viewPanel1" dataTableStyleClass="table table-bordered table-condensed table-striped table-rounded">
+		<xp:viewPanel rows="30" id="viewPanel1">
 			<xp:this.data>
 				<xp:dominoView var="view1" ignoreRequestParams="true" viewName="${'Update Agent Reports'}"/>
 			</xp:this.data>
