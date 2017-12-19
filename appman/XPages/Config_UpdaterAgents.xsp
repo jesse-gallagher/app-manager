@@ -102,8 +102,7 @@
 				</xp:div>
 			</xe:this.facets>
 			<xe:formRow label="Server">
-				<xe:djComboBox id="djComboBox1" value="#{viewScope.manualRunServer}">
-					<xp:selectItem itemLabel=""/>
+				<xe:djComboBox id="djComboBox1" value="#{viewScope.manualRunServer}" defaultValue="${session.serverName}">
 					<xp:selectItems value="${appHelper.knownServers}"/>
 				</xe:djComboBox>
 			</xe:formRow>

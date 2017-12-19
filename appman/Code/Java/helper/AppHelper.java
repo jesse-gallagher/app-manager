@@ -12,6 +12,7 @@ import lotus.domino.Session;
 import lotus.domino.View;
 import lotus.domino.Name;
 
+import com.ibm.commons.util.StringUtil;
 import com.ibm.xsp.extlib.util.ExtLibUtil;
 import com.ibm.xsp.model.DataObject;
 
@@ -38,11 +39,20 @@ public class AppHelper implements Serializable {
 		View servers = names.getView("($Servers)");
 		List<String> serverNames = servers.getColumnValues(0);
 		List<SelectItem> result = new ArrayList<SelectItem>(serverNames.size());
+		
+		String current = session.getServerName();
+		Name currentName = session.createName(current);
+		SelectItem currentItem = new SelectItem(current, currentName.getAbbreviated() + " (Current)");
+		result.add(currentItem);
+		
 		for(String server : serverNames) {
-			Name name = session.createName(server);
-			SelectItem selectItem = new SelectItem(server, name.getAbbreviated());
-			result.add(selectItem);
+			if(!StringUtil.equals(server, current)) {
+				Name name = session.createName(server);
+				SelectItem selectItem = new SelectItem(server, name.getAbbreviated());
+				result.add(selectItem);
+			}
 		}
+		
 		return result;
 	}
 
