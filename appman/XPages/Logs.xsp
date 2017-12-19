@@ -18,9 +18,13 @@
 			<xp:viewColumn columnName="$$Created" id="viewColumn1" displayAs="link">
 				<xp:viewColumnHeader value="Created" id="viewColumnHeader1" sortable="true" />
 			</xp:viewColumn>
+			<xp:viewColumn columnName="ServerRunOn" id="viewColumn3" displayAs="link">
+				<xp:this.converter><xp:converter converterId="abbreviatedName"/></xp:this.converter>
+				<xp:viewColumnHeader value="Running Server" id="viewColumnHeader3" sortable="true"/>
+			</xp:viewColumn>
 			<xp:viewColumn columnName="Server" id="viewColumn2" displayAs="link">
 				<xp:this.converter><xp:converter converterId="abbreviatedName"/></xp:this.converter>
-				<xp:viewColumnHeader value="Server" id="viewColumnHeader2" sortable="true"/>
+				<xp:viewColumnHeader value="Analyzed Server" id="viewColumnHeader2" sortable="true"/>
 			</xp:viewColumn>
 		</xp:viewPanel>
 	</xc:layout>
