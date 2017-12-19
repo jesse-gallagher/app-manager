@@ -21,7 +21,6 @@
 			
 			<xe:formRow label="Send Emails For">
 				<xp:checkBoxGroup value="#{doc.SendEmailsFor}" layout="pageDirection">
-					<xp:selectItem itemLabel="Multiple Signers" />
 					<xp:selectItem itemLabel="Mismatched Replica IDs" />
 					<xp:selectItem itemLabel="Divergent Document Counts" />
 				</xp:checkBoxGroup>
