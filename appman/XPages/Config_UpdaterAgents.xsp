@@ -30,8 +30,7 @@
 			</xp:div>
 		</xp:this.facets>
 		
-		<xp:dataTable value="#{controller.agentInfo}" rows="1000" var="agent"
-			styleClass="table table-bordered table-condensed table-striped table-rounded hideHeader hideFooter">
+		<xp:dataTable value="#{controller.agentInfo}" rows="1000" var="agent">
 			
 			<xp:column>
 				<xp:this.facets><xp:text xp:key="header" value="Server"/></xp:this.facets>
