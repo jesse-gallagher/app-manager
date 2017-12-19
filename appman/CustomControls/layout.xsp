@@ -40,6 +40,7 @@
 							<!-- <xe:pageTreeNode label="General Configuration" page="Config_General" /> -->
 							<xe:pageTreeNode label="Updater Agents" page="Config_UpdaterAgents" />
 							<xe:pageTreeNode label="Maintenance" page="Config_Maintenance" />
+							<xe:pageTreeNode label="Notifications" page="Config_Notifications" />
 							<xe:separatorTreeNode />
 							<xe:pageTreeNode label="Logs" page="Logs" />
 						</xe:this.children>

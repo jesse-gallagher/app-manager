@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xp:view xmlns:xp="http://www.ibm.com/xsp/core" xmlns:xe="http://www.ibm.com/xsp/coreex" xmlns:xc="http://www.ibm.com/xsp/custom"
+	beforePageLoad="#{controller.beforePageLoad}" afterPageLoad="#{controller.afterPageLoad}"
+	pageTitle="Config: General">
+
+	<xp:this.data>
+		<xp:dominoDocument var="doc" formName="Configuration\Notifications" ignoreRequestParams="true" action="editDocument"
+			documentId="#{viewScope.configDocumentId}"/>
+	</xp:this.data>
+
+	<xc:layout navigationPath="/Config/Notifications" pageTitle="#{view.pageTitle}">
+		<xe:formTable formTitle="Notifications">
+			<xe:this.facets>
+				<xp:div xp:key="footer">
+					<xp:button id="saveDocument" value="Save" styleClass="btn btn-primary">
+						<xp:eventHandler event="onclick" submit="true" refreshMode="complete" immediate="false"
+							action="#{controller.save}"/>
+					</xp:button>
+				</xp:div>
+			</xe:this.facets>
+			
+			<xe:formRow label="Send Emails For">
+				<xp:checkBoxGroup value="#{doc.SendEmailsFor}" layout="pageDirection">
+					<xp:selectItem itemLabel="Multiple Signers" />
+					<xp:selectItem itemLabel="Mismatched Replica IDs" />
+					<xp:selectItem itemLabel="Divergent Document Counts" />
+				</xp:checkBoxGroup>
+			</xe:formRow>
+			<xe:formRow label="Email Targets">
+				<xe:djTextarea value="#{doc.EmailTargets}" id="emailTargets" multipleSeparator=", " style="width: 30em"/>
+				<xe:namePicker id="namePicker1" for="emailTargets">
+					<xe:this.dataProvider>
+						<xe:dominoNABNamePicker addressBookSel="all"/>
+					</xe:this.dataProvider>
+				</xe:namePicker>
+			</xe:formRow>
+		</xe:formTable>
+	</xc:layout>
+	
+	
+	<xp:this.navigationRules>
+		<xp:navigationRule outcome="xsp-success" viewId="/Config_Notifications.xsp"/>
+		<xp:navigationRule outcome="xsp-failure" viewId="/Config_Notifications.xsp"/>
+	</xp:this.navigationRules>
+</xp:view>
