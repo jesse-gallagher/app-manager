@@ -78,21 +78,27 @@
 							<xp:this.script><![CDATA[
 								if(XSP.confirm("Run the updater agent for this server now?")) {
 									window.__oldSubmitLatency = XSP.submitLatency
-									XSP.submitLatency = 1000 * 60;
+									dojo.byId("#{id:manualRunSpinner}").style.visibility = "visible";
+									XSP.submitLatency = 2 * 60 * 1000;
 								} else {
 									return false;
 								}
 							]]></xp:this.script>
 							<xp:this.onComplete><![CDATA[
 								XSP.submitLatency = window.__oldSubmitLatency;
+								dojo.byId("#{id:manualRunSpinner}").style.visibility = "hidden";
 								XSP.alert("Agent completed successfully");
 							]]></xp:this.onComplete>
 							<xp:this.onError><![CDATA[
 								XSP.submitLatency = window.__oldSubmitLatency;
+								dojo.byId("#{id:manualRunSpinner}").style.visibility = "hidden";
 								XSP.alert("Error while running agent; check the JavaScript console");
 							]]></xp:this.onError>
 						</xp:eventHandler>
 					</xp:button>
+					<xp:span id="manualRunSpinner" style="visibility: hidden">
+						<xp:image url="/.ibmxspres/.oneuiv302/oneui/dojoTheme/lotusui30dojo/images/loading.gif"/>
+					</xp:span>
 				</xp:div>
 			</xe:this.facets>
 			<xe:formRow label="Server">
