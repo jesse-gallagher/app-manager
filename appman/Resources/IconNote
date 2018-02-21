@@ -34,11 +34,11 @@ AAAAUEECICABAAD/////+A4DgA==
   <item name="$FlagsNoRefresh">
     <text>rv</text>
   </item>
-  <item name="$Daos">
-    <text>1</text>
-  </item>
   <item name="$TITLE">
     <text>App Manager 6.0
 </text>
+  </item>
+  <item name="$Daos">
+    <text>1</text>
   </item>
 </note>
