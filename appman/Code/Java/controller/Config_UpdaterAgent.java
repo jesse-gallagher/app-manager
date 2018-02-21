@@ -3,10 +3,13 @@ package controller;
 import frostillicus.JSFUtil;
 import frostillicus.controller.BasicXPageController;
 import lotus.domino.*;
+
 import com.ibm.xsp.extlib.util.ExtLibUtil;
 import com.raidomatic.xml.*;
 import java.util.*;
 import java.text.SimpleDateFormat;
+
+import model.ServerInfo;
 
 public class Config_UpdaterAgent extends BasicXPageController {
 	private static final long serialVersionUID = 1L;
@@ -35,16 +38,28 @@ public class Config_UpdaterAgent extends BasicXPageController {
 
 
 	public String getServer() throws Exception {
-		return JSFUtil.strRight(xmlDoc.selectSingleNode("//agent").getAttribute("name"), "$$UpdaterAgent-");
+		String agentName = xmlDoc.selectSingleNode("//agent").getAttribute("name");
+		ServerInfo serverInfo = ServerInfo.fromAgentName(agentName);
+		return serverInfo.getSourceServer();
 	}
 	public void setServer(String server) throws Exception {
-		Name serverName = ExtLibUtil.getCurrentSession().createName(server);
-		String canonName = serverName.getCanonical();
-		serverName.recycle();
+		String targetServer = getTargetServer();
+		ServerInfo serverInfo = new ServerInfo(server, targetServer);
 
-		xmlDoc.selectSingleNode("//agent").setAttribute("name", "$$UpdaterAgent-" + canonName);
-		xmlDoc.selectSingleNode("//schedule").setAttribute("runserver", canonName);
+		xmlDoc.selectSingleNode("//agent").setAttribute("name", serverInfo.toAgentName());
+		xmlDoc.selectSingleNode("//schedule").setAttribute("runserver", serverInfo.getSourceServer());
 		//xmlDoc.selectSingleNode("//agent").setAttribute("runonbehalfof", canonName);
+	}
+	
+	public String getTargetServer() throws Exception {
+		String agentName = xmlDoc.selectSingleNode("//agent").getAttribute("name");
+		ServerInfo serverInfo = ServerInfo.fromAgentName(agentName);
+		return serverInfo.getTargetServer();
+	}
+	public void setTargetServer(String targetServer) throws Exception {
+		String server = getServer();
+		ServerInfo serverInfo = new ServerInfo(server, targetServer);
+		xmlDoc.selectSingleNode("//agent").setAttribute("name", serverInfo.toAgentName());
 	}
 
 	public String getScheduleType() throws Exception {

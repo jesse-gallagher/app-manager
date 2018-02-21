@@ -13,6 +13,7 @@ import javax.faces.context.FacesContext;
 import com.ibm.commons.util.StringUtil;
 import com.ibm.xsp.extlib.util.ExtLibUtil;
 import com.raidomatic.xml.*;
+import model.ServerInfo;
 
 public class Config_UpdaterAgents extends BasicXPageController {
 	private static final long serialVersionUID = 1L;
@@ -43,7 +44,11 @@ public class Config_UpdaterAgents extends BasicXPageController {
 			xmlDoc.loadString(dxl);
 
 			XMLNode agentNode = xmlDoc.selectSingleNode("//agent");
-			thisAgent.put("server", JSFUtil.strRight(agentNode.getAttribute("name"), "$$UpdaterAgent-"));
+			String agentName = agentNode.getAttribute("name");
+			thisAgent.put("name", agentName);
+			ServerInfo serverInfo = ServerInfo.fromAgentName(agentName);
+			thisAgent.put("server", serverInfo.getSourceServer());
+			thisAgent.put("targetServer", serverInfo.getTargetServer());
 			thisAgent.put("enabled", !agentNode.getAttribute("enabled").equals("false"));
 
 			XMLNode schedule = xmlDoc.selectSingleNode("//schedule");
@@ -63,10 +68,8 @@ public class Config_UpdaterAgents extends BasicXPageController {
 
 	public void createAgent() throws Exception {
 		String server = (String)ExtLibUtil.getViewScope().get("createUpdaterAgentServer");
+		String targetServer = (String)ExtLibUtil.getViewScope().get("createUpdaterAgentTargetServer");
 		if(!StringUtil.isEmpty(server)) {
-			Name serverName = ExtLibUtil.getCurrentSession().createName(server);
-			String canonName = serverName.getCanonical();
-
 			// Find the template agent to copy
 			Database database = ExtLibUtil.getCurrentDatabase();
 			DxlExporter exporter = ExtLibUtil.getCurrentSession().createDxlExporter();
@@ -83,12 +86,13 @@ public class Config_UpdaterAgents extends BasicXPageController {
 			// Clear out the original note info
 			XMLNode noteinfo = xmlDoc.selectSingleNode("//noteinfo");
 			noteinfo.getParentNode().removeChild(noteinfo);
-
-			// Now fill in the correct information
-			xmlDoc.selectSingleNode("//agent").setAttribute("name", "$$UpdaterAgent-" + canonName);
+			
+			ServerInfo serverInfo = new ServerInfo(server, targetServer);
+			
+			xmlDoc.selectSingleNode("//agent").setAttribute("name", serverInfo.toAgentName());
 			xmlDoc.selectSingleNode("//schedule").setAttribute("runlocation", "specific");
-			xmlDoc.selectSingleNode("//schedule").setAttribute("runserver", canonName);
-			xmlDoc.selectSingleNode("//agent").setAttribute("runonbehalfof", canonName);
+			xmlDoc.selectSingleNode("//schedule").setAttribute("runserver", serverInfo.getSourceServer());
+			xmlDoc.selectSingleNode("//agent").setAttribute("runonbehalfof", serverInfo.getSourceServer());
 
 			Database signerDB = ExtLibUtil.getCurrentSessionAsSignerWithFullAccess().getDatabase(database.getServer(), database.getFilePath());
 
@@ -125,9 +129,8 @@ public class Config_UpdaterAgents extends BasicXPageController {
 	@SuppressWarnings("unchecked")
 	public String getAgentUrl() throws UnsupportedEncodingException {
 		Map<String, Object> currentAgent = (Map<String, Object>)ExtLibUtil.resolveVariable(FacesContext.getCurrentInstance(), "agent");
-		String server = (String)currentAgent.get("server");
-		String name = "$$UpdaterAgent-" + server;
-		return JSFUtil.getContextPath() + "/" + URLEncoder.encode(name, "UTF-8");
+		String agentName = (String)currentAgent.get("name");
+		return JSFUtil.getContextPath() + "/" + URLEncoder.encode(agentName, "UTF-8");
 	}
 	
 	// ******************************************************************************

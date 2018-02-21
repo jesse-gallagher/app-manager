@@ -23,6 +23,12 @@
 									<xp:selectItems value="${appHelper.knownServers}"/>
 								</xe:djComboBox>
 							</xe:formRow>
+							<xe:formRow label="Target Server">
+								<xe:djComboBox id="djComboBox3" value="#{viewScope.createUpdaterAgentTargetServer}">
+									<xp:selectItem itemLabel=""/>
+									<xp:selectItems value="${appHelper.knownServers}"/>
+								</xe:djComboBox>
+							</xe:formRow>
 						</xe:formTable>
 					</xe:dialogContent>
 					<xe:dialogButtonBar>
@@ -41,6 +47,12 @@
 							<xp:this.converter><xp:converter converterId="abbreviatedName"/></xp:this.converter>
 						</xp:text>
 					</xp:link>
+				</xp:column>
+				<xp:column>
+					<xp:this.facets><xp:text xp:key="header" value="Target Server"/></xp:this.facets>
+					<xp:text value="#{agent.targetServer}">
+						<xp:this.converter><xp:converter converterId="abbreviatedName"/></xp:this.converter>
+					</xp:text>
 				</xp:column>
 				<xp:column>
 					<xp:this.facets><xp:text xp:key="header" value="Enabled"/></xp:this.facets>
