@@ -176,7 +176,7 @@ public class JSFUtil {
 		return new BASE64Decoder().decodeBuffer(fileDataB64);
 	}
 
-	@SuppressWarnings("unchecked")
+	@SuppressWarnings("rawtypes")
 	public static String xor(String input, Vector key) {
 		StringBuilder output = new StringBuilder();
 
@@ -226,7 +226,7 @@ public class JSFUtil {
 		return input.substring(input.length() - chars);
 	}
 
-	@SuppressWarnings("unchecked")
+	@SuppressWarnings("rawtypes")
 	public static List<String> toStringList(Object columnValue) {
 		List<String> result = new Vector<String>();
 		if(columnValue.getClass().getName().equals("java.util.Vector")) {
@@ -239,7 +239,7 @@ public class JSFUtil {
 		return result;
 	}
 
-	@SuppressWarnings("unchecked")
+	@SuppressWarnings("rawtypes")
 	public static List<Integer> toIntegerList(Object columnValue) {
 		List<Integer> result = new Vector<Integer>();
 		if(columnValue.getClass().getName().equals("java.util.Vector")) {
@@ -265,7 +265,7 @@ public class JSFUtil {
 		return ((DateTime)columnValue).toJavaDate();
 	}
 
-	@SuppressWarnings("unchecked")
+	@SuppressWarnings("rawtypes")
 	public static String iterableToSQL(Iterable input) {
 		// This isn't a particularly safe implementation, but I don't have the desire to
 		//  look for the "right" way to do it with PreparedStatements

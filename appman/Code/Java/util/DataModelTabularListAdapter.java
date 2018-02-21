@@ -62,7 +62,7 @@ public class DataModelTabularListAdapter extends TabularDataModel implements Ser
 		this.selectedIds.remove(id);
 	}
 
-	@SuppressWarnings("unchecked")
+	@SuppressWarnings("rawtypes")
 	@Override
 	public Iterator getSelectedIds() {
 		return selectedIds.iterator();

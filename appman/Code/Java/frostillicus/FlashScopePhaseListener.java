@@ -9,7 +9,7 @@ import javax.servlet.http.HttpServletRequest;
 @SuppressWarnings("serial")
 public class FlashScopePhaseListener implements PhaseListener {
 	
-	@SuppressWarnings("unchecked")
+	@SuppressWarnings("rawtypes")
 	public void afterPhase(PhaseEvent event) {
 		FacesContext facesContext = event.getFacesContext();
 		ExternalContext externalContext = facesContext.getExternalContext();
