@@ -92,7 +92,6 @@ public class Config_UpdaterAgents extends BasicXPageController {
 			xmlDoc.selectSingleNode("//agent").setAttribute("name", serverInfo.toAgentName());
 			xmlDoc.selectSingleNode("//schedule").setAttribute("runlocation", "specific");
 			xmlDoc.selectSingleNode("//schedule").setAttribute("runserver", serverInfo.getSourceServer());
-			xmlDoc.selectSingleNode("//agent").setAttribute("runonbehalfof", serverInfo.getSourceServer());
 
 			Database signerDB = ExtLibUtil.getCurrentSessionAsSignerWithFullAccess().getDatabase(database.getServer(), database.getFilePath());
 

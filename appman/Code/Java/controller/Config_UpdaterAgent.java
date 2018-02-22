@@ -33,7 +33,6 @@ public class Config_UpdaterAgent extends BasicXPageController {
 		this.xmlDoc = new XMLDocument();
 		String xml = exporter.exportDxl(agentDoc).replaceAll("<\\!DOCTYPE.*>", "");
 		xmlDoc.loadString(xml);
-		xmlDoc.selectSingleNode("//agent").setAttribute("runonbehalfof", "");
 	}
 
 
@@ -48,7 +47,6 @@ public class Config_UpdaterAgent extends BasicXPageController {
 
 		xmlDoc.selectSingleNode("//agent").setAttribute("name", serverInfo.toAgentName());
 		xmlDoc.selectSingleNode("//schedule").setAttribute("runserver", serverInfo.getSourceServer());
-		//xmlDoc.selectSingleNode("//agent").setAttribute("runonbehalfof", canonName);
 	}
 	
 	public String getTargetServer() throws Exception {
