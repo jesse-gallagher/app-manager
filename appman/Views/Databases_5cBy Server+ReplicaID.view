@@ -8,9 +8,6 @@ AQCU7G6FoWlsP/FjaADvdyWF
   <item name="$FormulaClass" sign="true">
     <text>1</text>
   </item>
-  <item name="$TITLE" sign="true">
-    <text>(Databases by Server+ReplicaID)</text>
-  </item>
   <item name="$Index" sign="true">
     <text/>
   </item>
@@ -48,5 +45,8 @@ AB8AAAAAAAAAAAADAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
 AAAAAAAAAAAAAAAAAAAAAAAAAAAAAPz/OgAAAAAAAQAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAA
 AAAAAAAAAAEAAAAAAAAAAAAAAAAAAAA=
 </rawitemdata>
+  </item>
+  <item name="$TITLE" sign="true">
+    <text>Databases\By Server+ReplicaID</text>
   </item>
 </note>

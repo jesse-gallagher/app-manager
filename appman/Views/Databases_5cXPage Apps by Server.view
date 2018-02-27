@@ -8,9 +8,6 @@ AQAmYw89issr8GZ0RgDteiWF
   <item name="$FormulaClass" sign="true">
     <text>1</text>
   </item>
-  <item name="$TITLE" sign="true">
-    <text>(XPage Apps by Server)</text>
-  </item>
   <item name="$Index" sign="true">
     <text/>
   </item>
@@ -50,5 +47,8 @@ AB8AAAAAAAAAAAADAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
 AAAAAAAAAAAAAAAAAAAAAAAAAAAAAPz/OgAAAAAAAQAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAA
 AAAAAAAAAAEAAAAAAAAAAAAAAAAAAAA=
 </rawitemdata>
+  </item>
+  <item name="$TITLE" sign="true">
+    <text>Databases\XPage Apps by Server</text>
   </item>
 </note>
