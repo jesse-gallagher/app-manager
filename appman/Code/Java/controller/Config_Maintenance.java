@@ -24,7 +24,7 @@ public class Config_Maintenance extends BasicXPageController {
 	public List<SelectItem> getExistingServerNames() throws NotesException {
 		Map<String, Object> viewScope = ExtLibUtil.getViewScope();
 		if(!viewScope.containsKey(CACHE_KEY)) {
-			View stubs = ExtLibUtil.getCurrentDatabase().getView("Databases by Server+ReplicaID");
+			View stubs = ExtLibUtil.getCurrentDatabase().getView("Databases\\Servers");
 			stubs.setAutoUpdate(false);
 			List<String> serverNames = stubs.getColumnValues(0);
 			Set<String> uniqueNames = new TreeSet<String>(String.CASE_INSENSITIVE_ORDER);
