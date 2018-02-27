@@ -6,8 +6,9 @@ import java.net.URLConnection;
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
 import org.w3c.dom.*;
-import org.apache.xml.serialize.OutputFormat;
-import org.apache.xml.serialize.XMLSerializer;
+
+import com.ibm.commons.xml.DOMUtil;
+import com.ibm.commons.xml.Format;
 
 public class XMLDocument extends XMLNode {
 	private static final long serialVersionUID = -8106159267601656260L;
@@ -44,12 +45,7 @@ public class XMLDocument extends XMLNode {
 	public String getXml() throws IOException {
 		try {
 			ByteArrayOutputStream bos = new ByteArrayOutputStream();
-			OutputFormat format = new OutputFormat();
-			format.setLineWidth(200);
-			format.setIndenting(true);
-			format.setIndent(2);
-			XMLSerializer serializer = new XMLSerializer(bos, format);
-			serializer.serialize(((Document)this.node).getDocumentElement());
+			DOMUtil.serialize(bos, ((Document)this.node).getDocumentElement(), Format.defaultFormat);
 			return new String(bos.toByteArray(), "UTF-8");
 		} catch(Exception e) {
 			e.printStackTrace();

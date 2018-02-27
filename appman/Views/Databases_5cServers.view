@@ -1,38 +1,37 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <note xmlns="http://www.lotus.com/dxl" class="view">
-  <item name="$FormatNote" summary="true" sign="true">
+  <item name="$FormatNote" summary="true">
     <rawitemdata type="4">
-AQCU7G6FoWlsP/FjaADvdyWF
+AQA3PWeKx0J27lTedQDzgSWG
 </rawitemdata>
   </item>
   <item name="$FormulaClass" sign="true">
     <text>1</text>
   </item>
   <item name="$TITLE" sign="true">
-    <text>(Databases by Server+ReplicaID)</text>
+    <text>Databases\Servers</text>
   </item>
   <item name="$Index" sign="true">
     <text/>
   </item>
   <item name="$Formula" summary="true" sign="true">
     <formula compiled="true">
-WAAFACwAKAAEAAYACQAJAAQAU2VydmVyUmVwbGljYUlEJENvbmZsaWN0JFJFRgQABAAAABwABQAE
-AEZvcm0BAAgARGF0YWJhc2UKAgMABwAKAAQACUwxUw==
+hAAFACIAHQADAAYACQAEAFNlcnZlciRDb25mbGljdCRSRUYABAAEAAAARgAFAAQARm9ybQEACABE
+YXRhYmFzZQoCBQAGAEhpZGRlbgEAAwBZZXMACwIcAgUACQAkQ29uZmxpY3QAaAEeARwCAwAHABYA
+EAAJTDFTNFM1UzZTN1M4UzlT
 </formula>
   </item>
   <item name="$Collation" summary="true">
     <rawitemdata type="2">
-IwACAABEiGYHAAAGAIBmAAYACQBTZXJ2ZXJSZXBsaWNhSUQ=
+EwABAAFEgGYAAAAGAFNlcnZlcg==
 </rawitemdata>
   </item>
   <item name="$ViewFormat" summary="true" sign="true">
     <rawitemdata type="5">
-AQACAAUAiEAAAFZDgwQGAAAAAAAAABAAAQEACgABAAAAAAAAAAICAAAAVkMBAAkABAAAAAAAnwAB
-AAAKAAAAAAAAAAAAAgIAAABTZXJ2ZXJSZXBsaWNhSUQkS2V5JgABAAAAAQEACQEAAAoBAQ4KAAA/
-AK0rAQABAAEAAAAAAAAAAABXQwEBAAkAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAD//wAAAAAAAAAA
-AAAAAAAAV0MBBQAJAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAA//8AAAAAAAAAAAAAAAAAAEIAEQAA
-AAEA////AAEA7+/vAAEA////AAAAAAAAAAAAAQD///8AAQD///8AAAABAAAAAAABAAAAAAABAAAA
-AAAAAAgAAAAAAAEA
+AQABAAMAiEAAAFZDAQAGAAYAAAAAAFAAAQAACgAAAAAAAAAAAAICAAAAU2VydmVyU2VydmVyJgAB
+AAAAAQEACQEAAAoBAQ4KAAA/AK0rAQABAAEAAAAAAAAAAABXQwEFAAkAAAAAAAAAAAAAAAAAAAAA
+AAAEAAAAAAD//wAAAAAAAAAAAAAAAAAAQgARAAAAAQD///8AAQDv7+8AAQD///8AAAAAAAAAAAAB
+AP///wABAP///wAAAAEAAAAAAAEAAAAAAAEAAAAAAAAACAAAAAAAAQA=
 </rawitemdata>
   </item>
   <item name="$Comment" sign="true">

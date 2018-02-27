@@ -33,6 +33,7 @@
 							<xe:pageTreeNode label="Multiple Signers" page="Problems_MultipleSigners" />
 							<xe:pageTreeNode label="Mismatched Replica IDs" page="Problems_MismatchedReplicaIDs" />
 							<xe:pageTreeNode label="Divergent Document Counts" page="Problems_DocumentCounts" />
+							<xe:pageTreeNode label="Report" page="Problems_Report" />
 						</xe:this.children>
 					</xe:basicContainerNode>
 					<xe:basicContainerNode label="Admin">

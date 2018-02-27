@@ -5,9 +5,10 @@ import java.io.*;
 
 import javax.xml.xpath.*;
 
-import org.apache.xml.serialize.OutputFormat;
-import org.apache.xml.serialize.XMLSerializer;
 import org.w3c.dom.*;
+
+import com.ibm.commons.xml.DOMUtil;
+import com.ibm.commons.xml.Format;
 
 public class XMLNode implements Map<String, Object>, Serializable {
 	private static final long serialVersionUID = 2304991412510751453L;
@@ -133,12 +134,7 @@ public class XMLNode implements Map<String, Object>, Serializable {
 	public String getXml() throws IOException {
 		try {
 			ByteArrayOutputStream bos = new ByteArrayOutputStream();
-			OutputFormat format = new OutputFormat();
-			format.setLineWidth(200);
-			format.setIndenting(true);
-			format.setIndent(2);
-			XMLSerializer serializer = new XMLSerializer(bos, format);
-			serializer.serialize((Element)this.node);
+			DOMUtil.serialize(bos, this.node, Format.defaultFormat);
 			return new String(bos.toByteArray(), "UTF-8");
 		} catch(Exception e) {
 			e.printStackTrace();

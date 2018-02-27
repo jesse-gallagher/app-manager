@@ -24,7 +24,9 @@
 				<xp:text value="#{doc.Title}"/>
 			</xe:formRow>
 			<xe:formRow label="Server">
-				<xp:text value="#{doc.Server}"/>
+				<xp:text value="#{doc.Server}">
+					<xp:this.converter><xp:converter converterId="abbreviatedName"/></xp:this.converter>
+				</xp:text>
 			</xe:formRow>
 			<xe:formRow label="File Path">
 				<xp:text value="#{doc.FilePath}"/>
@@ -39,10 +41,5 @@
 				</xp:radioGroup>
 			</xe:formRow>
 		</xe:formTable>
-	
-<!--		<xp:button id="createCopy" value="Create Design Backup">-->
-<!--			<xp:eventHandler event="onclick" submit="true" refreshMode="norefresh"-->
-<!--				action="#{controller.createDesignBackup}"/>-->
-<!--		</xp:button>-->
 	</xc:layout>
 </xp:view>

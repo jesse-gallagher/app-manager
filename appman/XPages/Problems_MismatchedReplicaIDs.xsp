@@ -16,6 +16,7 @@
 			</xp:viewColumn>
 			<xp:viewColumn columnName="server" displayAs="link">
 				<xp:viewColumnHeader value="Server"/>
+				<xp:this.converter><xp:converter converterId="abbreviatedName"/></xp:this.converter>
 			</xp:viewColumn>
 			<xp:viewColumn columnName="replicaId" displayAs="link">
 				<xp:viewColumnHeader value="Replica ID"/>

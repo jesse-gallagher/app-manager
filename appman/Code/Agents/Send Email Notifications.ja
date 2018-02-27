@@ -1,209 +1,122 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <note xmlns="http://www.lotus.com/dxl" class="filter">
+  <item name="$AssistAction_Ex" sign="true">
+    <rawitemdata type="14">
+gQI=
+</rawitemdata>
+  </item>
+  <item name="$AssistAction_Ex" sign="true">
+    <rawitemdata type="14">
+gQI=
+</rawitemdata>
+  </item>
+  <item name="$AssistAction_Ex" sign="true">
+    <rawitemdata type="14">
+gQI=
+</rawitemdata>
+  </item>
+  <item name="$AssistAction_Ex" sign="true">
+    <rawitemdata type="14">
+gQI=
+</rawitemdata>
+  </item>
+  <item name="$TITLE" sign="true">
+    <text>Send Email Notifications</text>
+  </item>
+  <item name="$Restricted" sign="true">
+    <number>1</number>
+  </item>
+  <item name="$AssistVersion">
+    <datetime>20180227T165251,99-05</datetime>
+  </item>
+  <item name="$AssistTrigger">
+    <text>1</text>
+  </item>
+  <item name="$MachineName" sign="true">
+    <text>CN=Galatea-VCC/O=IKSG</text>
+  </item>
   <item name="$FILE" summary="true" sign="true" seal="true">
     <object>
-      <file hosttype="msdos" compression="none" flags="sign" encoding="none" name="%%source%%.jar" size="2896">
+      <file hosttype="msdos" compression="none" flags="sign" encoding="none" name="%%source%%.jar" size="710">
         <created>
-          <datetime>20171219T135124,05-05</datetime>
+          <datetime>20180227T165252,11-05</datetime>
         </created>
         <modified>
-          <datetime>20171219T153041,12-05</datetime>
+          <datetime>20180227T165252,11-05</datetime>
         </modified>
         <filedata>
-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
+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
+amF2YVBLBQYAAAAAAQABADwAAAB0AgAAAAA=
 </filedata>
       </file>
     </object>
   </item>
   <item name="$FILE" summary="true" sign="true" seal="true">
     <object>
-      <file hosttype="msdos" compression="none" flags="sign" encoding="none" name="%%object%%.jar" size="5890">
+      <file hosttype="msdos" compression="none" flags="sign" encoding="none" name="%%object%%.jar" size="1409">
         <created>
-          <datetime>20171219T135124,06-05</datetime>
+          <datetime>20180227T165252,11-05</datetime>
         </created>
         <modified>
-          <datetime>20171219T153041,12-05</datetime>
+          <datetime>20180227T165252,13-05</datetime>
         </modified>
         <filedata>
-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
-BgAAAAABAAEAPQAAAK8WAAAAAA==
+UEsDBBQACAgIAJqGW0wAAAAAAAAAAAAAAAAPAAAASmF2YUFnZW50LmNsYXNzjVXZVxNXGP9dE5gw
+mUYMIAREQa0Ni6ZqV0AtEqzSgBYQhS46JGMcTTJxZmKxdrGL3avtQx/aPvbBc2pfqOeEUs/pYx/6
+R/X0dycLS0LbnJN7537fd7/l9y33r79//wPAIXyrYi9OqejFy01cTsuvM0FM4JUgEpiUxynJOKvg
+nIomvKpgWkUQM3KZDeC8ijlckMtFBfMqduBUAAtyf00qeD2IN/BmAJck5bK8oytYDCCpohMpKWEE
+cCWINK6qMHFNwXUFGQGfVXAF2hLX9Jt6zLRi52wz516wTdewhwUaUsZiIS0gFgQaR8yc6R7nlWjf
+nIB/zEoZAtsTZs6YKmQXDXtWX8yQEk5YST0zp9umPJeJfveq6QgEExO0M5o2ci61N01ZruFM6mZO
+QHEMxzEtfu1MZCy34MRSVtbMWbGZEp3imi7vjVk511iiz10b5UbXMSkcSOmuvqg7tN2+UTBeZlAo
+ZBt5y3bj60T1fD6r52LTGxjDMgDduS6wtyIgjw6dy6XGs7qZKcnPkkhZYVQRzei5dGx8KWnk3VIQ
+DaZzwVgU2B39F/f7CLcvZSVrfbeShWwZvIJj2N4tCfmasRmXGUxTQK2adRRkichIMlPOoDpjFeyk
+ccqUqQlVU3JIatHwFKIacrA07MN+DXncUGBrcOAqKGi4ibc0DGNEw5M4wEDrIia1LAn0/BdaUu6W
+hrdxW6DDCz/nHpy9lTeGeiQSsXyG1aHgHQ3v4j25RFkgm4M9WbhyxbAFmmdc3XZJ6PHC6dmr4X3c
+0fABPlTwkYaPcZfJIfUT3NXwqdTVUidLApFjW/00fIbbGj7HFyzm6fHJs7Pjl0bj8WkFX2r4Cl8r
+uKfhPr5hfqqw0uPaVJ/06q1rA8Nrh3VuhNKG6wmfLbh52abt0b4tGlWl6EylgzootkUPtdajs4sr
+lqrd1b1Zx6b+imzJZDlS21jBtklba63IZoXrmqszugVLDhoy6zelZIYcw43LGVWBqCNaFyEp21KH
+wcGTl6cMQWiL1raRvNdI86xcgcF6AjWkUjUOl0Atw1Cpg7qgUjRcS6VnvD+lZ4lda7TWjJxxrlX6
+5rSwCzKNXizsguT1WVtPGqVUVIZGNT+1qVgbK211GSVFZ1wjO6dnCkbF6oH/BQi1Nm+mMTrTGc/m
+3Vvee7LAh6+X7yOwDaocO/xS5Xzh7oeQI4lrH08x7oJ7Q/8KxLJ3oZ9ro0dUMMBVKwlgEAe5C769
+5csiCx8lgYf9RWx7BB83f2JgFQ0Ck4OraBSYGvwNyiMEHqNp/uAK1CH/YwTnI/4VaEMNvyLwPYIR
+7r4invBOJ/gdDhWx3aM1c32MHfMrCIdbimilzjaBVewU4CnczqWIjqp0pKGIyAPsSXiqdlRVhLso
+MuAddy3TdQ4X3OMzXgp1ATu9IBVs59qMFj74nQgTv1aG34bnyB9BO+KkTqAL09iFi+jGHezm4Oul
+rj5q28cptR/fEeMfifJPhOhnapfwnaZmOThjeJq2W7CEwzhC2524gaN4hhAO4DKepR0//+fxPF4g
+2Pdp6UUMedA/LEOvymeCN2Xe0tx93Hv7V9EtkBgI717Fnm3E/U+EBovo+QGK/wH8vl+qOQ15Fw7T
+nSMM86jnXE9JieeSzHcnjuE4jTYThBN4iTdHyyVzEgGMVcum23OMVeFjcpe9slgrmyaucc/s+D9Q
+SwcIX5OKZvEEAACvCQAAUEsBAhQAFAAICAgAmoZbTF+TimbxBAAArwkAAA8AAAAAAAAAAAAAAAAA
+AAAAAEphdmFBZ2VudC5jbGFzc1BLBQYAAAAAAQABAD0AAAAuBQAAAAA=
 </filedata>
       </file>
     </object>
   </item>
-  <item name="$FILE" summary="true" sign="true" seal="true">
-    <object>
-      <file hosttype="msdos" compression="none" flags="sign" encoding="none" name="%%resource%%.jar" size="434">
-        <created>
-          <datetime>20171219T142414,83-05</datetime>
-        </created>
-        <modified>
-          <datetime>20171219T153041,14-05</datetime>
-        </modified>
-        <filedata>
-UEsDBBQACAgIANJ7k0sAAAAAAAAAAAAAAAANAAAAdGVtcGxhdGUuaHRtbI1SwW6DMAw9M2n/YKXi
-VjS6jVaiUGk77QP2A6ExYCmFKrgt7OtnKNBV6mE5JM+O/fycOCn5YHfPT15Soja75GU4ejurTQdZ
-sa9t7VK1MMNS0HBnMVWMLQfaUlHFsMeK0ak+y0tYZxbFZe1RG0NVkapVqOBChstUbULBWe0MCmc4
-sx20K0iYQtAnricmt0vYTCF5XXGQ6wPZLoYvtGdk2uslfDjSdgmNrpqgQUf5duQPnDZ0amKIjq26
-NXIpifFawfOu+yPN0Sx5FYb+FD+IGqHXixtj1u9Kno7N3d1f4Q39YAxv62O7hUFIDIsoirbw77ak
-gP9NbNG/qyR4UiSw70Os0TZ0fiBi9SrvMaf7n/LN/swgKWP+UGRgv/GKs58KQTIn/dz8AlBLBwiD
-jnKoJgEAAD4CAABQSwECFAAUAAgICADSe5NLg45yqCYBAAA+AgAADQAAAAAAAAAAAAAAAAAAAAAA
-dGVtcGxhdGUuaHRtbFBLBQYAAAAAAQABADsAAABhAQAAAAA=
-</filedata>
-      </file>
-    </object>
+  <item name="$AssistAction" sign="true">
+    <rawitemdata type="10">
+gQKT/1YADwANAB8ACQAAAAAAAABKYXZhQWdlbnQuY2xhc3NjOlxOb3Rlc1xEYXRhJSVzb3VyY2Ul
+JS5qYXIAJSVvYmplY3QlJS5qYXIAAFJlcG9ydHMAAA==
+</rawitemdata>
+  </item>
+  <item name="$AssistAction_Ex" sign="true">
+    <rawitemdata type="14">
+gQI=
+</rawitemdata>
+  </item>
+  <item name="$AssistType" sign="true">
+    <number>65427</number>
+  </item>
+  <item name="$AssistFlags" sign="true">
+    <text>s</text>
   </item>
   <item name="$JavaCompilerSource">
     <text>1.5</text>
@@ -211,14 +124,16 @@ dGVtcGxhdGUuaHRtbFBLBQYAAAAAAQABADsAAABhAQAAAAA=
   <item name="$JavaCompilerTarget">
     <text>1.5</text>
   </item>
-  <item name="$AssistVersion">
-    <datetime>20171219T153041,15-05</datetime>
+  <item name="$AssistInfo" sign="true">
+    <rawitemdata type="11">
+AQABAAAAAgABAMB6EAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+</rawitemdata>
   </item>
-  <item name="$TITLE" sign="true">
-    <text>Send Email Notifications</text>
-  </item>
-  <item name="$AssistType" sign="true">
-    <number>65427</number>
+  <item name="$AssistQuery" sign="true">
+    <rawitemdata type="f">
+gQYAAAAA
+</rawitemdata>
   </item>
   <item name="$AssistLastRun" sign="true">
     <rawitemdata type="400">
@@ -228,68 +143,15 @@ AAAAAAAAAAA=
   <item name="$AssistDocCount" sign="true">
     <number>0</number>
   </item>
-  <item name="$FlagsExt" sign="true">
-    <text>D</text>
-  </item>
-  <item name="$AssistFlags" sign="true">
-    <text>s</text>
-  </item>
-  <item name="$MachineName" sign="true">
-    <text>CN=Galatea-VCC/O=IKSG</text>
-  </item>
-  <item name="$AssistTrigger">
-    <text>1</text>
-  </item>
-  <item name="$AssistInfo" sign="true">
-    <rawitemdata type="11">
-AQABAAAAAgABAMB6EADAV34AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-</rawitemdata>
-  </item>
-  <item name="$AssistQuery" sign="true">
-    <rawitemdata type="f">
-gQYAAAAA
-</rawitemdata>
-  </item>
-  <item name="$AssistAction" sign="true">
-    <rawitemdata type="10">
-gQKT/3cADwAlADAAAQAAAAAAAABKYXZhQWdlbnQuY2xhc3NDOlxQcm9ncmFtIEZpbGVzICh4ODYp
-XElCTVxOb3Rlc1xEYXRhJSVzb3VyY2UlJS5qYXIAJSVvYmplY3QlJS5qYXIAJSVyZXNvdXJjZSUl
-LmphcgAAAAA=
-</rawitemdata>
-  </item>
-  <item name="$AssistAction_Ex" sign="true">
-    <rawitemdata type="14">
-gQI=
-</rawitemdata>
-  </item>
-  <item name="$Restricted" sign="true">
-    <number>1</number>
-  </item>
-  <item name="$Flags">
-    <text>fJj3S</text>
-  </item>
   <item name="$AssistRunInfo" summary="true">
     <rawitemdata type="3">
-BgABAAAACADmBAAAAAAAAAUAAAAwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAM6xwAPuBJYWxHncA9IElhQAAAAAAAAAAAAAAAAAAAAAAAAAAqqqqqqqq
-qqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqq
-qqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqq
-qqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqq
-qqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqq
-qqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqq
-qqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqq
-qqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqq
-qqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqq
-qqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqq
-qqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqq
-qqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqq
-qqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqq
-qqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqq
-qqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqq
-qqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqq
-qqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqq
-qqqqqqqqqqqqqqqqqqqqqqqq
+CAABAAAACAASOwAALhYAAAAAAQAAAAAAAAAAAAAA
 </rawitemdata>
+  </item>
+  <item name="$Flags">
+    <text>3fSJj</text>
+  </item>
+  <item name="$FlagsExt" sign="true">
+    <text>D</text>
   </item>
 </note>

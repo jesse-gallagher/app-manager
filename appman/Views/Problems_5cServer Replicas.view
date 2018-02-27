@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<note xmlns="http://www.lotus.com/dxl" class="view">
+  <item name="$FormatNote" summary="true" sign="true">
+    <rawitemdata type="4">
+AQAPqrkucINk+ATedQDzgSWG
+</rawitemdata>
+  </item>
+  <item name="$FormulaClass" sign="true">
+    <text>1</text>
+  </item>
+  <item name="$TITLE" sign="true">
+    <text>Problems\Server Replicas</text>
+  </item>
+  <item name="$Index" sign="true">
+    <text/>
+  </item>
+  <item name="$Formula" summary="true" sign="true">
+    <formula compiled="true">
+egIFACwAKAAEAAkABgAJAAQAUmVwbGljYUlEU2VydmVyJENvbmZsaWN0JFJFRgQABAABAEgBEgBL
+Tk9XTl9TWVNURU1fUEFUSFMBAAsAY2VydHNydi5uc2YAAQALAGNwcGZid3MubnNmAB8CAQALAGRh
+b3NjYXQubnNmAB8CAQAMAGRiZGlybWFuLm5zZh8CAQAMAGRvbGFkbWluLm5zZh8CAQARAGlOb3Rl
+cy9Gb3JtczkubnNmAB8CAQAHAGxvZy5uc2YAHwIBAAsAcmVwb3J0cy5uc2YAHwIBAAoAc2NoZW1h
+Lm5zZh8CAQAMAHdlYmFkbWluLm5zZh8CAQAJAG5hbWVzLm5zZgAfAgEACgBhZG1pbjQubnNmHwIB
+AAsAZXZlbnRzNC5uc2YAHwIBAAsAY2F0YWxvZy5uc2YAHwIBAAcAZGRtLm5zZgAfAgEAEgBpTm90
+ZXMvRm9ybXM5cy5uc2YfAgEACwBMTkQvbG5kLm5zZgAfAgMABwAeABcACTFTMlMxMVJUVFQyMVJU
+VFQzM1JUVFQAAACmAAUABABGb3JtAQAIAERhdGFiYXNlCgIFAAYASGlkZGVuAQADAFllcwALAhwC
+BQAIAEZpbGVQYXRoAQABAFwAAQABAC8AhAMFABIAS05PV05fU1lTVEVNX1BBVEhTdAIeARwCBQAI
+AEZpbGVQYXRoAQABAFwAAQABAC8AhAMBAAUAaGVscC8ARgIeARwCBQAJACRDb25mbGljdABoAR4B
+HAIDAAcAPAA1AAkwUlJMMVM0UzVSVDZTN1M4UzlSVDE2UzE4UzIxUzIzUzI0UlQzMVMzM1MzNlMz
+OFMzOVJUAA==
+</formula>
+  </item>
+  <item name="$Collation" summary="true">
+    <rawitemdata type="2">
+IwACAABEiGYHAAAJAIhmAAkABgBSZXBsaWNhSURTZXJ2ZXI=
+</rawitemdata>
+  </item>
+  <item name="$ViewFormat" summary="true" sign="true">
+    <rawitemdata type="5">
+AQACAAwAiEAAAFZDAwQJAAAAAAAAABEAAQEACgABAAAAAAAAAAICAAAAVkMBAAYABgAAAAAAUgAB
+AAAKAAEAAAAAAAAAAgIAAABSZXBsaWNhSURTZXJ2ZXJTZXJ2ZXImAAEAAAABAQAJAQAACgEBDgoA
+AD8ArSsBAAEAAQAAAAAAAAAAAFdDAQEACQAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAP//AAAAAAAA
+AAAAAAAAAABXQwEFAAkAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAD//wAAAAAAAAAAAAAAAAAAQgAR
+AAAAAQD///8AAQDv7+8AAQD///8AAAAAAAAAAAABAP///wABAP///wAAAAEAAAAAAAEAAAAAAAEA
+AAAAAAAACAAAAAAAAQA=
+</rawitemdata>
+  </item>
+  <item name="$Comment" sign="true">
+    <text/>
+  </item>
+  <item name="$Flags">
+    <text>PY</text>
+  </item>
+  <item name="$V5ACTIONS" sign="true">
+    <rawitemdata type="1">
+vRwjAAAAAQABAAAAAQAAAAAAAAAAAAAACAACAHn/bAABANTQyAABAAAAAAAJAAAAAAABANTQyAAA
+AB8AAAAAAAAAAAADAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAPz/OgAAAAAAAQAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAEAAAAAAAAAAAAAAAAAAAA=
+</rawitemdata>
+  </item>
+</note>

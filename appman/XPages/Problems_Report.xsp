@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xp:view xmlns:xp="http://www.ibm.com/xsp/core" xmlns:xe="http://www.ibm.com/xsp/coreex" xmlns:xc="http://www.ibm.com/xsp/custom"
+	beforePageLoad="#{controller.beforePageLoad}" afterPageLoad="#{controller.afterPageLoad}"
+	pageTitle="Problems: Report">
+
+
+	<xc:layout navigationPath="/Problems/Report" pageTitle="#{view.pageTitle}">
+		<xp:text value="${controller.report}" contentType="HTML"/>
+	</xc:layout>
+</xp:view>
