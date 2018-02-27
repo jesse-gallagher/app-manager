@@ -4,7 +4,6 @@ package frostillicus;
 import javax.faces.application.Application;
 import javax.faces.context.FacesContext;
 import javax.faces.el.ValueBinding;
-import sun.misc.BASE64Decoder;
 import com.ibm.xsp.component.UIViewRootEx2;
 import com.ibm.xsp.extlib.util.ExtLibUtil;
 
@@ -12,8 +11,6 @@ import lotus.domino.*;
 import lotus.notes.addins.DominoServer;
 
 import java.io.*;
-import java.net.HttpURLConnection;
-import java.net.URL;
 import java.util.*;
 
 import javax.servlet.http.Cookie;
@@ -54,126 +51,6 @@ public class JSFUtil {
 	}
 	public static UIViewRootEx2 getViewRoot() {
 		return (UIViewRootEx2)getVariableValue("view");
-	}
-
-	public static Database findProjectDatabase(String projectDocumentUNID) throws NotesException {
-		Document projectDoc = JSFUtil.getDatabase().getDocumentByUNID(projectDocumentUNID);
-		Database projectDatabase = findProjectDatabase(projectDoc);
-		projectDoc.recycle();
-		return projectDatabase;
-	}
-	public static Database findProjectDatabase(Document projectDoc) throws NotesException {
-		Database db;
-		Session session = JSFUtil.getSession();
-		Session sessionAsSigner = JSFUtil.getSessionAsSigner();
-
-		// If there's already DB info int he doc, use that
-		String dbReplicaID = projectDoc.getItemValueString("DBReplicaID"); 
-		if(dbReplicaID.length() > 0) {
-			db = session.getDatabase("", dbReplicaID);
-			if(!db.isOpen()) {
-				db = session.getDatabase(projectDoc.getItemValueString("ServerHint"), dbReplicaID);
-			}
-			if(db.isOpen()) {
-				return db;
-			}
-		}
-
-		Database bigMax = sessionAsSigner.getDatabase("", "MTC\\Events-Database.nsf");
-		if(!bigMax.isOpen()) {
-			bigMax.recycle();
-			return null;
-		}
-
-		Document bmProject = bigMax.getDocumentByUNID(projectDoc.getItemValueString("ProjectUNID"));
-
-		// Find the project database by the DB link
-		RichTextItem rtitem = (RichTextItem)bmProject.getFirstItem("DatabaseLink");
-		RichTextNavigator rtnav = rtitem.createNavigator();
-		RichTextDoclink doclink = (RichTextDoclink)rtnav.getFirstElement(RichTextItem.RTELEM_TYPE_DOCLINK);
-
-		// If the doclink isn't there, try to find it by its default path
-		if(doclink == null) {
-			Document bmClient = bigMax.getDocumentByUNID(bmProject.getParentDocumentUNID());
-			db = session.getDatabase("Herc/MTC", bmClient.getItemValueString("ClientShortName") + "\\" + projectDoc.getItemValueString("ProjectNoteID"));
-			bmClient.recycle();
-		} else {
-			db = session.getDatabase("", "");
-
-			// Check for a local replica first
-			db.openByReplicaID("", doclink.getDBReplicaID());
-
-			// Failing that, use the canonical version
-			if(!db.isOpen()) {
-				db.openByReplicaID(doclink.getServerHint(), doclink.getDBReplicaID());
-			}
-
-			doclink.recycle();
-		}
-		rtnav.recycle();
-		rtitem.recycle();
-
-		bmProject.recycle();
-		bigMax.recycle();
-
-		if(db.isOpen()) {
-			return db;
-		}
-
-		return null;
-	}
-
-	public static String pluralize(String input) {
-		if(input.endsWith("s")) {
-			return input + "es";
-		} else if(input.endsWith("y")) {
-			return input.substring(0, input.length()-2) + "ies";
-		}
-		return input + "s";
-	}
-	public static String singularize(String input) {
-		if(input.endsWith("ses")) {
-			return input.substring(0, input.length()-2);
-		} else if(input.endsWith("ies")) {
-			return input.substring(0, input.length()-3) + "y";
-		} else if(input.endsWith("s")) {
-			return input.substring(0, input.length()-1);
-		}
-		return input;
-	}
-
-	public String fetchURL(String urlString) throws Exception {
-		URL url = new URL(urlString);
-		HttpURLConnection conn = (HttpURLConnection)url.openConnection();
-		conn.setRequestProperty("User-Agent", "Firefox/2.0");
-		//conn.setRequestProperty("Cookie", cookie);
-
-		BufferedReader in = new BufferedReader(new InputStreamReader((InputStream)conn.getContent()));
-		StringWriter resultWriter = new StringWriter();
-		String inputLine;
-		while((inputLine = in.readLine()) != null) {
-			resultWriter.write(inputLine);
-		}
-		in.close();
-
-		return resultWriter.toString().replace("<HTTP-EQUIV", "<meta http-equiv");
-
-	}
-
-	public static Document getReportDocument(String reportName) throws NotesException {
-		View templates = JSFUtil.getDatabase().getView("Export Templates");
-		templates.setAutoUpdate(false);
-
-		Document template = templates.getDocumentByKey(reportName);
-		templates.recycle();
-		return template;
-	}
-	public static byte[] getFileResourceData(Document fileResource) throws NotesException, IOException {
-		String dxl = fileResource.generateXML();
-		int fileDataPos = dxl.indexOf("<filedata>");
-		int fileDataEnd = dxl.indexOf("</filedata>");
-		String fileDataB64 = dxl.substring(fileDataPos + 10, fileDataEnd-1);
-		return new BASE64Decoder().decodeBuffer(fileDataB64);
 	}
 
 	@SuppressWarnings("rawtypes")

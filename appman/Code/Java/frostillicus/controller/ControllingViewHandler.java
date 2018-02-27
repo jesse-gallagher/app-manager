@@ -11,7 +11,6 @@ import javax.faces.event.PhaseEvent;
 import com.ibm.commons.util.StringUtil;
 import com.ibm.xsp.component.UIViewRootEx;
 import com.ibm.xsp.extlib.util.ExtLibUtil;
-//import com.ibm.xsp.model.domino.DominoDocumentData;
 
 import lotus.domino.*;
 import java.util.*;
