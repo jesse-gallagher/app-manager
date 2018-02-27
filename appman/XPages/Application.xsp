@@ -41,10 +41,5 @@
 				</xp:radioGroup>
 			</xe:formRow>
 		</xe:formTable>
-	
-<!--		<xp:button id="createCopy" value="Create Design Backup">-->
-<!--			<xp:eventHandler event="onclick" submit="true" refreshMode="norefresh"-->
-<!--				action="#{controller.createDesignBackup}"/>-->
-<!--		</xp:button>-->
 	</xc:layout>
 </xp:view>
