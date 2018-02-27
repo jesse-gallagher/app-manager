@@ -24,7 +24,9 @@
 				<xp:text value="#{doc.Title}"/>
 			</xe:formRow>
 			<xe:formRow label="Server">
-				<xp:text value="#{doc.Server}"/>
+				<xp:text value="#{doc.Server}">
+					<xp:this.converter><xp:converter converterId="abbreviatedName"/></xp:this.converter>
+				</xp:text>
 			</xe:formRow>
 			<xe:formRow label="File Path">
 				<xp:text value="#{doc.FilePath}"/>
