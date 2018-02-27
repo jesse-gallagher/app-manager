@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xp:view xmlns:xp="http://www.ibm.com/xsp/core" xmlns:xe="http://www.ibm.com/xsp/coreex">
+	<xe:formTable formTitle="Agent Schedule" id="agentSchedulePanel">
+		<xe:formRow label="Enabled">
+			<xp:radioGroup value="#{compositeData.agentController.enabled}">
+				<xp:selectItem itemLabel="Yes" itemValue="true"/>
+				<xp:selectItem itemLabel="No" itemValue="false"/>
+			</xp:radioGroup>
+		</xe:formRow>
+		<xe:formRow label="Schedule Type">
+			<xp:comboBox value="#{compositeData.agentController.scheduleType}" id="scheduleType">
+				<xp:eventHandler event="onchange" submit="true" refreshMode="partial" refreshId="agentSchedulePanel" disableValidators="true"/>
+			
+				<xp:selectItem itemLabel="Daily" itemValue="daily"/>
+				<xp:selectItem itemLabel="Weekly" itemValue="weekly"/>
+				<xp:selectItem itemLabel="Monthly" itemValue="monthly"/>
+			</xp:comboBox>
+		</xe:formRow>
+		<xe:formRow label="Day in Month" rendered="#{compositeData.agentController.scheduleType == 'monthly'}">
+			<xp:comboBox value="#{compositeData.agentController.dateInMonth}">
+				<xp:selectItems><xp:this.value><![CDATA[${javascript:
+					var result = []
+					for(var i = 1; i <= 31; i++) { result.push(i.toFixed(0)) }
+					result
+				}]]></xp:this.value></xp:selectItems>
+			</xp:comboBox>
+		</xe:formRow>
+		<xe:formRow label="Time" rendered="#{compositeData.agentController.scheduleType == 'daily'}">
+			<xe:djTimeTextBox id="djTimeTextBox1" value="#{compositeData.agentController.startTime}"/>
+		</xe:formRow>
+		<xe:formRow label="On Day" rendered="#{compositeData.agentController.scheduleType == 'weekly'}">
+			<xp:comboBox value="#{compositeData.agentController.dayOfWeek}">
+				<xp:selectItem itemLabel="Sunday" itemValue="sunday"/>
+				<xp:selectItem itemLabel="Monday" itemValue="monday"/>
+				<xp:selectItem itemLabel="Tuesday" itemValue="tuesday"/>
+				<xp:selectItem itemLabel="Wednesday" itemValue="wednesday"/>
+				<xp:selectItem itemLabel="Thursday" itemValue="thursday"/>
+				<xp:selectItem itemLabel="Friday" itemValue="friday"/>
+				<xp:selectItem itemLabel="Saturday" itemValue="saturday"/>
+			</xp:comboBox>
+		</xe:formRow>
+	</xe:formTable>
+</xp:view>

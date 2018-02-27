@@ -25,6 +25,7 @@ public abstract class AbstractConfigDocumentController extends BasicDocumentCont
 		config.setAutoUpdate(false);
 		String name = getConfigurationDocumentName();
 		ViewEntry general = config.getEntryByKey(name, true);
+		System.out.println("Got config " + general);
 		if(general == null) {
 			Document generalConfig = database.createDocument();
 			generalConfig.replaceItemValue("Form", "Configuration\\" + name);
