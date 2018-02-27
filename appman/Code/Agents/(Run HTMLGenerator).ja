@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<note xmlns="http://www.lotus.com/dxl" class="filter">
+  <item name="$FILE" summary="true" sign="true" seal="true">
+    <object>
+      <file hosttype="msdos" compression="none" flags="sign" encoding="none" name="%%source%%.jar" size="513">
+        <created>
+          <datetime>20180227T135522,06-05</datetime>
+        </created>
+        <modified>
+          <datetime>20180227T140645,15-05</datetime>
+        </modified>
+        <filedata>
+UEsDBBQACAgIANZwW0wAAAAAAAAAAAAAAAAOAAAASmF2YUFnZW50LmphdmGVUU1PwzAMPXfS/oO1
+U4tQ/sC0w2CIDzEObOLupWZUtEmVuGMT2n/HbRNYJw5waGon79nPfuNRUdXWMZSWG69yWxXGqovp
+ON4bYqUr7wsmRSYn3NnGKazrCo16phazQMYNevojaUuGHLJ16m69fLyN2b/ZffNT/nhUN5uy0KBL
+9B4ecIdzwTPQnqWQhy67Eqnw2aKTAN/ZIocny+SXWJg0C68Ju0MbJkmyIpFjDfjwn8GWOFym2bTD
+dMWvrWHpBniazCJP1PMpLFLjBiGPwWxQoeVdN87JTYRGancMfQA3TGey0Q8YYtLYKZQ5WyZ8rzmw
+B1bF3it2hdmGdt1OojchonQoJVNse9JA/sLqpmp9yq3+ZfL4fLY0ASspX6Kme6bqBcuG0kk/yOQy
+qMqUF6OaqkJ3SF+x7Adu+UfQyPoN0pu9pppbVymLdh+8VFTknKpFLZcmnfzACgPzuoYlGlHqJkEO
+9dAVo35fOxEVdB7lkO/4BVBLBwjtEzwdcwEAAGoDAABQSwECFAAUAAgICADWcFtM7RM8HXMBAABq
+AwAADgAAAAAAAAAAAAAAAAAAAAAASmF2YUFnZW50LmphdmFQSwUGAAAAAAEAAQA8AAAArwEAAAAA
+</filedata>
+      </file>
+    </object>
+  </item>
+  <item name="$FILE" summary="true" sign="true" seal="true">
+    <object>
+      <file hosttype="msdos" compression="none" flags="sign" encoding="none" name="%%object%%.jar" size="1084">
+        <created>
+          <datetime>20180227T135522,06-05</datetime>
+        </created>
+        <modified>
+          <datetime>20180227T140645,17-05</datetime>
+        </modified>
+        <filedata>
+UEsDBBQACAgIANZwW0wAAAAAAAAAAAAAAAAPAAAASmF2YUFnZW50LmNsYXNzlVVrc9tEFD0bPxQr
+oiTO0w2hKbTFTpoKQimpXShp0redlNoYUspjLS+ugi15ZLnT/iI+lw/OhM7wA/hRDEfyY5LYyVB/
+2PXuvXv23Lv3XP3z719/A7iGfQ1jAolH8qXcrCnH1xAVmKu7frtlVt2G7bhmuH9HtpRA/Jbt2P7X
+ApF0piwQ3XKrSkcECQMxxAXez9uO2mk3KsoryUqdJ5J515L1svTsYN3bjPov7JbARH5wbY4cdlxf
+tQrSdnQITBqYQlJArym/qFot23UEFtKZ/DFqPUtuAjOY0zArMDPKbmAeC2RHrPC2Ldfx1StfYOkk
+4FEzUc/jAw2LAqlTnQws4UOGSeittufRsC19WQmzlTqJ3jflNCwLrDrKN60GGfrKVE5VyZdu2zNl
+s9mQjvlUNV1vAKbjAj4KkvyxwPn0KaiZsobLAtfPxCV35Unf9cwHpUL+fn+l4xISOtJY0ZARuPE/
+MbosBygGVnFVYLznwBxspvPvEGYuk99nSZh16dTM3cq+svyczir9VIPJmjhpM/AZ1nmd7xZ9z3Zq
+fP70UYTubviO1w18gRvdh9p2rXbjaBkMP1TPIzeODVZ9l+QEsrilgaU6O9LZwFegNCY91axLSz30
+VaMs620m4WZ6mNRwoCc4BOdJ/Rvc0bApMDVkNLCFbSqkRYW0Gw3pvaay0s8y5QTu4YGG+8cyVnzd
+Cs88xCPKV3kew+hysF3zCSn5JKZkgyHnqbS7ryzV9KmdZdtZ3mw2lwvSkTXFOtnBEw27AtMjDhv4
+Fk8FtGawVadiZ0dEninrKIG1+l0fJLQObjTwfdhLml1caf1e8phPwrb6jWBudBsQMOQxfS+eoW7W
+TXUg1flTJCVwzjtWoQJr71TQ7GsDtQhsnH32VF0RJt7lEXTUoYzyQauuNRxFv4oFhBo89/Fk06YX
+ScFS9+ygNZ8btORrgTcushdHEPzG+I9NnqPGlclZcI6tHGD8TWjWOcbDTQ0THI2uA+f3OBO6f1gE
+n4xx7j1f6fCTsXqIaYHC1UOkBHbe4sLe2gEuZqNvcWnvAFeysVQsFe3gkw7WsnF6fS6Q1VJa8stU
+/BA3I4gc4vYY/sBk/k/cTT7uoLDaQfFNePtjlmupx22dTAJWMfIxyGYak2zeU7iCJG0zVPcs/eex
+iwVWYAo/YjGM4zkS4diNI0Zx/YA9ohu4jWf0GiPSBu0/MaolNquf8QuiRL2MXyHpv06sCixGn+Vt
+VSjmYJenf0MtTOKLMHv2f1BLBwjVymiXrAMAAJMHAABQSwECFAAUAAgICADWcFtM1cpol6wDAACT
+BwAADwAAAAAAAAAAAAAAAAAAAAAASmF2YUFnZW50LmNsYXNzUEsFBgAAAAABAAEAPQAAAOkDAAAA
+AA==
+</filedata>
+      </file>
+    </object>
+  </item>
+  <item name="$JavaCompilerSource">
+    <text>1.3</text>
+  </item>
+  <item name="$JavaCompilerTarget">
+    <text>1.2</text>
+  </item>
+  <item name="$AssistVersion">
+    <datetime>20180227T140645,18-05</datetime>
+  </item>
+  <item name="$TITLE" sign="true">
+    <text>(Run HTMLGenerator)</text>
+  </item>
+  <item name="$AssistType" sign="true">
+    <number>65427</number>
+  </item>
+  <item name="$AssistLastRun" sign="true">
+    <rawitemdata type="400">
+AAAAAAAAAAA=
+</rawitemdata>
+  </item>
+  <item name="$AssistDocCount" sign="true">
+    <number>0</number>
+  </item>
+  <item name="$FlagsExt" sign="true">
+    <text>D</text>
+  </item>
+  <item name="$AssistFlags" sign="true">
+    <text>EHu</text>
+  </item>
+  <item name="$AssistTrigger">
+    <text>4</text>
+  </item>
+  <item name="$AssistInfo" sign="true">
+    <rawitemdata type="11">
+AQAEAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+</rawitemdata>
+  </item>
+  <item name="$AssistQuery" sign="true">
+    <rawitemdata type="f">
+gQYAAAAA
+</rawitemdata>
+  </item>
+  <item name="$AssistAction" sign="true">
+    <rawitemdata type="10">
+gQKT/1YADwANAB8ACQAAAAAAAABKYXZhQWdlbnQuY2xhc3NjOlxOb3Rlc1xEYXRhJSVzb3VyY2Ul
+JS5qYXIAJSVvYmplY3QlJS5qYXIAAFJlcG9ydHMAAA==
+</rawitemdata>
+  </item>
+  <item name="$AssistAction_Ex" sign="true">
+    <rawitemdata type="14">
+gQI=
+</rawitemdata>
+  </item>
+  <item name="$Restricted" sign="true">
+    <number>1</number>
+  </item>
+  <item name="$Flags">
+    <text>fJj3u</text>
+  </item>
+  <item name="$AssistRunInfo" summary="true">
+    <rawitemdata type="3">
+BgABAAAACADqOAAAAAAAAAUAAAAwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAABv1oAEGCJYWxHncA9IElhQAAAAAAAAAAAAAAAAAAAAAAAAAAqqqqqqqq
+qqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqq
+qqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqq
+qqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqq
+qqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqq
+qqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqq
+qqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqq
+qqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqq
+qqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqq
+qqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqq
+qqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqq
+qqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqq
+qqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqq
+qqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqq
+qqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqq
+qqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqq
+qqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqq
+qqqqqqqqqqqqqqqqqqqqqqqq
+</rawitemdata>
+  </item>
+</note>
