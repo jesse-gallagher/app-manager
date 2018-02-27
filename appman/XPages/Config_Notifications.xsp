@@ -19,12 +19,6 @@
 				</xp:div>
 			</xe:this.facets>
 			
-			<xe:formRow label="Send Emails For">
-				<xp:checkBoxGroup value="#{doc.SendEmailsFor}" layout="pageDirection">
-					<xp:selectItem itemLabel="Mismatched Replica IDs" />
-					<xp:selectItem itemLabel="Divergent Document Counts" />
-				</xp:checkBoxGroup>
-			</xe:formRow>
 			<xe:formRow label="Email Targets">
 				<xe:djTextarea value="#{doc.EmailTargets}" id="emailTargets" multipleSeparator=", " style="width: 30em"/>
 				<xe:namePicker id="namePicker1" for="emailTargets">
