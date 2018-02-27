@@ -51,7 +51,7 @@ public class Config_Maintenance extends BasicXPageController {
 			server = name.getCanonical();
 			name.recycle();
 			
-			View stubs = ExtLibUtil.getCurrentDatabase().getView("Databases by Server+ReplicaID");
+			View stubs = ExtLibUtil.getCurrentDatabase().getView("Databases\\By Server+ReplicaID");
 			stubs.setAutoUpdate(false);
 			DocumentCollection docs = stubs.getAllDocumentsByKey(server, true);
 			docs.removeAll(true);

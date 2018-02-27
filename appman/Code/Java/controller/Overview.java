@@ -12,7 +12,7 @@ public class Overview extends BasicXPageController {
 	}
 	public int getXPageAppCount() throws NotesException {
 		Database database = ExtLibUtil.getCurrentDatabase();
-		View xpageApps = database.getView("XPage Apps by Server");
+		View xpageApps = database.getView("Databases\\XPage Apps by Server");
 		xpageApps.setAutoUpdate(false);
 		ViewNavigator nav = xpageApps.createViewNavFromCategory(getServerName());
 		int count = nav.getCount();
