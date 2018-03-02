@@ -96,6 +96,7 @@ public abstract class AbstractAgentController extends BasicXPageController {
 			Database database = ExtLibUtil.getCurrentDatabase();
 			Database signerDB = ExtLibUtil.getCurrentSessionAsSignerWithFullAccess().getDatabase(database.getServer(), database.getFilePath());
 
+			agent.setNoReplace(true);
 			agent.save(signerDB);
 
 			fetchAgentInfo();

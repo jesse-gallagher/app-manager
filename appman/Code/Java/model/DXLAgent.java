@@ -47,7 +47,8 @@ public class DXLAgent implements Serializable {
 		} else {
 			this.startTime = -1;
 		}
-		this.enabled = !xmlDoc.selectSingleNode("//agent").getAttribute("enabled").equals("false");
+		this.enabled = !"false".equals(xmlDoc.selectSingleNode("//agent").getAttribute("enabled"));
+		this.noReplace = "true".equals(xmlDoc.selectSingleNode("//agent").getAttribute("noreplace"));
 	}
 	
 	private String name;
@@ -57,6 +58,7 @@ public class DXLAgent implements Serializable {
 	private String dayOfWeek;
 	private long startTime;
 	private boolean enabled;
+	private boolean noReplace;
 	
 	public String getName() {
 		return name;
@@ -123,6 +125,13 @@ public class DXLAgent implements Serializable {
 		this.enabled = enabled;
 	}
 	
+	public void setNoReplace(boolean noReplace) {
+		this.noReplace = noReplace;
+	}
+	public boolean isNoReplace() {
+		return noReplace;
+	}
+	
 	public void save(Database database) throws NotesException, IOException, XPathExpressionException {
 		if(StringUtil.isNotEmpty(name)) {
 			xmlDoc.selectSingleNode("//agent").setAttribute("name", name);
@@ -147,6 +156,7 @@ public class DXLAgent implements Serializable {
 			datetime.setText(TIME_FORMAT.format(new Date(startTime)));
 		}
 		xmlDoc.selectSingleNode("//agent").setAttribute("enabled", String.valueOf(enabled));
+		xmlDoc.selectSingleNode("//agent").setAttribute("noreplace", String.valueOf(noReplace));
 		
 		DxlImporter importer = database.getParent().createDxlImporter();
 		try {

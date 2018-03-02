@@ -90,6 +90,7 @@ public class Config_UpdaterAgents extends BasicXPageController {
 			ServerInfo serverInfo = new ServerInfo(server, targetServer);
 			
 			xmlDoc.selectSingleNode("//agent").setAttribute("name", serverInfo.toAgentName());
+			xmlDoc.selectSingleNode("//agent").setAttribute("noreplace", "true");
 			xmlDoc.selectSingleNode("//schedule").setAttribute("runlocation", "specific");
 			xmlDoc.selectSingleNode("//schedule").setAttribute("runserver", serverInfo.getSourceServer());
 
